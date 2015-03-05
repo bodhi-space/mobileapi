@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>API Documentation</title>
+
+    <link href="../../stylesheets/screen.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="../../stylesheets/print.css" rel="stylesheet" type="text/css" media="print" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+      <script src="../../javascripts/all_nosearch.js" type="text/javascript"></script>
+
+  </head>
+
+  <body class="includes includes_bodhimobile includes_bodhimobile_bodhicli">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="../../images/navbar.png" />
+      </span>
+    </a>
+    <div class="tocify-wrapper">
+      <a class="bodhi-logo" href="http://bodhi-space.github.io/slate/"> <img src="../../images/logo.png" /> </a>
+      <div id="toc">
+      </div>
+    </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+        <h1 id="access-the-api-using-bodhi-command-line">Access the API using Bodhi command line</h1>
+
+<p>In this lab exercise we are going to work with the type system using Bodhi CLI.</p>
+
+<p>At the end of this lab you will have accomplished the following:<br>
+1. Made a query against the API to display all types in the system<br>
+2. List the properties of a type<br>
+3. Create a new type<br>
+4. Quicky create a data file to populate the type 5. Post data to the type  </p>
+
+<p>To use the following examples you must set up your project.json file as described in the set up instructions for the Bodhi CLI.</p>
+
+<p>bodhi-types &ndash;help<br>
+bodhi-types ls<br>
+bodhi-types get team_member<br>
+bodhi-types lp team_member<br>
+bodhi-types new survey &ndash;namespace<br>
+bodhi-types set-prop survey name<br>
+bodhi-types set-prop survey name -S<br>
+bodhi-types set-prop survey survey_date -T<br>
+bodhi-types set-prop survey survey_rating -I<br>
+bodhi-types set-prop survey survey_comments -S<br>
+bodhi-types post survey<br>
+bodhi-types get survey<br>
+bodhi-types gen-instance survey  </p>
+
+      </div>
+      <div class="dark-box">
+      </div>
+    </div>
+  </body>
+</html>
