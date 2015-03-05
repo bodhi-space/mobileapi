@@ -1,4 +1,4 @@
-## Push Notifications Module
+#### Push Notifications Module
 
 This module provides the ability to working with Push Notifications and analogs.
 
@@ -14,7 +14,7 @@ This module provides the ability to working with Push Notifications and analogs.
 
 ### Functions
 
-#### register
+##### register
 
 ```javascript
 pushNotifications.register( {badge:true, sound:true, alert:true},  
@@ -27,11 +27,11 @@ function(info) {
 
 `pushNotifications.register( options, successCallback, errorCallback )`
 
-##### Discussion
+###### Discussion
 
 Registers application to Push Notifications.
 
-##### Arguments
+###### Arguments
 
   * `options` required
 
@@ -87,11 +87,11 @@ Callback parameter is object which contains keys:
 
 Error Callback. Called when function return error.
 
-##### Return Value
+###### Return Value
 
   * [RBCPromise](#kernel-promise) object
 
-#### unregister
+##### unregister
 
 ```javascript
 pushNotifications.unregister( function() {  
@@ -103,11 +103,11 @@ pushNotifications.unregister( function() {
 
 `pushNotifications.unregister( successCallback, errorCallback )`
 
-##### Discussion
+###### Discussion
 
 Unregisters application for Push Notifications.
 
-##### Arguments
+###### Arguments
 
   * `succesCallback` optional
 
@@ -119,11 +119,11 @@ Callback parameter is always *null*.
 
 Error Callback. Called when function return error.
 
-##### Return Value
+###### Return Value
 
   * [RBCPromise](#kernel-promise) object
 
-#### setApplicationIconBadgeNumber
+##### setApplicationIconBadgeNumber
 
 ```javascript
 pushNotifications.setApplicationIconBadgeNumber( 4, function() {  
@@ -135,11 +135,11 @@ pushNotifications.setApplicationIconBadgeNumber( 4, function() {
 
 `pushNotifications.setApplicationIconBadgeNumber( badge, successCallback, errorCallback )`
 
-##### Discussion
+###### Discussion
 
 Sets the number as the badge of the app icon.
 
-##### Arguments
+###### Arguments
 
   * `badge` required
 
@@ -155,6 +155,6 @@ Callback parameter is always *null*.
 
 Error Callback. Called when function return error.
 
-##### Return Value
+###### Return Value
 
   * [RBCPromise](#kernel-promise) object

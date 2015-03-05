@@ -1,4 +1,4 @@
-## Calendar Module
+#### Calendar Module
 
 This module provides the access to events in caledar. Developer can receive calendars and events list, create and delete event items.
 
@@ -17,13 +17,13 @@ This module provides the access to events in caledar. Developer can receive cale
 
 ### Objects
 
-#### calendarItem
+##### calendarItem
 
-##### Discussion
+###### Discussion
 
 This object contains information about the calendar.
 
-##### Keys
+###### Keys
 
   * `id` required
 
@@ -61,13 +61,13 @@ This is the built-in birthday calendar.
 
 A Boolean value. Represents whether developer can modify items in this calendar.
 
-#### recurrenceRuleItem
+##### recurrenceRuleItem
 
-##### Discussion
+###### Discussion
 
 This object describes the recurrence pattern for a repeating event.
 
-##### Keys
+###### Keys
 
   * `frequency` required
 
@@ -149,14 +149,14 @@ An Interger value. Recurrence end with a maximum occurrence count.
 
 Not available on android.
 
-#### eventAlarmItem
+##### eventAlarmItem
 
-##### Discussion
+###### Discussion
 
 This object represents alarms on an eventItem. An alarm can be relative (e.g.
 15 mins before) or absolute (specific time).
 
-#### Keys
+##### Keys
 
   * `date`optional
 
@@ -169,11 +169,11 @@ In milliseconds.
 
 ### eventItem
 
-##### Discussion
+###### Discussion
 
 This object contains information about the calendar's event item.
 
-##### Keys
+###### Keys
 
   * `id` required
 
@@ -264,7 +264,7 @@ Array of `recurrenceRuleItem` objects. The recurrence rules for the event.
 
 ### Functions
 
-#### getCalendars
+##### getCalendars
 
 ```javascript
 calendar.getCalendars( function(info) {  
@@ -276,11 +276,11 @@ calendar.getCalendars( function(info) {
 
 `calendar.getCalendars( successCallback, errorCallback )`
 
-##### Discussion
+###### Discussion
 
 Returns a list of the calendars.
 
-##### Arguments
+###### Arguments
 
   * `succesCallback` optional
 
@@ -294,11 +294,11 @@ Callback parameter is object which contains:
 
 Error Callback. Called when function return error.
 
-##### Return Value
+###### Return Value
 
   * [RBCPromise](#kernel-promise) object
 
-#### getCalendarById
+##### getCalendarById
 
 ```javascript
 calendar.getCalendarById( "2e2b9f86-4a27-43d4-8f1e-c1566244bf3b",
@@ -311,11 +311,11 @@ function(info) {
 
 `calendar.getCalendarById( calendarId, successCallback, errorCallback )`
 
-##### Discussion
+###### Discussion
 
 Returns the calendar with specified id.
 
-##### Arguments
+###### Arguments
 
   * `calendarId` required
 
@@ -333,11 +333,11 @@ Callback parameter is object which contains:
 
 Error Callback. Called when function return error.
 
-##### Return Value
+###### Return Value
 
   * [RBCPromise](#kernel-promise) object
 
-#### getEvents
+##### getEvents
 
 ```javascript
 calendar.getEvents( {"startDate":aStartDate, "endDate":anEndDate },
@@ -350,11 +350,11 @@ function(info) {
 
 `calendar.getEvents( options, successCallback, errorCallback )`
 
-##### Discussion
+###### Discussion
 
 Returns a list of events for specified range of dates.
 
-##### Arguments
+###### Arguments
 
   * `options` required
 
@@ -384,11 +384,11 @@ Callback parameter is object which contains:
 
 Error Callback. Called when function return error.
 
-##### Return Value
+###### Return Value
 
   * [RBCPromise](#kernel-promise) object
 
-#### getEventById
+##### getEventById
 
 ```javascript
 calendar.getEventById( "18ab2e21-333b-48d1-b010-6ade00639451",
@@ -401,11 +401,11 @@ function(info) {
 
 `calendar.getEventById( eventId, successCallback, errorCallback )`
 
-##### Discussion
+###### Discussion
 
 Returns the event with specified id.
 
-##### Arguments
+###### Arguments
 
   * `eventId`required
 
@@ -423,11 +423,11 @@ Callback parameter is object which contains:
 
 Error Callback. Called when function return error.
 
-##### Return Value
+###### Return Value
 
   * [RBCPromise](#kernel-promise) object
 
-#### create
+##### create
 
 ```javascript
 var event = {  
@@ -456,11 +456,11 @@ calendar.create( event, function(info) {
 
 `calendar.create( event, successCallback, errorCallback )`
 
-##### Discussion
+###### Discussion
 
 Adds new event to calendar.
 
-##### Arguments
+###### Arguments
 
   * `event` required
 
@@ -478,11 +478,11 @@ Callback parameter is object which contains:
 
 Error Callback. Called when function return error.
 
-##### Return Value
+###### Return Value
 
   * [RBCPromise](#kernel-promise) object
 
-#### delete
+##### delete
 
 ```javascript
 var event = { id: "18ab2e21-333b-48d1-b010-6ade00639451" }; 
@@ -496,11 +496,11 @@ calendar.delete( event, function(info) {
 
 `calendar.delete( event, successCallback, errorCallback )`
 
-##### Discussion
+###### Discussion
 
 Deletes exist event item from calendar.
 
-##### Arguments
+###### Arguments
 
   * `event` required
 
@@ -516,6 +516,6 @@ Callback parameter is always **null**
 
 Error Callback. Called when function return error.
 
-##### Return Value
+###### Return Value
 
   * [RBCPromise](#kernel-promise) object

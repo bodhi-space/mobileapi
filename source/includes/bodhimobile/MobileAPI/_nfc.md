@@ -1,4 +1,4 @@
-## NFC Module
+#### NFC Module
 
 This module provides the ability to read and write NDEF messages to tags or share NDEF messages with peers.
 
@@ -24,7 +24,7 @@ This module provides the ability to read and write NDEF messages to tags or shar
 ### Functions
 
 
-#### write
+##### write
 
 ```javascript
 	var message = [
@@ -36,11 +36,11 @@ This module provides the ability to read and write NDEF messages to tags or shar
 
 `nfc.write(message, errorCallback);`
 
-##### Discussion
+###### Discussion
 
 Writes an NDEF Message to a NFC tag.	
 
-##### Arguments
+###### Arguments
 
 	* `errorCallback` optional
 
@@ -51,7 +51,7 @@ Error Callback. Called when function return error.
 A NDEF Message is an array of one or more NDEF Records
     
 
-#### share
+##### share
 
 ```javascript
 var message = [
@@ -63,11 +63,11 @@ var message = [
 
 `nfc.share(message, errorCallback);`
 
-##### Discussion
+###### Discussion
 
 Function writes an NdefMessage via peer-to-peer.  This should appear as an NFC tag to another device.
 
-##### Arguments
+###### Arguments
 
 	* `errorCallback` optional
 
@@ -78,7 +78,7 @@ Error Callback. Called when function return error.
 A NDEF Message is an array of one or more NDEF Records
 
 
-#### unshare
+##### unshare
 
 ```javascript
 	nfc.unshare(errorCallback);
@@ -86,17 +86,17 @@ A NDEF Message is an array of one or more NDEF Records
 
 `nfc.unshare(errorCallback);`
 
-##### Discussion
+###### Discussion
 
 Stop sharing NDEF data via peer-to-peer.
 
-##### Arguments
+###### Arguments
 
 	* `errorCallback` optional
 
 Error Callback. Called when function return error.
 
-#### erase
+##### erase
 
 ```javascript
 nfc.erase(errorCallback);
@@ -104,18 +104,18 @@ nfc.erase(errorCallback);
 
 `nfc.erase(errorCallback);`
 
-##### Discussion
+###### Discussion
 
 Erase a tag by writing an empty message.  Will format unformatted tags before writing.
 
-##### Arguments
+###### Arguments
 
 	* `errorCallback` optional
 
 Error Callback. Called when function return error.
 
 
-#### handover
+##### handover
 
 ```javascript
 	var uri = "content://media/external/image/media/15";
@@ -130,11 +130,11 @@ Error Callback. Called when function return error.
 
 `nfc.handover(uris, errorCallback);`
 
-##### Discussion
+###### Discussion
 
 Send a file to another device via NFC handover. Function shares files to a NFC peer using handover. Files are sent by specifying a file:// or context:// URI or a list of URIs. The file transfer is initiated with NFC but the transfer is completed with over Bluetooth or WiFi which is handled by a NFC handover request. The Android code is responsible for building the handover NFC Message. Supported only on Android
 
-##### Arguments
+###### Arguments
 
 	* `errorCallback` optional
 
@@ -144,88 +144,88 @@ Error Callback. Called when function return error.
 
 A URI as a String, or an *array* of URIs.
 
-#### stopHandover
+##### stopHandover
 
 `nfc.stopHandover(errorCallback);`
 
-##### Discussion
+###### Discussion
 
 Stop sharing NDEF data via NFC handover.
 
-##### Arguments
+###### Arguments
 
 * `errorCallback` optional
 
 Error Callback. Called when function return error.
 
-#### addNdefListener
+##### addNdefListener
 
 `nfc.addNdefListener(callback);`
 
-##### Discussion
+###### Discussion
 
 Registers an event listener for any NDEF tag.
 
-##### Arguments
+###### Arguments
 
 	* `callback` required
 
 The callback that is called when an NDEF tag is read.
 
-#### removeNdefListener
+##### removeNdefListener
 
 `nfc.removeNdefListener(callback);`
 
-##### Discussion
+###### Discussion
 
 Removes the event listener for NDEF tags added via `nfc.addNdefListener`.
 
-##### Arguments
+###### Arguments
 	
 	* `callback` required
 
 The callback that is called when the listener is successfully removed.
 
-#### addNdefFormatableListener
+##### addNdefFormatableListener
 
 `nfc.addNdefFormatableListener(callback);`
 
-##### Discussion
+###### Discussion
 
 Registers an event listener for formatable NDEF tags.
 
-##### Arguments
+###### Arguments
 
 	* `callback` required
 
 The callback that is called when NDEF formatable tag is read.
 
 
-#### addTagDiscoveredListener
+##### addTagDiscoveredListener
 
 `nfc.addTagDiscoveredListener(callback);`
 
-##### Discussion
+###### Discussion
 
 Registers the callback for tag events.
 
 This event occurs when any tag is detected by the phone.
 
-##### Arguments
+###### Arguments
 
 	* `callback` required
 
 The callback that is called when a tag is detected.
 
-#### removeTagDiscoveredListener
+##### removeTagDiscoveredListener
 
 `nfc.removeTagDiscoveredListener(callback);`
 
-##### Discussion
+###### Discussion
 
 Removes the event listener added via `nfc.addTagDiscoveredListener`.
 
-##### Arguments
+###### Arguments
 
 * `callback` required
 
@@ -234,17 +234,17 @@ The callback that is called when the listener is successfully removed.
 
 ### Events
 
-#### nfc.ndef
+##### nfc.ndef
 
-##### Discussion
+###### Discussion
 A ndef event is fired when a NDEF tag is read.
 
-#### nfc.ndefformatable
+##### nfc.ndefformatable
 
-##### Discussion
+###### Discussion
 A ndef-formatable event occurs when a tag is read that can be NDEF formatted. This is not fired for tags that are already formatted as NDEF. The ndef-formatable event will not contain an NdefMessage.
 
-#### nfc.tagdiscovered
+##### nfc.tagdiscovered
 
-##### Discussion
+###### Discussion
 Tagdiscovered event occurs when any tag is detected by the phone.

@@ -1,4 +1,4 @@
-## Bar Code Module
+#### Bar Code Module
 
 This module provides the ability to scanning barcodes.
 
@@ -9,9 +9,9 @@ This module provides the ability to scanning barcodes.
 
 ### Constants
 
-#### barcode.TYPES
+##### barcode.TYPES
 
-##### Discussion
+###### Discussion
 
 This enum contains variants of supported bar- or qr- codes.
 
@@ -25,7 +25,7 @@ Will be recognized only Bar Codes.
 
 ### Functions
 
-#### scan
+##### scan
 
 ```javascript
 barcode.scan( {"type":barcode.TYPES.QRCODE}, function(info) {  
@@ -37,11 +37,11 @@ barcode.scan( {"type":barcode.TYPES.QRCODE}, function(info) {
 
 `barcode.scan( options, successCallback, errorCallback )`
 
-##### Discussion
+###### Discussion
 
 Recognize bar- or qr- codes.
 
-##### Arguments
+###### Arguments
 
   * `options` required
 
@@ -70,6 +70,6 @@ Callback parameter is object which contains:
 
 Error Callback. Called when function return error.
 
-##### Return Value
+###### Return Value
 
   * [RBCPromise](#kernel-promise) object

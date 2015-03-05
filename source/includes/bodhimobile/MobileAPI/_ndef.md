@@ -1,4 +1,4 @@
-## NDEF Constants and Functions
+#### NDEF Constants and Functions
 
 The `ndef` object provides NDEF constants, functions for creating NdefRecords, and functions for converting data.
 
@@ -37,15 +37,15 @@ see [android.nfc.NdefRecord] (http://developer.android.com/reference/android/nfc
   
 ### Functions
 
-#### record
+##### record
 
 `ndef.record( tnf, type, id, payload )`
 
-##### Discussion
+###### Discussion
 
 Creates a JSON representation of a NDEF Record.
 
-##### Arguments
+###### Arguments
 
 	* `tnf` required
 
@@ -63,19 +63,19 @@ byte array, containing zero to 255 bytes, must not be null
  
 byte array, containing zero to (2 ** 32 - 1) bytes, must not be null
 
-##### Return Value
+###### Return Value
 
   	* JSON representation of a NDEF Record.
 
-#### textRecord
+##### textRecord
 
 `ndef.textRecord( text, languageCode, id )`
 
-##### Discussion
+###### Discussion
 
 Helper that creates an NDEF record containing plain text.
 
-##### Arguments
+###### Arguments
 
 	* `text` required
  
@@ -89,19 +89,19 @@ ISO/IANA language code. Examples: “fi”, “en-US”, “fr- CA”, “jp”.
  
 byte array, containing zero to 255 bytes
 
-##### Return Value
+###### Return Value
 
   	* JSON representation of a NDEF Record.
 
-#### uriRecord
+##### uriRecord
 
 `ndef.uriRecord( uri, id )`
 
-##### Discussion
+###### Discussion
 
 Helper that creates a NDEF record containing a URI.
 
-##### Arguments
+###### Arguments
 
 	* `uri` required
  
@@ -111,15 +111,15 @@ String represents URI
 
 byte array, containing zero to 255 bytes
 
-##### Return Value
+###### Return Value
 
   	* JSON representation of a NDEF Record.
 
-#### absoluteUriRecord
+##### absoluteUriRecord
 
 `ndef.absoluteUriRecord( uri, payload, id )`
 
-##### Discussion
+###### Discussion
 
 Helper that creates a NDEF record containing an absolute URI.
 An Absolute URI record means the URI describes the payload of the record.
@@ -133,7 +133,7 @@ field of an Absolute URI record (TNF=3) and ignore the payload.
 Windows do not open the browser for TNF=3.
 To write a URI as the payload use ndef.uriRecord(uri)
 
-##### Arguments
+###### Arguments
 
 	* `uri` required
  
@@ -147,19 +147,19 @@ byte array, containing zero to (2 ** 32 - 1) bytes
 
 byte array, containing zero to 255 bytes
 
-##### Return Value
+###### Return Value
 
   * JSON representation of a NDEF Record.
 
-#### mimeMediaRecord
+##### mimeMediaRecord
 
 `ndef.mimeMediaRecord( mimeType, payload, id )`
 
-##### Discussion
+###### Discussion
 
 Helper that creates a NDEF record containing an mimeMediaRecord.
 
-##### Arguments
+###### Arguments
 
 	* `mimeType` required
  
@@ -173,19 +173,19 @@ byte array, containing zero to (2 ** 32 - 1) bytes
 
 byte array, containing zero to 255 bytes
 
-##### Return Value
+###### Return Value
 
   	* JSON representation of a NDEF Record.
 
-#### smartPoster
+##### smartPoster
 
 `ndef.smartPoster( ndefRecords, id )`
 
-##### Discussion
+###### Discussion
 
 Helper that creates an NDEF record containing an Smart Poster.
 
-##### Arguments
+###### Arguments
 
 	* `ndefRecords` required
  
@@ -195,54 +195,54 @@ array of NDEF Records
 
 byte array, containing zero to 255 bytes
 
-##### Return Value
+###### Return Value
 
   	* JSON representation of a NDEF Record.
   
-#### emptyRecord
+##### emptyRecord
 
 `ndef.emptyRecord()`
 
-##### Discussion
+###### Discussion
 
 Helper that creates an empty NDEF record.
 
-##### Return Value
+###### Return Value
 
   	* JSON representation of a NDEF Record.
 
-#### encodeMessage
+##### encodeMessage
 
 `ndef.encodeMessage( ndefRecords )`
 
-##### Discussion
+###### Discussion
 
 Encodes an NDEF Message into bytes that can be written to a NFC tag.
 
-##### Arguments
+###### Arguments
 
 	* `ndefRecords` required
  
 array of NDEF Records
 
-##### Return Value
+###### Return Value
 
   	* byte array ( see [NFC Data Exchange Format (NDEF)] (http://www.nfc-forum.org/specs/spec_list/) )
 
-#### decodeMessage
+##### decodeMessage
 
 `ndef.decodeMessage( bytes )`
 
-##### Discussion
+###### Discussion
 
 Decodes an array bytes into an NDEF Message
 
-##### Arguments
+###### Arguments
 
 	* `bytes` required
 
 an array bytes read from a NFC tag
 
-##### Return Value
+###### Return Value
 
   	* array of NDEF Records ( see [NFC Data Exchange Format (NDEF)] (http://www.nfc-forum.org/specs/spec_list/) )

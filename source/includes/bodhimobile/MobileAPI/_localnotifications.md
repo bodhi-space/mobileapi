@@ -1,4 +1,4 @@
-## Local Notifications Module
+#### Local Notifications Module
 
 This module used for showing scheduled notification for user when the application is in background.  
 
@@ -25,7 +25,7 @@ Different platforms used different methods for it:
 
 ### Objects
 
-#### notification
+##### notification
 
 ```javascript
 var notification = {id: "1",  
@@ -37,11 +37,11 @@ var notification = {id: "1",
         otherInfo: null};
 ```
 
-##### Discussion
+###### Discussion
 
 This Object contains information about notification. It is simple Object value with predefined keys.
 
-##### Keys
+###### Keys
 
   * `id` required
 
@@ -75,7 +75,7 @@ The property with a Object value. Developer defined data.
 
 ### Functions
 
-#### add
+##### add
 
 ```javascript
 notifications.local.add( newNotification, function () {  
@@ -87,12 +87,12 @@ notifications.local.add( newNotification, function () {
 
 `notifications.local.add( notification, successCallback, errorCallback )`
 
-##### Discussion
+###### Discussion
 
 Schedule new notification. If notification with id already exist it will be
 rewritten.
 
-##### Arguments
+###### Arguments
 
   * `notification` required
 
@@ -108,11 +108,11 @@ Callback parameter is always *null*.
 
 Error Callback. Called when function return error.
 
-##### Return Value
+###### Return Value
 
   * [RBCPromise](#kernel-promise) object
 
-#### cancel
+##### cancel
 
 ```javascript
 notifications.local.cancel( existNotification, function () {  
@@ -124,11 +124,11 @@ notifications.local.cancel( existNotification, function () {
 
 `notifications.local.cancel( notification, successCallback, errorCallback )`
 
-##### Discussion
+###### Discussion
 
 Cancel scheduled notification.
 
-##### Arguments
+###### Arguments
 
   * `notification` required
 
@@ -144,11 +144,11 @@ Callback parameter is always *null*.
 
 Error Callback. Called when function return error.
 
-##### Return Value
+###### Return Value
 
   * [RBCPromise](#kernel-promise) object
 
-#### cancelAll
+##### cancelAll
 
 ```javascript
 notifications.local.cancelAll( function () {  
@@ -160,11 +160,11 @@ notifications.local.cancelAll( function () {
 
 `notifications.local.cancelAll( successCallback, errorCallback )`
 
-##### Discussion
+###### Discussion
 
 Cancel all scheduled notifications.
 
-##### Arguments
+###### Arguments
 
   * `succesCallback` optional
 
@@ -176,11 +176,11 @@ Callback parameter is always *null*.
 
 Error Callback. Called when function return error.
 
-##### Return Value
+###### Return Value
 
   * [RBCPromise](#kernel-promise) object
 
-#### getScheduled
+##### getScheduled
 
 ```javascript
 notifications.local.getScheduled( function (info) {  
@@ -196,11 +196,11 @@ notifications.local.getScheduled( function (info) {
 
 `notifications.local.getScheduled( successCallback, errorCallback )`
 
-##### Discussion
+###### Discussion
 
 Return all scheduled notifications.
 
-##### Arguments
+###### Arguments
 
   * `succesCallback` optional
 
@@ -214,11 +214,11 @@ Callback parameter is object and can contains keys:
 
 Error Callback. Called when function return error.
 
-##### Return Value
+###### Return Value
 
   * [RBCPromise](#kernel-promise) object
 
-#### isScheduled
+##### isScheduled
 
 ```javascript
 notifications.local.isScheduled( existNotification, function (info) {  
@@ -233,11 +233,11 @@ notifications.local.isScheduled( existNotification, function (info) {
 
 `notifications.local.isScheduled(notification, successCallback, errorCallback )`
 
-##### Discussion
+###### Discussion
 
 Test scheduled notification.
 
-##### Arguments
+###### Arguments
 
   * `notification` required
 
@@ -256,11 +256,11 @@ Callback parameter is object and can contains keys:
 
 Error Callback. Called when function return error.
 
-##### Return Value
+###### Return Value
 
   * [RBCPromise](#kernel-promise) object
 
-#### received
+##### received
 
 ```javascript
 notifications.local.received( function(info) {  
@@ -270,24 +270,24 @@ notifications.local.received( function(info) {
 
 `notifications.local.received( callback )`
 
-##### Discussion
+###### Discussion
 
 Register `callback` as observer for localnotifications.received event.
 
-##### Arguments
+###### Arguments
 
   * `callback` required
 
 Callback which execute when application oppened by notification.
 
-##### Return Value
+###### Return Value
 
   * `this`
 
 ### Events
 
-#### localnotifications.received
+##### localnotifications.received
 
-##### Discussion
+###### Discussion
 
 Event received when application oppened by notification

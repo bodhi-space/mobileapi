@@ -1,4 +1,4 @@
-## Printing Module
+#### Printing Module
 
 This module provides the support for documents printing. Currently working only on iOS with printers which support **AirPrint** technology.
 
@@ -13,9 +13,9 @@ This module provides the support for documents printing. Currently working only 
 
 ### Constants
 
-#### OutputType
+##### OutputType
 
-##### Discussion
+###### Discussion
 
 The output type, which is an indication of the type of content the application is drawing or providing.
 
@@ -31,9 +31,9 @@ Specifies that the printed content consists of black-and-white or color images.
 
 Specifies that the printed content is grayscale. Set the output type to this value when your printable content contains no color—for example, it’s black text only.
 
-#### Orientation
+##### Orientation
 
-##### Discussion
+###### Discussion
 
 The orientation of printing on a page.
 
@@ -45,9 +45,9 @@ Pages are printed in portrait orientation.
 
 Pages are printed in landscape orientation.
 
-#### Duplex
+##### Duplex
 
-##### Discussion
+###### Discussion
 
 The duplex mode of a selected printer.
 
@@ -65,9 +65,9 @@ Duplex print that flips the back page along the short edge of the paper.
 
 ### Properties
 
-#### supported
+##### supported
 
-##### Discussion
+###### Discussion
 
 ```javascript
 var supported = printing.supported;
@@ -77,7 +77,7 @@ Returns whether the device supports printing.
 
 ### Functions
 
-#### getSupportedContentTypes
+##### getSupportedContentTypes
 
 ```javascript
 printing.getSupportedContentTypes( function(info) {  
@@ -89,11 +89,11 @@ printing.getSupportedContentTypes( function(info) {
 
 `printing.getSupportedContentTypes( successCallback, errorCallback )`
 
-##### Discussion
+###### Discussion
 
 Returns the list of supported document's content types for printing.
 
-##### Arguments
+###### Arguments
 
   * `succesCallback` optional
 
@@ -107,12 +107,12 @@ Callback parameter is object which contains:
 
 Error Callback. Called when function return error.
 
-##### Return Value
+###### Return Value
 
   * [RBCPromise](#kernel-promise) object
 
 
-#### print
+##### print
 
 ```javascript
 var options = {  
@@ -130,11 +130,11 @@ printing.print( options, function(info) {
 
 `printing.print( options, successCallback, errorCallback )`
 
-##### Discussion
+###### Discussion
 
 Prints selected document.
 
-##### Arguments
+###### Arguments
 
   * `options` required
 
@@ -174,6 +174,6 @@ Callback parameter is always null.
 
 Error Callback. Called when function return error.
 
-##### Return Value
+###### Return Value
 
   * [RBCPromise](#kernel-promise) object

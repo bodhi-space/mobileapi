@@ -1,4 +1,4 @@
-## Compass Module
+#### Compass Module
 
 This module provides the ability to getting compass readings.
 
@@ -10,13 +10,13 @@ This module provides the ability to getting compass readings.
 
 ### Objects
 
-#### headingInfo
+##### headingInfo
 
-##### Discussion
+###### Discussion
 
 This Object contains information about compass heading.
 
-##### Keys
+###### Keys
 
   * `timestamp` required
 
@@ -36,7 +36,7 @@ A Float value. The value in this property represents the heading relative to the
 
 ### Functions
 
-#### watchHeading
+##### watchHeading
 
 ```javascript
 var watch_id = compass.watchHeading( function (headingInfo) {  
@@ -48,11 +48,11 @@ var watch_id = compass.watchHeading( function (headingInfo) {
 
 `compass.watchHeading( successCallback, errorCallback )`
 
-##### Discussion
+###### Discussion
 
 Starts watching compass heading information.
 
-##### Arguments
+###### Arguments
 
   * `succesCallback` optional
 
@@ -64,11 +64,11 @@ Callback parameter is `headingInfo` object.
 
 Error Callback. Called when function return error.
 
-##### Return Value
+###### Return Value
 
   * A String value. This value used as parameter of clearWatch method to stop updating.
 
-#### clearWatch
+##### clearWatch
 
 ```javascript
 compass.clearWatch( watch_id );
@@ -76,16 +76,16 @@ compass.clearWatch( watch_id );
 
 `compass.clearWatch( watchId )`
 
-##### Discussion
+###### Discussion
 
 Stops heading updating.
 
-##### Arguments
+###### Arguments
 
   * `watchId` required
 
 Watch identifier which returned `watchHeading` method.
 
-##### Return Value
+###### Return Value
 
   * No return value.

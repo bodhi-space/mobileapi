@@ -1,4 +1,4 @@
-## Main Menu Module
+#### Main Menu Module
 
 This module used for working with application main menu. Developer can add and remove custom menu items from it.
 
@@ -15,7 +15,7 @@ This module used for working with application main menu. Developer can add and r
 
 ### Objects
 
-#### menuItem
+##### menuItem
 
 ```javascript
 var menuItem = {id: "1",  
@@ -23,11 +23,11 @@ var menuItem = {id: "1",
         icon: "http://server.com/path_to_icon"};
 ```
 
-##### Discussion
+###### Discussion
 
 This Object contains information about custom menu item.
 
-##### Keys
+###### Keys
 
   * `id` optional
 
@@ -43,7 +43,7 @@ The property with a String value. The icon URL of the custom menu item.
 
 ### Functions
 
-#### updateTitle
+##### updateTitle
 
 ```javascript
 mainMenu.updateTitle( "Test Application", function () {  
@@ -55,11 +55,11 @@ mainMenu.updateTitle( "Test Application", function () {
 
 `mainMenu.updateTitle( title, successCallback, errorCallback )`
 
-##### Discussion
+###### Discussion
 
 Updates title for the items group in main menu.
 
-##### Arguments
+###### Arguments
 
   * `title` required
 
@@ -75,11 +75,11 @@ Callback parameter is always null.
 
 Error Callback. Called when function return error.
 
-##### Return Value
+###### Return Value
 
   * [RBCPromise](#kernel-promise) object
 
-#### addCustomItem
+##### addCustomItem
 
 ```javascript
 var menuItem = {title: "Favorites", icon: "http://server.com/path_to_icon"};
@@ -93,11 +93,11 @@ mainMenu.addCustomItem( item, function(info) {
 
 `mainMenu.addCustomItem( item, successCallback, errorCallback )`
 
-##### Discussion
+###### Discussion
 
 Adds new application custom item to the main menu.
 
-##### Arguments
+###### Arguments
 
   * `item` required
 
@@ -115,11 +115,11 @@ Callback parameter is object which contains:
 
 Error Callback. Called when function return error.
 
-##### Return Value
+###### Return Value
 
   * [RBCPromise](#kernel-promise) object
 
-#### removeCustomItem
+##### removeCustomItem
 
 ```javascript
 var item = { id: "1" };  
@@ -132,11 +132,11 @@ mainMenu.removeCustomItem( item, function(info) {
 
 `mainMenu.removeCustomItem( item, successCallback, errorCallback )`
 
-##### Discussion
+###### Discussion
 
 Deletes exist item from the main menu.
 
-##### Arguments
+###### Arguments
 
   * `item` required
 
@@ -154,11 +154,11 @@ Callback parameter is object which contains:
 
 Error Callback. Called when function return error.
 
-##### Return Value
+###### Return Value
 
   * [RBCPromise](#kernel-promise) object
 
-#### removeAllCustomItems
+##### removeAllCustomItems
 
 ```javascript
 mainMenu.removeAllCustomItem( function(info) {  
@@ -170,11 +170,11 @@ mainMenu.removeAllCustomItem( function(info) {
 
 `mainMenu.removeAllCustomItems( successCallback, errorCallback )`
 
-##### Discussion
+###### Discussion
 
 Deletes all items for the current application from the main menu.
 
-##### Arguments
+###### Arguments
 
   * `succesCallback` optional
 
@@ -186,11 +186,11 @@ Callback parameter is always **null**
 
 Error Callback. Called when function return error.
 
-##### Return Value
+###### Return Value
 
   * [RBCPromise](#kernel-promise) object
 
-#### showMenu
+##### showMenu
 
 ```javascript
 mainMenu.showMenu( function(info) {  
@@ -202,11 +202,11 @@ mainMenu.showMenu( function(info) {
 
 `mainMenu.showMenu( successCallback, errorCallback )`
 
-##### Discussion
+###### Discussion
 
 Opens the main menu.
 
-##### Arguments
+###### Arguments
 
   * `succesCallback` optional
 
@@ -218,11 +218,11 @@ Callback parameter is always **null**
 
 Error Callback. Called when function return error.
 
-##### Return Value
+###### Return Value
 
   * [RBCPromise](#kernel-promise) object
 
-#### bounceMenu
+##### bounceMenu
 
 ```javascript
 mainMenu.bounceMenu( function(info) {  
@@ -234,11 +234,11 @@ mainMenu.bounceMenu( function(info) {
 
 `mainMenu.bounceMenu( successCallback, errorCallback )`
 
-##### Discussion
+###### Discussion
 
 Bounces the main menu.
 
-##### Arguments
+###### Arguments
 
   * `succesCallback` optional
 
@@ -250,18 +250,18 @@ Callback parameter is always **null**
 
 Error Callback. Called when function return error.
 
-##### Return Value
+###### Return Value
 
   * [RBCPromise](#kernel-promise) object
 
 ### Events
 
-#### mainMenu.customItemSelected
+##### mainMenu.customItemSelected
 
-##### Discussion
+###### Discussion
 
 Event received when user selected application custom item in the main menu.
 
-##### Callback Arguments
+###### Callback Arguments
 
   * `item` \- The `menuItem` object. (Object)

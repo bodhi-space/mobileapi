@@ -1,4 +1,4 @@
-## App Storage Module
+#### App Storage Module
 
 This module provides the ability to store any kind of data.  
 Developer can add data or strings manually or load files from server.  
@@ -47,7 +47,7 @@ All methods except `deleteAll` available at both objects.
 
 ### Functions
 
-#### put
+##### put
 
 ```javascript
 appStorage.put( {key:"app/test/key1", value:"Test values"}  
@@ -63,7 +63,7 @@ function(info) {
 * Shared
 `appStorage.shared.put( options, successCallback, errorCallback )`
 
-##### Discussion
+###### Discussion
 
 With this function developer can save strings, data or file for the key.  
 Developer can use this function in three cases:
@@ -76,7 +76,7 @@ For it developer must set key, contentType and data properties for `options`
 For it developer must set key, url and contentType (optional) properties for
 `options`
 
-##### Arguments
+###### Arguments
 
   * `options` required
 
@@ -116,11 +116,11 @@ Callback parameter is object which contains keys:
 
 Error Callback. Called when function return error.
 
-##### Return Value
+###### Return Value
 
   * [RBCPromise](#kernel-promise) object
 
-#### getAllKeys
+##### getAllKeys
 
 ```javascript
 appStorage.getAllKeys( {prefix:"app/test/"}  
@@ -135,11 +135,11 @@ function(info) {
 
 `appStorage.getAllKeys( options, successCallback, errorCallback )`
 
-##### Discussion
+###### Discussion
 
 Returns all keys which respond to options.
 
-##### Arguments
+###### Arguments
 
   * `options` required
 
@@ -167,11 +167,11 @@ Callback parameter is object which contains "keys" array with objects with:
 
 Error Callback. Called when function return error.
 
-##### Return Value
+###### Return Value
 
   * [RBCPromise](#kernel-promise) object
 
-#### get
+##### get
 
 ```javascript
 appStorage.get( {key:"app/test/key1"}  
@@ -189,11 +189,11 @@ function(info) {
 * Shared
 `appStorage.shared.get( options, successCallback, errorCallback )`
 
-##### Discussion
+###### Discussion
 
 Return value or data in base64 for specified keys
 
-##### Arguments
+###### Arguments
 
   * `options` required
 
@@ -225,11 +225,11 @@ Callback parameter is object which contains "values" array with objects with:
 
 Error Callback. Called when function return error.
 
-##### Return Value
+###### Return Value
 
   * [RBCPromise](#kernel-promise) object
 
-#### delete
+##### delete
 
 ```javascript
 appStorage.delete( {key:"app/test/key1"}  
@@ -245,11 +245,11 @@ function(info) {
 * Shared
 `appStorage.shared.delete( options, successCallback, errorCallback )`
 
-##### Discussion
+###### Discussion
 
 Delete records for specified keys
 
-##### Arguments
+###### Arguments
 
   * `options` required
 
@@ -273,11 +273,11 @@ Callback parameter is always null.
 
 Error Callback. Called when function return error.
 
-##### Return Value
+###### Return Value
 
   * [RBCPromise](#kernel-promise) object
 
-#### deleteAll
+##### deleteAll
 
 ```javascript
 appStorage.deleteAll( {prefix:"app/test/"}  
@@ -294,11 +294,11 @@ function(info) {
 *Not supported*
 
 
-##### Discussion
+###### Discussion
 
 Delete all keys which respond to options.
 
-##### Arguments
+###### Arguments
 
   * `options` required
 
@@ -322,11 +322,11 @@ Callback parameter is always null.
 
 Error Callback. Called when function return error.
 
-##### Return Value
+###### Return Value
 
   * [RBCPromise](#kernel-promise) object
 
-#### putString
+##### putString
 
 ```javascript
 appStorage.putString( "app/test/key1", "Test values",  
@@ -342,11 +342,11 @@ function(info) {
 * Shared
 `appStorage.shared.putString( key, value, successCallback, errorCallback )`
 
-##### Discussion
+###### Discussion
 
 This function use put to add string value.
 
-##### Arguments
+###### Arguments
 
   * `key` required
 
@@ -370,11 +370,11 @@ Callback parameter is object which contains keys:
 
 Error Callback. Called when function return error.
 
-##### Return Value
+###### Return Value
 
   * [RBCPromise](#kernel-promise) object
 
-#### getString
+##### getString
 
 ```javascript
 appStorage.getString( "app/test/key1",  
@@ -392,11 +392,11 @@ function(info) {
 * Shared
 `appStorage.shared.getString( key, successCallback, errorCallback )`
 
-##### Discussion
+###### Discussion
 
 This function use get to get string value.
 
-##### Arguments
+###### Arguments
 
   * `key` required
 
@@ -420,11 +420,11 @@ Callback parameter is object which contains "values" array with objects with:
 
 Error Callback. Called when function return error.
 
-##### Return Value
+###### Return Value
 
   * [RBCPromise](#kernel-promise) object
 
-#### getStrings
+##### getStrings
 
 ```javascript
 appStorage.getStrings( ["app/test/key1", "app/test/key2"],  
@@ -442,11 +442,11 @@ function(info) {
 * Shared
 `appStorage.shared.getStrings( keys, successCallback, errorCallback )`
 
-##### Discussion
+###### Discussion
 
 This function use get to get multiple string values.
 
-##### Arguments
+###### Arguments
 
   * `keys` required
 
@@ -470,11 +470,11 @@ Callback parameter is object which contains "values" array with objects with:
 
 Error Callback. Called when function return error.
 
-##### Return Value
+###### Return Value
 
   * [RBCPromise](#kernel-promise) object
 
-#### putContent
+##### putContent
 
 ```javascript
 appStorage.putContent( "app/test/key2", "text/plain", "VGVzdA==",  
@@ -490,11 +490,11 @@ function(info) {
 * Shared
 `appStorage.shared.putContent( key, contentType, data, successCallback, errorCallback )`
 
-##### Discussion
+###### Discussion
 
 This function use put to add binary data.
 
-##### Arguments
+###### Arguments
 
   * `key` required
 
@@ -522,11 +522,11 @@ Callback parameter is object which contains keys:
 
 Error Callback. Called when function return error.
 
-##### Return Value
+###### Return Value
 
   * [RBCPromise](#kernel-promise) object
 
-#### loadContent
+##### loadContent
 
 ```javascript
 appStorage.loadContent( "app/test/key3", "http://www.company.com/file_url",  
@@ -543,11 +543,11 @@ function(info) {
 `appStorage.shared.loadContent( key, url, successCallback, errorCallback )`
 
 
-##### Discussion
+###### Discussion
 
 This function use put to load data from remote server.
 
-##### Arguments
+###### Arguments
 
   * `key` required
 
@@ -571,11 +571,11 @@ Callback parameter is object which contains keys:
 
 Error Callback. Called when function return error.
 
-##### Return Value
+###### Return Value
 
   * [RBCPromise](#kernel-promise) object
 
-#### getContent
+##### getContent
 
 ```javascript
 appStorage.getContent( "app/test/key3",  
@@ -593,11 +593,11 @@ function(info) {
 * Shared
 `appStorage.shared.getContent( key, successCallback, errorCallback )`
 
-##### Discussion
+###### Discussion
 
 This function use get to get binary data in base64.
 
-##### Arguments
+###### Arguments
 
   * `key` required
 
@@ -621,6 +621,6 @@ Callback parameter is object which contains "values" array with objects with:
 
 Error Callback. Called when function return error.
 
-##### Return Value
+###### Return Value
 
   * [RBCPromise](#kernel-promise) object

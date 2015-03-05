@@ -1,4 +1,4 @@
-## Web View Module
+#### Web View Module
 
 This module contains methods for working with webview screens.
 
@@ -11,7 +11,7 @@ This module contains methods for working with webview screens.
 
 ### Functions
 
-#### present
+##### present
 
 ```javascript
 webview.present( "http://www.google.com" );
@@ -19,7 +19,7 @@ webview.present( "http://www.google.com" );
 
 `webview.present( url )`
 
-##### Discussion
+###### Discussion
 
 Shows new screen with webview over currently visible.  
 Current screen in this case continues working.
@@ -27,17 +27,17 @@ Current screen in this case continues working.
 Opened page must contains functionality for closing using dismiss method
 because iOS don't have hardware back button.
 
-##### Arguments
+###### Arguments
 
   * `url` required
 
 A String Value. Url of page which will be opened.
 
-##### Return Value
+###### Return Value
 
   * [RBCPromise](#kernel-promise) object
 
-#### dismiss
+##### dismiss
 
 ```javascript
 webview.dismiss( );
@@ -45,16 +45,16 @@ webview.dismiss( );
 
 `webview.dismiss( )`
 
-##### Discussion
+###### Discussion
 
 Closes current page if it was opened with present method or from local
 notification about iBeacons.
 
-##### Return Value
+###### Return Value
 
   * [RBCPromise](#kernel-promise) object
 
-#### open
+##### open
 
 ```javascript
 webview.open( "http://www.google.com" );
@@ -62,24 +62,24 @@ webview.open( "http://www.google.com" );
 
 `webview.open( url )`
 
-##### Discussion
+###### Discussion
 
 Push new screen with webview after currently visible.
 
 Opened page must contains functionality for closing using close method because
 iOS don't have hardware back button.
 
-##### Arguments
+###### Arguments
 
   * `url` required
 
 A String Value. Url of page which will be opened.
 
-##### Return Value
+###### Return Value
 
   * [RBCPromise](#kernel-promise) object
 
-#### close
+##### close
 
 ```javascript
 webview.close( );
@@ -87,10 +87,10 @@ webview.close( );
 
 `webview.close( )`
 
-##### Discussion
+###### Discussion
 
 Closes current page if it was opened with open method.
 
-##### Return Value
+###### Return Value
 
   * [RBCPromise](#kernel-promise) object

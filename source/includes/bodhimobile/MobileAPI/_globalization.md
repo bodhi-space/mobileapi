@@ -1,4 +1,4 @@
-## Globalization Module
+#### Globalization Module
 
 Obtains information and performs operations specific to the user's locale and timezone.
 
@@ -19,7 +19,7 @@ Obtains information and performs operations specific to the user's locale and ti
 
 ### Functions
 
-#### getPreferredLanguage
+##### getPreferredLanguage
 
 ```javascript
 globalization.getPreferredLanguage( function(info) {  
@@ -31,13 +31,13 @@ globalization.getPreferredLanguage( function(info) {
 
 `globalization.getPreferredLanguage( successCallback, errorCallback )`
 
-##### Discussion
+###### Discussion
 
 Returns the language identifier string to the `succesCallback` with a properties object as a parameter. That object should have a value property with a String value.  
 
 If there is an error getting the language, then the `errorCallback` executes.
 
-##### Arguments
+###### Arguments
 
   * `succesCallback` optional
 
@@ -47,11 +47,11 @@ Success callback. Called when function finished without errors
 
 Error Callback. Called when function return error.
 
-##### Return Value
+###### Return Value
 
   * [RBCPromise](#kernel-promise) object
 
-#### getLocaleName
+##### getLocaleName
 
 ```javascript
 globalization.getLocaleName( function(info) {  
@@ -63,13 +63,13 @@ globalization.getLocaleName( function(info) {
 
 `globalization.getLocaleName( successCallback, errorCallback )`
 
-##### Discussion
+###### Discussion
 
 Returns the locale identifier string to the `succesCallback` with a properties object as a parameter. That object should have a value property with a String value.  
 
 If there is an error getting the locale, then the `errorCallback` executes.
 
-##### Arguments
+###### Arguments
 
   * `succesCallback` optional
 
@@ -79,11 +79,11 @@ Success callback. Called when function finished without errors
 
 Error Callback. Called when function return error.
 
-##### Return Value
+###### Return Value
 
   * [RBCPromise](#kernel-promise) object
 
-#### dateToString
+##### dateToString
 
 ```javascript
 globalization.dateToString( new Date(), {formatLength:"short", selector:"date and time"},  
@@ -96,13 +96,13 @@ function(info) {
 
 `globalization.dateToString( date, options, successCallback, errorCallback )`
 
-##### Discussion
+###### Discussion
 
 Returns the formatted date String via a value property accessible from the object passed as a parameter to the `succesCallback`.  
 
 If there is an error formatting the date, then the `errorCallback` executes
 
-##### Arguments
+###### Arguments
 
   * `date` required
 
@@ -128,11 +128,11 @@ Success callback. Called when function finished without errors
 
 Error Callback. Called when function return error.
 
-##### Return Value
+###### Return Value
 
   * [RBCPromise](#kernel-promise) object
 
-#### stringToDate
+##### stringToDate
 
 ```javascript
 globalization.stringToDate( "4/06/2014", {selector:"date"},  function(info) {  
@@ -144,11 +144,11 @@ globalization.stringToDate( "4/06/2014", {selector:"date"},  function(info) {
 
 `globalization.stringToDate( dateString, options, successCallback, errorCallback )`
 
-##### Discussion
+###### Discussion
 
 Parses a date formatted as a string, according to the client's user preferences and calendar using the time zone of the client, and returns the corresponding date object.
 
-##### Arguments
+###### Arguments
 
   * `dateString` required
 
@@ -190,11 +190,11 @@ Callback parameter is object and can contains keys:
 
 Error Callback. Called when function return error.
 
-##### Return Value
+###### Return Value
 
   * [RBCPromise](#kernel-promise) object
 
-#### getDatePattern
+##### getDatePattern
 
 ```javascript
 globalization.getDatePattern( {formatLength:"short", selector:"date and time"},  
@@ -207,11 +207,11 @@ function(info) {
 
 `globalization.getDatePattern( options, successCallback, errorCallback )`
 
-##### Discussion
+###### Discussion
 
 Returns a pattern string to format and parse dates according to the client's user preferences.
 
-##### Arguments
+###### Arguments
 
   * `options` optional
 
@@ -243,11 +243,11 @@ Callback parameter is object and can contains keys:
 
 Error Callback. Called when function return error.
 
-##### Return Value
+###### Return Value
 
   * [RBCPromise](#kernel-promise) object
 
-#### getDateNames
+##### getDateNames
 
 ```javascript
 globalization.getDateNames( { type: "wide", item: "months" },  function(info) {  
@@ -261,11 +261,11 @@ globalization.getDateNames( { type: "wide", item: "months" },  function(info) {
 
 `globalization.getDateNames( options, successCallback, errorCallback )`
 
-##### Discussion
+###### Discussion
 
 Returns an array of the names of the months or days of the week, depending on the client's user preferences and calendar.
 
-##### Arguments
+###### Arguments
 
   * `options` optional
 
@@ -291,11 +291,11 @@ Callback parameter is object and can contains keys:
 
 Error Callback. Called when function return error.
 
-##### Return Value
+###### Return Value
 
   * [RBCPromise](#kernel-promise) object
 
-#### isDayLightSavingsTime
+##### isDayLightSavingsTime
 
 ```javascript
 globalization.isDayLightSavingsTime( new Date(),  function(info) {  
@@ -307,12 +307,12 @@ globalization.isDayLightSavingsTime( new Date(),  function(info) {
 
 `globalization.isDayLightSavingsTime( date, successCallback, errorCallback )`
 
-##### Discussion
+###### Discussion
 
 Indicates whether daylight savings time is in effect for a given date using
 the client's time zone and calendar.
 
-##### Arguments
+###### Arguments
 
   * `date`required
 
@@ -330,11 +330,11 @@ Callback parameter is object and can contains keys:
 
 Error Callback. Called when function return error.
 
-##### Return Value
+###### Return Value
 
   * [RBCPromise](#kernel-promise) object
 
-#### getFirstDayOfWeek
+##### getFirstDayOfWeek
 
 ```javascript
 globalization.getFirstDayOfWeek( function(info) {  
@@ -346,12 +346,12 @@ globalization.getFirstDayOfWeek( function(info) {
 
 `globalization.getFirstDayOfWeek( successCallback, errorCallback )`
 
-##### Discussion
+###### Discussion
 
 Returns the first day of the week according to the client's user preferences
 and calendar.
 
-##### Arguments
+###### Arguments
 
   * `succesCallback`optional
 
@@ -365,11 +365,11 @@ Callback parameter is object and can contains keys:
 
 Error Callback. Called when function return error.
 
-##### Return Value
+###### Return Value
 
   * [RBCPromise](#kernel-promise) object
 
-#### numberToString
+##### numberToString
 
 ```javascript
 globalization.numberToString( 3.1415926, {type:"decimal"},  
@@ -382,11 +382,11 @@ function(info) {
 
 `globalization.numberToString( number, options, successCallback, errorCallback )`
 
-##### Discussion
+###### Discussion
 
 Returns a number formatted as a string according to the client's user preferences.
 
-##### Arguments
+###### Arguments
 
   * `number` required
 
@@ -410,11 +410,11 @@ Callback parameter is object and can contains keys:
 
 Error Callback. Called when function return error.
 
-##### Return Value
+###### Return Value
 
   * [RBCPromise](#kernel-promise) object
 
-#### stringToNumber
+##### stringToNumber
 
 ```javascript
 globalization.stringToNumber( "3.1415926", {type:"decimal"},  
@@ -427,12 +427,12 @@ function(info) {
 
 `globalization.stringToNumber( string, options, successCallback, errorCallback )`
 
-##### Discussion
+###### Discussion
 
 Parses a number formatted as a string according to the client's user
 preferences and returns the corresponding number.
 
-##### Arguments
+###### Arguments
 
   * `string` required
 
@@ -458,11 +458,11 @@ Callback parameter is object and can contains keys:
 
 Error Callback. Called when function return error.
 
-##### Return Value
+###### Return Value
 
   * [RBCPromise](#kernel-promise) object
 
-#### getNumberPattern
+##### getNumberPattern
 
 ```javascript
 globalization.getNumberPattern( {type:"decimal"}, function(info) {  
@@ -481,12 +481,12 @@ globalization.getNumberPattern( {type:"decimal"}, function(info) {
 
 `globalization.getNumberPattern( options, successCallback, errorCallback )`
 
-##### Discussion
+###### Discussion
 
 Returns a pattern string to format and parse numbers according to the client's
 user preferences.
 
-##### Arguments
+###### Arguments
 
   * `options` optional
 
@@ -522,11 +522,11 @@ Callback parameter is object and can contains keys:
 
 Error Callback. Called when function return error.
 
-##### Return Value
+###### Return Value
 
   * [RBCPromise](#kernel-promise) object
 
-#### getCurrencyPattern
+##### getCurrencyPattern
 
 ```javascript
 globalization.getCurrencyPattern( "USD", function(info) {  
@@ -544,12 +544,12 @@ globalization.getCurrencyPattern( "USD", function(info) {
 `globalization.getCurrencyPattern( currencyCode, successCallback,
 errorCallback )`
 
-##### Discussion
+###### Discussion
 
 Returns a pattern string to format and parse currency values according to the
 client's user preferences and ISO 4217 currency code.
 
-##### Arguments
+###### Arguments
 
   * `currencyCode` required
 
@@ -577,6 +577,6 @@ Callback parameter is object and can contains keys:
 
 Error Callback. Called when function return error.
 
-##### Return Value
+###### Return Value
 
   * [RBCPromise](#kernel-promise) object

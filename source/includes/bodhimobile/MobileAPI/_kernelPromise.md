@@ -1,4 +1,4 @@
-###### Kernel Promise
+#### Kernel Promise
 
 Virtually all functions in modules return instance of RBCPromise object.  
 With it you can easy add success and finished callbacks for the function.
@@ -14,7 +14,7 @@ With it you can easy add success and finished callbacks for the function.
 
 ### Functions
 
-#### then
+##### then
 
 ```javascript
 someModule.someFunction().then( function(info) {  
@@ -47,7 +47,7 @@ Error Callback. Called when function return error.
 
   * `this`
 
-#### fail
+##### fail
 
 ```javascript
 someModule.someFunction().fail( function (error) {  
@@ -73,7 +73,7 @@ Error Callback. Called when function return error.
 
   * `this`
 
-#### success
+##### success
 
 ```javascript
 someModule.someFunction().success( function(info) {  

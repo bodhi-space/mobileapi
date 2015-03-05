@@ -1,4 +1,4 @@
-## Cryptography Module
+#### Cryptography Module
 
 This module contains cryptographic methods.
 
@@ -8,7 +8,7 @@ This module contains cryptographic methods.
 
 ### Functions
 
-#### hash
+##### hash
 
 ```javascript
 cryptography.hash( {data:"string", hash:"md5"},  
@@ -21,11 +21,11 @@ function(info) {
 
 `cryptography.hash( options, successCallback, errorCallback )`
 
-##### Discussion
+###### Discussion
 
 Computes the hash of a string
 
-##### Arguments
+###### Arguments
 
   * `options`required
 
@@ -63,6 +63,6 @@ Callback parameter is object which contains keys:
 
 Error Callback. Called when function return error.
 
-##### Return Value
+###### Return Value
 
   * [RBCPromise](#kernel-promise) object

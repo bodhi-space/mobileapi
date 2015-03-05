@@ -1,4 +1,4 @@
-## Contacts Module
+#### Contacts Module
 
 This module provides the access to contacts list from address book. Developer can receive contacts, create, update and delete contact item.
 
@@ -16,13 +16,13 @@ This module provides the access to contacts list from address book. Developer ca
 
 ### Objects
 
-#### contactField
+##### contactField
 
-##### Discussion
+###### Discussion
 
 This object contains information about the field of contact, such as phone number or email.
 
-##### Keys
+###### Keys
 
   * `type` required
 
@@ -32,13 +32,13 @@ A String value. The type of field.
 
 A String value. The value of field.
 
-#### contactAddress
+##### contactAddress
 
-##### Discussion
+###### Discussion
 
 This Object contains information about the address record of contact.
 
-#### Keys
+##### Keys
 
   * `type` required
 
@@ -68,13 +68,13 @@ A String value. The postal code.
 
 A String value. The country.
 
-#### contactName
+##### contactName
 
-##### Discussion
+###### Discussion
 
 This Object contains information about the name of contact.
 
-#### Keys
+##### Keys
 
   * `formatted` required
 
@@ -100,13 +100,13 @@ A String value. The prefix ("Sir" "Duke" "General").
 
 A String value. The suffix ("Jr." "Sr." "III").
 
-#### contactInfo
+##### contactInfo
 
-##### Discussion
+###### Discussion
 
 This Object contains information about the contact item.
 
-##### Keys
+###### Keys
 
   * `id` required
 
@@ -146,7 +146,7 @@ A Date value. The birthday of contact.
 
 ### Functions
 
-#### find
+##### find
 
 ```javascript
 contacts.find( {}, function(info) {  
@@ -158,11 +158,11 @@ contacts.find( {}, function(info) {
 
 `contacts.find( options, successCallback, errorCallback )`
 
-##### Discussion
+###### Discussion
 
 Returns a list of contacts.
 
-##### Arguments
+###### Arguments
 
   * `options` optional
 
@@ -202,11 +202,11 @@ Callback parameter is object which contains:
 
 Error Callback. Called when function return error.
 
-##### Return Value
+###### Return Value
 
   * [RBCPromise](#kernel-promise) object
 
-#### findById
+##### findById
 
 ```javascript
 contacts.findById( "32", function(info) {  
@@ -218,11 +218,11 @@ contacts.findById( "32", function(info) {
 
 `contacts.findById( contactId, successCallback, errorCallback )`
 
-##### Discussion
+###### Discussion
 
 Returns the contact with specified id.
 
-##### Arguments
+###### Arguments
 
   * `contactId` required
 
@@ -240,11 +240,11 @@ Callback parameter is object which contains:
 
 Error Callback. Called when function return error.
 
-##### Return Value
+###### Return Value
 
   * [RBCPromise](#kernel-promise) object
 
-#### create
+##### create
 
 ```javascript
 var contact = {  
@@ -267,11 +267,11 @@ contacts.create( contact, function(info) {
 
 `contacts.create( contact, successCallback, errorCallback )`
 
-##### Discussion
+###### Discussion
 
 Adds new contact to address book.
 
-##### Arguments
+###### Arguments
 
   * `contact` required
 
@@ -289,11 +289,11 @@ Callback parameter is object which contains:
 
 Error Callback. Called when function return error.
 
-##### Return Value
+###### Return Value
 
   * [RBCPromise](#kernel-promise) object
 
-#### update
+##### update
 
 ```javascript
 var contact = {  
@@ -317,11 +317,11 @@ contacts.update( contact, function(info) {
 
 `contacts.update( contact, successCallback, errorCallback )`
 
-##### Discussion
+###### Discussion
 
 Updates information for exist contact in address book.
 
-##### Arguments
+###### Arguments
 
   * `contact` required
 
@@ -337,11 +337,11 @@ Callback parameter is always **null**
 
 Error Callback. Called when function return error.
 
-##### Return Value
+###### Return Value
 
   * [RBCPromise](#kernel-promise) object
 
-#### delete
+##### delete
 
 ```javascript
 var contact = { id: "35" };
@@ -355,11 +355,11 @@ contacts.delete( contact, function(info) {
 
 `contacts.delete( contact, successCallback, errorCallback )`
 
-##### Discussion
+###### Discussion
 
 Deletes exist contact from address book.
 
-##### Arguments
+###### Arguments
 
   * `contact` required
 
@@ -375,6 +375,6 @@ Callback parameter is always **null**
 
 Error Callback. Called when function return error.
 
-##### Return Value
+###### Return Value
 
   * [RBCPromise](#kernel-promise) object

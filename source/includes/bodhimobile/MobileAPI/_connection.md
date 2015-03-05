@@ -1,4 +1,4 @@
-## Connection Module
+#### Connection Module
 
 Getting information about current connection status.
 
@@ -18,9 +18,9 @@ Getting information about current connection status.
 
 ### Constants
 
-#### TYPES
+##### TYPES
 
-##### Discussion
+###### Discussion
 
 This enum contains all variants of internet connections types.
 
@@ -66,9 +66,9 @@ Tip: This varian used when application cannot determine more info about cellular
 
 Device not connected to the internet
 
-#### STATES
+##### STATES
 
-##### Discussion
+###### Discussion
 
 This enum contains simple information about internet connection.
 
@@ -86,37 +86,37 @@ Device doesn't connected to internet
 
 ### Objects
 
-#### RBCConnectionMonitor
+##### RBCConnectionMonitor
 
-##### Discussion
+###### Discussion
 
 This object contains information about specified server availability for requests from the device. See [RBCConnectionMonitor Class](#rbcconnectionmonitor-class) to get more information.
 
 ### Properties
 
-#### type
+##### type
 
 ```javascript
 var type = connection.type;
 ```
 
-##### Discussion
+###### Discussion
 
 Current internet connection type. See `TYPES` enum for variants.
 
-#### state
+##### state
 
 ```javascript
 var state = connection.state;
 ```
 
-##### Discussion
+###### Discussion
 
 Current internet connection state. See STATES enum for variants.
 
 ### Functions
 
-#### startMonitoring
+##### startMonitoring
 
 ```javascript
 connection.startMonitoring( {url:"http://www.google.com"}, function(info) {  
@@ -128,11 +128,11 @@ connection.startMonitoring( {url:"http://www.google.com"}, function(info) {
 
 `connection.startMonitoring( options, successCallback, errorCallback )`
 
-##### Discussion
+###### Discussion
 
 Creates new [RBCConnectionMonitor](#rbcconnectionmonitor-class) object which used for monitoring specified in `options` server.
 
-##### Arguments
+###### Arguments
 
   * `options` required
 
@@ -158,11 +158,11 @@ Callback parameter is object which contains:
 
 Error Callback. Called when function return error.
 
-##### Return Value
+###### Return Value
 
   * [RBCPromise](#kernel-promise) object 
 
-#### isOnline
+##### isOnline
 
 ```javascript
 if (connection.isOnline()) {  
@@ -172,15 +172,15 @@ if (connection.isOnline()) {
 
 `connection.isOnline( )`
 
-##### Discussion
+###### Discussion
 
 Return `true` if device currently connected to internel. Otherwise return `false`.
 
-##### Return Value
+###### Return Value
 
   * `true` or `false`
 
-#### typeChanged
+##### typeChanged
 
 ```javascript
 connection.typeChanged( function(info) {  
@@ -190,19 +190,19 @@ connection.typeChanged( function(info) {
 
 `connection.typeChanged( callback )`
 
-##### Discussion
+###### Discussion
 
 Register `callback` as observer for `connection.type` event.
 
-##### Arguments
+###### Arguments
 
   * `callback`required
 
-##### Return Value
+###### Return Value
 
   * `this`
 
-#### stateChanged
+##### stateChanged
 
 ```javascript
 connection.stateChanged( function(info) {  
@@ -212,28 +212,28 @@ connection.stateChanged( function(info) {
 
 `connection.stateChanged( callback )`
 
-##### Discussion
+###### Discussion
 
 Register `callback` as observer for `connection.state` event.
 
-##### Arguments
+###### Arguments
 
   * `callback` required
 
-##### Return Value
+###### Return Value
 
   * `this`
 
 ### Events
 
-#### connection.type
+##### connection.type
 
-##### Discussion
+###### Discussion
 
 Event received when device determines that type of internet connection has been changed. For example if device found wi-fi network instead cellular.
 
-#### connection.state
+##### connection.state
 
-##### Discussion
+###### Discussion
 
 Event received when device found or lost internet connection

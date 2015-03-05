@@ -1,4 +1,4 @@
-## Accelerometer Module
+#### Accelerometer Module
 
 This module provides the ability to getting current readings of the accelerometer.
 
@@ -11,7 +11,7 @@ This module provides the ability to getting current readings of the acceleromete
   
 ### Objects
 
-#### accelerationItem
+##### accelerationItem
 
 ##### Discussion
 
@@ -37,7 +37,7 @@ A Date value. Timestamp of acceleration information.
 
 ### Functions
 
-#### getCurrentAcceleration
+##### getCurrentAcceleration
 
 ```javascript
 accelerometer.getCurrentAcceleration( function (accelerationItem) {
@@ -78,7 +78,7 @@ Error Callback. Called when function return error.
   * [RBCPromise](#kernel-promise) object
 
 
-#### watchAcceleration
+##### watchAcceleration
 
 ```javascript
 var watch_id = accelerometer.watchAcceleration( function (positionInfo) {
@@ -118,7 +118,7 @@ Error Callback. Called when function return error.
 
   * A String value. This value used as parameter of `clearWatch` method to stop updating.
 
-#### clearWatch
+##### clearWatch
 
 ```javascript
 accelerometer.clearWatch( watch_id );

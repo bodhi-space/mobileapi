@@ -1,4 +1,4 @@
-## Audio Module
+#### Audio Module
 
 This module allows playing and recording audio.
 
@@ -10,9 +10,9 @@ This module allows playing and recording audio.
 
 ### Constants
 
-#### RBCAudioItemState
+##### RBCAudioItemState
 
-##### Discussion
+###### Discussion
 
 This enum contains variants of [RBCAudioItem](#rbcaudioitem-class) object states.
 
@@ -34,15 +34,15 @@ Audio record currently recorded.
 
 ### Objects
 
-#### RBCAudioItem
+##### RBCAudioItem
 
-##### Discussion
+###### Discussion
 
 This object contains information about audio records and allows developer to record, play and control audio. See [RBCAudioItem Class](#rbcaudioitem-class) to get more information.
 
 ### Functions
 
-#### getAudio
+##### getAudio
 
 ```javascript
 audio.getAudio( function(info) {  
@@ -54,11 +54,11 @@ audio.getAudio( function(info) {
 
 `audio.getAudio( options, successCallback, errorCallback )`
 
-##### Discussion
+###### Discussion
 
 Creates new [RBCAudioItem](#rbcaudioitem-class) object which used for all audio operations.
 
-##### Arguments
+###### Arguments
 
   * `options` optional
 
@@ -80,6 +80,6 @@ Callback parameter is object which contains:
 
 Error Callback. Called when function return error.
 
-##### Return Value
+###### Return Value
 
   * [RBCPromise](#kernel-promise) object

@@ -1,4 +1,4 @@
-## Shake Detector Module
+#### Shake Detector Module
 
 This module provides the ability to detecting when user shakes the device..
 
@@ -7,7 +7,7 @@ This module provides the ability to detecting when user shakes the device..
   * `startWatch` function
   * `clearWatch` function
   
-#### startWatch
+##### startWatch
 
 ```javascript
 var watch_id = shakeDetector.startWatch( function () {
@@ -19,11 +19,11 @@ var watch_id = shakeDetector.startWatch( function () {
 
 `shakeDetector.startWatch( onDetectCallback, errorCallback )`
 
-##### Discussion
+###### Discussion
 
 Starts detecting device shaking.
 
-##### Arguments
+###### Arguments
 
 * `onDetectCallback` optional
 
@@ -35,11 +35,11 @@ Doesn't have any arguments.
 
 Error Callback. Called when function return error.
 
-##### Return Value
+###### Return Value
 
   * A String value. This value used as parameter of `clearWatch` method to stop updating.
 
-#### clearWatch
+##### clearWatch
 
 ```javascript
 shakeDetector.clearWatch( watch_id );
@@ -47,16 +47,16 @@ shakeDetector.clearWatch( watch_id );
 
 `shakeDetector.clearWatch( watchId )`
 
-##### Discussion
+###### Discussion
 
 Stops detecting device shaking.
 
-##### Arguments
+###### Arguments
 
   * `watchId` required
 
 Watch identifier which returned `startWatch` method.
 
-##### Return Value
+###### Return Value
 
   * No return value.

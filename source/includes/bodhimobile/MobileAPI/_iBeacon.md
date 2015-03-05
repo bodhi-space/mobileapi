@@ -1,4 +1,4 @@
-## iBeacon Module
+#### iBeacon Module
 
 This module provides the support for working with iBeacons. Developer can use iBeacon module in 2 variants:
 
@@ -34,7 +34,7 @@ Both variants can be used simultaneously. Developer can monitor regions and spec
 
 ### Objects
 
-#### notificationInfo
+##### notificationInfo
 
 ```javascript
 var notificationInfo = {
@@ -44,11 +44,11 @@ var notificationInfo = {
 }; 
 ```
 
-##### Discussion
+###### Discussion
 
 This Object contains information about users notifications.
 
-##### Keys
+###### Keys
 
   * `title`
 
@@ -62,7 +62,7 @@ A String value. Local notification message.
 
 A String value. Link that will open after application will be opened from notification.
 
-#### regionInfo
+##### regionInfo
 
 ```javascript
 var regionInfo = {
@@ -75,11 +75,11 @@ var regionInfo = {
 }; 
 ```
 
-##### Discussion
+###### Discussion
 
 This Object contains information about iBeacon region.
 
-##### Keys
+###### Keys
 
   * `uuid` required
 
@@ -89,7 +89,7 @@ A String value. Region's proximity UUID.
 
 An `notificationInfo` Object. Contains information about notification that will be displayed if the device entered to the region and application was in background.
     
-#### beaconInfo
+##### beaconInfo
 
 ```javascript
 var regionInfo = {
@@ -104,11 +104,11 @@ var regionInfo = {
 }; 
 ```
 
-##### Discussion
+###### Discussion
 
 This Object contains information about iBeacon.
 
-##### Keys
+###### Keys
 
   * `uuid` required
 
@@ -132,19 +132,19 @@ An `notificationInfo` Object. Contains information about notification that will 
 
 ### Properties
 
-#### supported
+##### supported
 
 ```javascript
 var supported = iBeacon.supported;
 ```
 
-##### Discussion
+###### Discussion
 
 Returns whether the device supports iBeacons monitoring.
 
 ### Functions
 
-#### getRegions
+##### getRegions
 
 ```javascript
 iBeacon.getRegions( function(info) {  
@@ -156,11 +156,11 @@ iBeacon.getRegions( function(info) {
 
 `iBeacon.getRegions( successCallback, errorCallback )`
 
-##### Discussion
+###### Discussion
 
 Returns a list of regions which the monitored currently.
 
-##### Arguments
+###### Arguments
 
   * `succesCallback` optional
 
@@ -174,11 +174,11 @@ Callback parameter is object which contains:
 
 Error Callback. Called when function return error.
 
-##### Return Value
+###### Return Value
 
   * [RBCPromise](#kernel-promise) object
 
-#### addRegion
+##### addRegion
 
 ```javascript
 var region = {  
@@ -199,11 +199,11 @@ iBeacon.addRegion( region, function(info) {
 
 `iBeacon.addRegion( region, successCallback, errorCallback )`
 
-##### Discussion
+###### Discussion
 
 Adds new region to monitoring.
 
-##### Arguments
+###### Arguments
 
   * `region` required
 
@@ -221,11 +221,11 @@ Callback parameter is object which contains:
 
 Error Callback. Called when function return error.
 
-##### Return Value
+###### Return Value
 
   * [RBCPromise](#kernel-promise) object
 
-#### checkRegion
+##### checkRegion
 
 ```javascript
 iBeacon.checkRegion( "b614b5eb-80fa-433b-ba25-dfadc540811a", function(info) {  
@@ -240,11 +240,11 @@ iBeacon.checkRegion( "b614b5eb-80fa-433b-ba25-dfadc540811a", function(info) {
 
 `iBeacon.checkRegion( uuid, successCallback, errorCallback )`
 
-##### Discussion
+###### Discussion
 
 Checks whether the device is within the region with `uuid`.
 
-##### Arguments
+###### Arguments
 
   * `uuid` required
 
@@ -264,11 +264,11 @@ Callback parameter is object which contains:
 
 Error Callback. Called when function return error.
 
-##### Return Value
+###### Return Value
 
   * [RBCPromise](#kernel-promise) object
 
-#### removeRegion
+##### removeRegion
 
 ```javascript
 iBeacon.removeRegion( "b614b5eb-80fa-433b-ba25-dfadc540811a", function(info) {  
@@ -280,11 +280,11 @@ iBeacon.removeRegion( "b614b5eb-80fa-433b-ba25-dfadc540811a", function(info) {
 
 `iBeacon.removeRegion( uuid, successCallback, errorCallback )`
 
-##### Discussion
+###### Discussion
 
 Removes the region with `uuid` from monitoring.
 
-##### Arguments
+###### Arguments
 
   * `uuid` required
 
@@ -302,11 +302,11 @@ Callback parameter is object which contains:
 
 Error Callback. Called when function return error.
 
-##### Return Value
+###### Return Value
 
   * [RBCPromise](#kernel-promise) object
 
-#### removeAllRegions
+##### removeAllRegions
 
 ```javascript
 iBeacon.removeAllRegions( function() {  
@@ -318,11 +318,11 @@ iBeacon.removeAllRegions( function() {
 
 `iBeacon.removeAllRegions( successCallback, errorCallback )`
 
-##### Discussion
+###### Discussion
 
 Removes all regions from monitoring.
 
-##### Arguments
+###### Arguments
 
   * `succesCallback` optional
 
@@ -334,11 +334,11 @@ Callback parameter is always *null*
 
 Error Callback. Called when function return error.
 
-##### Return Value
+###### Return Value
 
   * [RBCPromise](#kernel-promise) object
 
-#### addBeacon
+##### addBeacon
 
 ```javascript
 var beacon = {  
@@ -360,11 +360,11 @@ iBeacon.addBeacon( beacon, function(info) {
 
 `iBeacon.addBeacon( beacon, successCallback, errorCallback )`
 
-##### Discussion
+###### Discussion
 
 Adds new iBeacon to monitoring.
 
-##### Arguments
+###### Arguments
 
   * `options` required
 
@@ -382,11 +382,11 @@ Callback parameter is object which contains:
 
 Error Callback. Called when function return error.
 
-##### Return Value
+###### Return Value
 
   * [RBCPromise](#kernel-promise) object
 
-#### getBeacons
+##### getBeacons
 
 ```javascript
 iBeacon.getBeacons( function(info) {  
@@ -398,11 +398,11 @@ iBeacon.getBeacons( function(info) {
 
 `iBeacon.getBeacons( successCallback, errorCallback )`
 
-##### Discussion
+###### Discussion
 
 Returns a list of iBeacons which the monitored currently.
 
-##### Arguments
+###### Arguments
 
   * `succesCallback` optional
 
@@ -416,11 +416,11 @@ Callback parameter is object which contains:
 
 Error Callback. Called when function return error.
 
-##### Return Value
+###### Return Value
 
   * [RBCPromise](#kernel-promise) object
 
-#### removeBeacon
+##### removeBeacon
 
 ```javascript
 var beacon = {  
@@ -437,11 +437,11 @@ iBeacon.removeBeacon( beacon, function(info) {
 
 `iBeacon.removeBeacon( beacon, successCallback, errorCallback )`
 
-##### Discussion
+###### Discussion
 
 Removes the iBeacon from monitoring.
 
-##### Arguments
+###### Arguments
 
   * `beacon` required
 
@@ -459,11 +459,11 @@ Callback parameter is object which contains:
 
 Error Callback. Called when function return error.
 
-##### Return Value
+###### Return Value
 
   * [RBCPromise](#kernel-promise) object
 
-#### removeAllBeacons
+##### removeAllBeacons
 
 ```javascript
 iBeacon.removeAllBeacons( function() {  
@@ -475,11 +475,11 @@ iBeacon.removeAllBeacons( function() {
 
 `iBeacon.removeAllBeacons( successCallback, errorCallback )`
 
-##### Discussion
+###### Discussion
 
 Removes all iBeacons from monitoring.
 
-##### Arguments
+###### Arguments
 
   * `succesCallback` optional
 
@@ -491,59 +491,59 @@ Callback parameter is always *null*
 
 Error Callback. Called when function return error.
 
-##### Return Value
+###### Return Value
 
   * [RBCPromise](#kernel-promise) object
 
 ### Events
 
-#### iBeacon.didEnterToRegion
+##### iBeacon.didEnterToRegion
 
-##### Discussion
+###### Discussion
 
 Event received when the device enters to the monitored region.
 
-##### Callback Arguments
+###### Callback Arguments
 
   * `region` \- A `regionInfo` object. (Object)
 
-#### iBeacon.didExitFromRegion
+##### iBeacon.didExitFromRegion
 
-##### Discussion
+###### Discussion
 
 Event received when the device exits from the monitored region.
 
-##### Callback Arguments
+###### Callback Arguments
 
   * `region` \- A `regionInfo` object. (Object)
 
-#### iBeacon.didFoundBeaconsInRegion
+##### iBeacon.didFoundBeaconsInRegion
 
-##### Discussion
+###### Discussion
 
 Event received when the device updated the list of beacons in the region where it is.
 
-##### Callback Arguments
+###### Callback Arguments
 
   * `region` \- regionInfo object. (Object)
   * `beacons` \- The list of beaconInfo objects. (Array of Object)
 
-#### iBeacon.didFoundBeacon
+##### iBeacon.didFoundBeacon
 
-##### Discussion
+###### Discussion
 
 Event received when the device found the monitored iBeacon.
 
-##### Callback Arguments
+###### Callback Arguments
 
   * `beacon` \- A `beaconInfo` object. (Object)
 
-#### iBeacon.didLostBeacon
+##### iBeacon.didLostBeacon
 
-##### Discussion
+###### Discussion
 
 Event received when the device lost the monitored iBeacon.
 
-##### Callback Arguments
+###### Callback Arguments
 
   * `beacon` \- A `beaconInfo` object. (Object)

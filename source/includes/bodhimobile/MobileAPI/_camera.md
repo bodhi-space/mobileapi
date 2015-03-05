@@ -1,4 +1,4 @@
-## Camera Module
+#### Camera Module
 
 This module provides the ability to taking photos and videos from camera and getting its from photo album.
 
@@ -22,9 +22,9 @@ Developer can receive photo's data directly to html in base64 format and can sav
 
 ### Constants
 
-#### DestinationType
+##### DestinationType
 
-##### Discussion
+###### Discussion
 
 This enum contains all variants of saving media content.
 
@@ -38,9 +38,9 @@ This type supported only for photos. Videos is too large for it.
 
 With this destination type methods will save photos or video to [App Storage](#app-storage-module).
 
-#### EncodingType
+##### EncodingType
 
-##### Discussion
+###### Discussion
 
 This enum contains variants of photos file's encoding. Used only for image content.
 
@@ -52,9 +52,9 @@ Photo will encoded in jpeg format.
 
 Photo will encoded in png format.
 
-#### MediaType
+##### MediaType
 
-##### Discussion
+###### Discussion
 
 This enum contains variants of media to select from.
 
@@ -70,9 +70,9 @@ Allows selection of video only.
 
 Allows selection from all media types.
 
-#### PictureSourceType
+##### PictureSourceType
 
-##### Discussion
+###### Discussion
 
 This enum contains variants of sources.
 
@@ -88,9 +88,9 @@ Takes media from camera.
 
 Chooses media from saved photo album.
 
-#### Direction
+##### Direction
 
-##### Discussion
+###### Discussion
 
 Chooses the camera to use (front- or back-facing).
 
@@ -104,7 +104,7 @@ Chooses front camera to use.
 
 ### Functions
 
-#### getMedia
+##### getMedia
 
 ```javascript
 var options = {  
@@ -125,11 +125,11 @@ camera.getMedia( options, function(info) {
 
 `camera.getMedia( options, successCallback, errorCallback )`
 
-##### Discussion
+###### Discussion
 
 The method allows taking or choosing all types of media.
 
-##### Arguments
+###### Arguments
 
   * `options` required
 
@@ -183,11 +183,11 @@ Callback parameter is object which contains:
 
 Error Callback. Called when function return error.
 
-##### Return Value
+###### Return Value
 
   * [RBCPromise](#kernel-promise) object
 
-#### takeMedia
+##### takeMedia
 
 ```javascript
 var options = {  
@@ -207,11 +207,11 @@ camera.takeMedia( options, function(info) {
 
 `camera.takeMedia( options, successCallback, errorCallback )`
 
-##### Discussion
+###### Discussion
 
 The method allows taking all types of media. It use [getMedia](#getmedia) method with predefined options.sourceType = **camera.PictureSourceType.CAMERA**
 
-##### Arguments
+###### Arguments
 
   * `options` required
 
@@ -261,11 +261,11 @@ Callback parameter is object which contains:
 
 Error Callback. Called when function return error.
 
-##### Return Value
+###### Return Value
 
   * [RBCPromise](#kernel-promise) object
 
-#### chooseMedia
+##### chooseMedia
 
 ```javascript
 var options = {  
@@ -285,11 +285,11 @@ camera.chooseMedia( options, function(info) {
 
 `camera.chooseMedia( options, successCallback, errorCallback )`
 
-##### Discussion
+###### Discussion
 
 The method allows choosing all types of media. It use [getMedia](#getmedia) method with predefined options.sourceType = **camera.PictureSourceType.PHOTOLIBRARY**
 
-##### Arguments
+###### Arguments
 
   * `options` required
 
@@ -341,12 +341,12 @@ Callback parameter is object which contains:
 
 Error Callback. Called when function return error.
 
-##### Return Value
+###### Return Value
 
   * [RBCPromise](#kernel-promise) object
 
 
-#### recordVideo
+##### recordVideo
 
 ```javascript
 var options = {  
@@ -363,11 +363,11 @@ camera.recordVideo( options, function(info) {
 
 `camera.recordVideo( options, successCallback, errorCallback )`
 
-##### Discussion
+###### Discussion
 
 The method allows recording video from camera. It use [takeMedia](#takemedia) method with predefined options.mediaType = **camera.MediaType.VIDEO**
 
-##### Arguments
+###### Arguments
 
   * `options` required
 
@@ -404,11 +404,11 @@ Callback parameter is object which contains:
 
 Error Callback. Called when function return error.
 
-##### Return Value
+###### Return Value
 
   * [RBCPromise](#kernel-promise) object
 
-#### chooseVideo
+##### chooseVideo
 
 ```javascript
 var options = {  
@@ -424,11 +424,11 @@ camera.chooseVideo( options, function(info) {
 
 `camera.chooseVideo( options, successCallback, errorCallback )`
 
-##### Discussion
+###### Discussion
 
 The method allows choosing video from photo library. It use [chooseMedia](#choosemedia) method with predefined options.mediaType = **camera.MediaType.VIDEO**
 
-##### Arguments
+###### Arguments
 
   * `options` required
 
@@ -460,11 +460,11 @@ Callback parameter is object which contains:
 
 Error Callback. Called when function return error.
 
-##### Return Value
+###### Return Value
 
   * [RBCPromise](#kernel-promise) object
 
-#### capturePhoto
+##### capturePhoto
 
 ```javascript
 var options = {  
@@ -483,11 +483,11 @@ camera.capturePhoto( options, function(info) {
 
 `camera.capturePhoto( options, successCallback, errorCallback )`
 
-##### Discussion
+###### Discussion
 
 The method allows capturing photo from camera. It use [takeMedia](#takemedia) method with predefined options.mediaType = **camera.MediaType.PICTURE**
 
-##### Arguments
+###### Arguments
 
   * `options` required
 
@@ -539,11 +539,11 @@ Callback parameter is object which contains:
 
 Error Callback. Called when function return error.
 
-##### Return Value
+###### Return Value
 
   * [RBCPromise](#kernel-promise) object
 
-#### choosePhoto
+##### choosePhoto
 
 ```javascript
 var options = {  
@@ -561,11 +561,11 @@ camera.choosePhoto( options, function(info) {
 
 `camera.choosePhoto( options, successCallback, errorCallback )`
 
-##### Discussion
+###### Discussion
 
 The method allows choosing photo from photo library. It use [chooseMedia](#choosemedia) method with predefined options.mediaType = **camera.MediaType.PICTURE**
 
-##### Arguments
+###### Arguments
 
   * `options` required
 
@@ -612,11 +612,11 @@ Callback parameter is object which contains:
 
 Error Callback. Called when function return error.
 
-##### Return Value
+###### Return Value
 
   * [RBCPromise](#kernel-promise) object
 
-#### cleanup
+##### cleanup
 
 ```javascript
 camera.cleanup( function(info) {  
@@ -628,11 +628,11 @@ camera.cleanup( function(info) {
 
 `camera.cleanup( successCallback, errorCallback )`
 
-##### Discussion
+###### Discussion
 
 Cleanup all records with media from [Camera](#camera-module) in [App Storage](#app-storage-module)
 
-##### Arguments
+###### Arguments
 
   * `succesCallback` optional
 
@@ -644,6 +644,6 @@ Callback parameter is always null.
 
 Error Callback. Called when function return error.
 
-##### Return Value
+###### Return Value
 
   * [RBCPromise](#kernel-promise) object

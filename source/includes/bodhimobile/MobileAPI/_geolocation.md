@@ -1,4 +1,4 @@
-## Geolocation Module
+#### Geolocation Module
 
 This module provides the ability to getting geolocation coordinates.
 
@@ -12,13 +12,13 @@ This module provides the ability to getting geolocation coordinates.
   
 ### Objects
 
-#### coordinatesInfo
+##### coordinatesInfo
 
-##### Discussion
+###### Discussion
 
 This Object contains information about geolocation coordinates.
 
-##### Keys
+###### Keys
 
   * `latitude` required
 
@@ -48,13 +48,13 @@ A Float value. The instantaneous speed of the device in meters per second.
 
 A Float value. The course of the location in degrees true North.
 
-#### positionInfo
+##### positionInfo
 
-##### Discussion
+###### Discussion
 
 This Object contains information about geolocation position.
 
-##### Keys
+###### Keys
 
   * `timestamp` required
 
@@ -66,7 +66,7 @@ An `coordinatesInfo` Object.
 
 ### Functions
 
-#### getCurrentPosition
+##### getCurrentPosition
 
 ```javascript
 geolocation.getCurrentPosition( {}, function (positionInfo) {
@@ -78,11 +78,11 @@ geolocation.getCurrentPosition( {}, function (positionInfo) {
 
 `geolocation.getCurrentPosition( options, successCallback, errorCallback )`
 
-##### Discussion
+###### Discussion
 
 Gets current geolocation position one time. To monitor position changes use `watchPosition`.
 
-##### Arguments
+###### Arguments
 
   * `options` required
 
@@ -110,12 +110,12 @@ Callback parameter is `positionInfo` object.
 
 Error Callback. Called when function return error.
 
-##### Return Value
+###### Return Value
 
   * [RBCPromise](#kernel-promise) object
 
 
-#### watchPosition
+##### watchPosition
 
 ```javascript
 var watch_id = geolocation.watchPosition( {}, function (positionInfo) {
@@ -127,11 +127,11 @@ var watch_id = geolocation.watchPosition( {}, function (positionInfo) {
 
 `geolocation.watchPosition( options, successCallback, errorCallback )`
 
-##### Discussion
+###### Discussion
 
 Starts watching current geolocation position.
 
-##### Arguments
+###### Arguments
 
   * `options` required
 
@@ -159,11 +159,11 @@ Callback parameter is `positionInfo` object.
 
 Error Callback. Called when function return error.
 
-##### Return Value
+###### Return Value
 
   * A String value. This value used as parameter of `clearWatch` method to stop updating.
 
-#### clearWatch
+##### clearWatch
 
 ```javascript
 geolocation.clearWatch( watch_id );
@@ -171,16 +171,16 @@ geolocation.clearWatch( watch_id );
 
 `geolocation.clearWatch( watchId )`
 
-##### Discussion
+###### Discussion
 
 Stops heading geolocation position.
 
-##### Arguments
+###### Arguments
 
   * `watchId` required
 
 Watch identifier which returned `watchPosition` method.
 
-##### Return Value
+###### Return Value
 
   * No return value.

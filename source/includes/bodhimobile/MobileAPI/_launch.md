@@ -1,4 +1,4 @@
-## Launch Module
+#### Launch Module
 
 This module provides support for opening url in external browser and opening
 external map application with specific location coordinates or addresses.
@@ -10,7 +10,7 @@ external map application with specific location coordinates or addresses.
 
 ### Functions
 
-#### browser
+##### browser
 
 ```javascript
 launch.browser( {url:"http://www.google.com"},  
@@ -21,11 +21,11 @@ function (error) {
 
 `launch.browser( options, errorCallback )`
 
-##### Discussion
+###### Discussion
 
 Opens links in external browser.
 
-##### Arguments
+###### Arguments
 
   * `options` required
 
@@ -39,12 +39,12 @@ A String value. The key must contains URL.
 
 Error Callback. Called when function return error.
 
-##### Return Value
+###### Return Value
 
   * [RBCPromise](#kernel-promise) object
 
 
-#### map
+##### map
 
 ```javascript
 launch.map( {address:"1 Infinite Loop Cupertino"},  
@@ -55,12 +55,12 @@ function (error) {
 
 `launch.map( options, errorCallback )`
 
-##### Discussion
+###### Discussion
 
 Opens external map application with specific location coordinates or
 addresses.
 
-##### Arguments
+###### Arguments
 
   * `options`required
 
@@ -84,6 +84,6 @@ Object must contains 2 properties:
 
 Error Callback. Called when function return error.
 
-##### Return Value
+###### Return Value
 
   * [RBCPromise](#kernel-promise) object

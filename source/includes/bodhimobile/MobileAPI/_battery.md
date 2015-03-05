@@ -1,4 +1,4 @@
-## Battery Module
+#### Battery Module
 
 Getting information about battery level and plugged for charger state.
 
@@ -17,13 +17,13 @@ Getting information about battery level and plugged for charger state.
 
 ### Properties
 
-#### level
+##### level
 
 ```javascript
 var level = battery.level;
 ```
 
-##### Discussion
+###### Discussion
 
 Current battery level.
 
@@ -31,19 +31,19 @@ Current battery level.
 On iOS devices with os version < 8.0 battery level divisible by 5
 </aside>
 
-#### isPlugged
+##### isPlugged
 
 ```javascript
 var plugged = battery.isPlugged;
 ```
 
-##### Discussion
+###### Discussion
 
 Is device plugged for charger
 
 ### Functions
 
-#### levelChanged
+##### levelChanged
 
 ```javascript
 battery.levelChanged( function(info) {  
@@ -53,19 +53,19 @@ battery.levelChanged( function(info) {
 
 `battery.levelChanged( callback )`
 
-##### Discussion
+###### Discussion
 
 Register `callback` as observer for [`battery.level`](#battery.level) event.
 
-##### Arguments
+###### Arguments
 
   * `callback` required
 
-##### Return Value
+###### Return Value
 
   * `this`
 
-#### pluggedChanged
+##### pluggedChanged
 
 ```javascript
 battery.pluggedChanged( function(info) {  
@@ -75,19 +75,19 @@ battery.pluggedChanged( function(info) {
 
 `battery.pluggedChanged( callback )`
 
-##### Discussion
+###### Discussion
 
 Register `callback` as observer for [`battery.plugged`](#battery.plugged) event.
 
-##### Arguments
+###### Arguments
 
   * `callback` required
 
-##### Return Value
+###### Return Value
 
   * `this`  
 
-#### low
+##### low
 
 ```javascript
 battery.low( function() {  
@@ -97,19 +97,19 @@ battery.low( function() {
 
 `battery.low( callback )`
 
-##### Discussion
+###### Discussion
 
 Register `callback` as observer for [`battery.low`](#battery.low) event.
 
-##### Arguments
+###### Arguments
 
   * `callback` required
 
-##### Return Value
+###### Return Value
 
   * `this`  
 
-#### critical
+##### critical
 
 ```javascript
 battery.critical( function() {  
@@ -119,42 +119,42 @@ battery.critical( function() {
 
 `battery.critical( callback )`
 
-##### Discussion
+###### Discussion
 
 Register `callback` as observer for [`battery.critical`](#battery.critical) event.
 
-##### Arguments
+###### Arguments
 
   * `callback` required
 
-##### Return Value
+###### Return Value
 
   * `this`
 
 ### Events
 
-#### `battery.level`
+##### `battery.level`
 
-##### Discussion
+###### Discussion
 
 Event received when changed battery level
 
-#### `battery.plugged`
+##### `battery.plugged`
 
-##### Discussion
+###### Discussion
 
 Event received when device plugged or unplugged from charger
 
-#### `battery.low`
+##### `battery.low`
 
-##### Discussion
+###### Discussion
 
 Event received when device unplugged from charger and battery level less then
 20%
 
-#### `battery.critical`
+##### `battery.critical`
 
-##### Discussion
+###### Discussion
 
 Event received when device unplugged from charger and battery level less then
 5%

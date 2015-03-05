@@ -1,4 +1,4 @@
-## Device Module
+#### Device Module
 
 Getting basic information about device.  
 Also provides events about application state.
@@ -20,9 +20,9 @@ Also provides events about application state.
 
 ### Constants
 
-#### device.TYPES
+##### device.TYPES
 
-##### Discussion
+###### Discussion
 
 The enum contains variants of device types.
 
@@ -36,24 +36,24 @@ The enum contains variants of device types.
 
 ### Properties
 
-#### model
+##### model
 
 ```javascript
 var deviceModel = device.model;
 ```
 
-##### Discussion
+###### Discussion
 
 Device model. For example iPhone6,1 or iPhone6,2 for iPhone 5s
 
 
-#### platform
+##### platform
 
 ```javascript
 var devicePlatform = device.platform;
 ```
 
-##### Discussion
+###### Discussion
 
 Device Platform. Supported values:
 
@@ -61,49 +61,49 @@ Device Platform. Supported values:
   * Android
   * WP
 
-#### guid
+##### guid
 
 ```javascript
 var deviceId = device.guid;
 ```
 
-##### Discussion
+###### Discussion
 
 Device identifier
 
-#### osVersion
+##### osVersion
 
 ```javascript
 var osVersion = device.osVersion;
 ```
 
-##### Discussion
+###### Discussion
 
 Device OS version
 
-#### name
+##### name
 
 ```javascript
 var deviceName = device.name;
 ```
 
-##### Discussion
+###### Discussion
 
 Device Name
 
-#### type
+##### type
 
 ```javascript
 var deviceType = device.type;
 ```
 
-##### Discussion
+###### Discussion
 
 Device Type. See device.TYPES for more info.
 
 ### Functions
 
-#### ready
+##### ready
 
 ```javascript
 device.ready( function() {  
@@ -113,24 +113,24 @@ device.ready( function() {
 
 `device.ready( callback )`
 
-##### Discussion
+###### Discussion
 
 Add _callback_ which will be called after full JavaScript kernel and modules
 initialization.  
 If call this function after initialization end _callback_ will be called
 immediately.
 
-##### Arguments
+###### Arguments
 
   * `callback` required
 
 Callback which execute after JavaScript kernel initialization.
 
-##### Return Value
+###### Return Value
 
   * `this`
 
-#### pause
+##### pause
 
 ```javascript
 device.pause( function() {  
@@ -140,21 +140,21 @@ device.pause( function() {
 
 `device.pause( callback )`
 
-##### Discussion
+###### Discussion
 
 Register _callback_ as observer for device.pause event.
 
-##### Arguments
+###### Arguments
 
   * `callback` required
 
 Callback which execute when application enter to background.
 
-##### Return Value
+###### Return Value
 
   * `this`
 
-#### resume
+##### resume
 
 ```javascript
 device.resume( function() {  
@@ -164,31 +164,31 @@ device.resume( function() {
 
 `device.resume( callback )`
 
-##### Discussion
+###### Discussion
 
 Register _callback_ as observer for device.resume event.
 
-##### Arguments
+###### Arguments
 
   * `callback` required
 
 Callback which execute when application return to foreground.
 
-##### Return Value
+###### Return Value
 
   * `this`
 
 ### Events
 
-#### `device.pause`
+##### `device.pause`
 
-##### Discussion
+###### Discussion
 
 Event received when application enter to background
 
-#### `device.resume`
+##### `device.resume`
 
-##### Discussion
+###### Discussion
 
 Event received when application returned from background
 

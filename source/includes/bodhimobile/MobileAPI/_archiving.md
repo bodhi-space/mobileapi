@@ -1,4 +1,4 @@
-## Archiving Module
+#### Archiving Module
 
 This module provides the ability to working with zip archives.
 
@@ -12,7 +12,7 @@ and extract files from zip archive (which saved in [App Storage](#app-storage-mo
 
 ### Functions
 
-#### zip
+##### zip
 
 ```javascript
 archiving.zip( {archive:"zip1_key", password:"12345", files:[{key:"image1",
@@ -26,7 +26,7 @@ function(info) {
 
 `archiving.zip( options, successCallback, errorCallback )`
 
-##### Discussion
+###### Discussion
 
 Create new zip archive with files from [App Storage](#app-storage-module).
 
@@ -34,7 +34,7 @@ Developer can create archive with selected files (options must contains
 `files` key) or can add all files in [App Storage](#app-storage-module) with keys which
 contains prefix in the start (options must contains `filesWithPrefix` key).
 
-##### Arguments
+###### Arguments
 
   * `options` required
 
@@ -77,11 +77,11 @@ Callback parameter is always null.
 
 Error Callback. Called when function return error.
 
-##### Return Value
+###### Return Value
 
   * [RBCPromise](#kernel-promise) object
 
-#### unzip
+##### unzip
 
 ```javascript
 archiving.unzip( {archive:"zip1_key", password:"12345", prefix:"zip1_files"},  
@@ -94,7 +94,7 @@ function(info) {
 
 `archiving.unzip( options, successCallback, errorCallback )`
 
-##### Discussion
+###### Discussion
 
 Extract files from zip archive to [App Storage](#app-storage-module).
 
@@ -110,7 +110,7 @@ After unzipping will be created keys:
   1. prefix/file1.txt
   2. prefix/folder1/file1.txt
 
-##### Arguments
+###### Arguments
 
   * `options` required
 
@@ -140,6 +140,6 @@ Callback parameter is object which contains keys:
 
 Error Callback. Called when function return error.
 
-##### Return Value
+###### Return Value
 
   * [RBCPromise](#kernel-promise) object

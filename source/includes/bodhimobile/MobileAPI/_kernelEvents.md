@@ -1,4 +1,4 @@
-## Kernel Events
+#### Kernel Events
 
 The Kernel support handling events from native application.  
 Developer can [add](#addeventlistener) or
@@ -12,7 +12,7 @@ Events usually used module_name.module_event scheme for naming.
 
 ### Functions
 
-#### addEventListener
+##### addEventListener
 
 ```javascript
 events.addEventListener("module_name.module_event", function (eventInfo) {  
@@ -42,7 +42,7 @@ application.
 
   * `this`
 
-#### removeEventListener
+##### removeEventListener
 
 ```javascript
 events.removeEventListener("module_name.module_event");

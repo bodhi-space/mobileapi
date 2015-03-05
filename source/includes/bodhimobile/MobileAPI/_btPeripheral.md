@@ -1,4 +1,4 @@
-## BT Peripheral Module
+#### BT Peripheral Module
 
 This module used for working with Bluetooth 4.0 LE Peripherals.
 
@@ -25,9 +25,9 @@ Now supported only Health Thermometer and Battery Service GATT profiles.
 
 ### Constants
 
-#### STATES
+##### STATES
 
-##### Discussion
+###### Discussion
 
 This enum contains all states of [BT Peripheral](#bt-peripheral-module) module.
 
@@ -55,9 +55,9 @@ Bluetooth is currently powered off.
 
 Bluetooth is currently powered on and available to use.
 
-#### CONNECTION_STATES
+##### CONNECTION_STATES
 
-##### Discussion
+###### Discussion
 
 This enum contains all variants of Peripheral connection state.
 
@@ -83,13 +83,13 @@ Peripheral Device in disconnection state.
 
 ### Objects
 
-#### peripheralInfo
+##### peripheralInfo
 
-##### Discussion
+###### Discussion
 
 This Object contains information about Peripheral Device.
 
-##### Keys
+###### Keys
 
   * `id` required
 
@@ -103,13 +103,13 @@ An Integer value. Device Name.
 
 An Integer value. Current Device RSSI.
 
-#### profilesInfo
+##### profilesInfo
 
-##### Discussion
+###### Discussion
 
 This Object contains information about supported GATT profiles which found on Peripheral Device after connection established.
 
-##### Keys
+###### Keys
 
   * `thermometer`
 
@@ -147,19 +147,19 @@ A Boolean value. **true** if device plugged for charger. Otherwise **false**.
 
 ### Properties
 
-#### supported
+##### supported
 
 ```javascript
 var supported = btPeripheral.supported;
 ```
 
-##### Discussion
+###### Discussion
 
 Returns whether the device supports [BT Peripheral](#bt-peripheral-module) module.
 
 ### Functions
 
-#### start
+##### start
 
 ```javascript
 btPeripheral.start( function() {  
@@ -171,11 +171,11 @@ btPeripheral.start( function() {
 
 `btPeripheral.start( successCallback, errorCallback )`
 
-##### Discussion
+###### Discussion
 
 Starts working with Bluetooth 4.0 LE. Developer must call this method before using all another functions.
 
-##### Arguments
+###### Arguments
 
   * `succesCallback` optional
 
@@ -187,11 +187,11 @@ Callback parameter is always *null*
 
 Error Callback. Called when function return error.
 
-##### Return Value
+###### Return Value
 
   * [RBCPromise](#kernel-promise) object
 
-#### stop
+##### stop
 
 ```javascript
 btPeripheral.stop( function() {  
@@ -203,11 +203,11 @@ btPeripheral.stop( function() {
 
 `btPeripheral.stop( successCallback, errorCallback )`
 
-##### Discussion
+###### Discussion
 
 Stops working with Bluetooth 4.0 LE. Developer must call this method when all operations with it finished.
 
-##### Arguments
+###### Arguments
 
   * `succesCallback` optional
 
@@ -219,11 +219,11 @@ Callback parameter is always *null*
 
 Error Callback. Called when function return error.
 
-##### Return Value
+###### Return Value
 
   * [RBCPromise](#kernel-promise) object
 
-#### getState
+##### getState
 
 ```javascript
 btPeripheral.getState( function(info) {  
@@ -235,11 +235,11 @@ btPeripheral.getState( function(info) {
 
 `btPeripheral.getState( successCallback, errorCallback )`
 
-##### Discussion
+###### Discussion
 
 Gets current state. Also developer can add listener for btPeripheral.stateChanged event to receive state updates.
 
-##### Arguments
+###### Arguments
 
   * `succesCallback` optional
 
@@ -253,11 +253,11 @@ Callback parameter is object which contains:
 
 Error Callback. Called when function return error.
 
-##### Return Value
+###### Return Value
 
   * [RBCPromise](#kernel-promise) object
 
-#### startDiscovery
+##### startDiscovery
 
 ```javascript
 btPeripheral.startDiscovery( function() {  
@@ -269,11 +269,11 @@ btPeripheral.startDiscovery( function() {
 
 `btPeripheral.startDiscovery( successCallback, errorCallback )`
 
-##### Discussion
+###### Discussion
 
 Starts scanning for peripherals. Developer can add listener for `btPeripheral.peripheralsChanged` event to receive updates of peripherals list
 
-##### Arguments
+###### Arguments
 
   * `succesCallback` optional
 
@@ -285,11 +285,11 @@ Callback parameter is always *null*
 
 Error Callback. Called when function return error.
 
-##### Return Value
+###### Return Value
 
   * [RBCPromise](#kernel-promise) object
 
-#### stopDiscovery
+##### stopDiscovery
 
 ```javascript
 btPeripheral.stopDiscovery( function() {  
@@ -301,11 +301,11 @@ btPeripheral.stopDiscovery( function() {
 
 `btPeripheral.stopDiscovery( successCallback, errorCallback )`
 
-##### Discussion
+###### Discussion
 
 Stops scanning for peripherals.
 
-##### Arguments
+###### Arguments
 
   * `succesCallback`optional
 
@@ -317,11 +317,11 @@ Callback parameter is always *null*
 
 Error Callback. Called when function return error.
 
-##### Return Value
+###### Return Value
 
   * [RBCPromise](#kernel-promise) object
 
-#### connect
+##### connect
 
 ```javascript
 btPeripheral.connect( "46c85837-cc6e-452f-a279-f4731cec164d", function(info) {  
@@ -333,7 +333,7 @@ btPeripheral.connect( "46c85837-cc6e-452f-a279-f4731cec164d", function(info) {
 
 `btPeripheral.connect( peripheralId, successCallback, errorCallback )`
 
-##### Discussion
+###### Discussion
 
 Tries to connect to peripheral device. Developer can monitor connection state
 with btPeripheral.peripheralStateChanged event.
@@ -342,7 +342,7 @@ Also when connection established automatically starts receiving information
 from supported GATT profiles. Developer must add listener for
 btPeripheral.peripheralInfoChanged event to receive it.
 
-##### Arguments
+###### Arguments
 
   * `peripheralId` required
 
@@ -358,11 +358,11 @@ Callback parameter is always *null*
 
 Error Callback. Called when function return error.
 
-##### Return Value
+###### Return Value
 
   * [RBCPromise](#kernel-promise) object
 
-#### disconnect
+##### disconnect
 
 ```javascript
 btPeripheral.disconnect( "46c85837-cc6e-452f-a279-f4731cec164d", function(info) {  
@@ -374,11 +374,11 @@ btPeripheral.disconnect( "46c85837-cc6e-452f-a279-f4731cec164d", function(info) 
 
 `btPeripheral.disconnect( peripheralId, successCallback, errorCallback )`
 
-##### Discussion
+###### Discussion
 
 Disconnects from peripheral device.
 
-##### Arguments
+###### Arguments
 
   * `peripheralId` required
 
@@ -394,50 +394,50 @@ Callback parameter is always *null*
 
 Error Callback. Called when function return error.
 
-##### Return Value
+###### Return Value
 
   * [RBCPromise](#kernel-promise) object
 
 ### Events
 
-#### btPeripheral.stateChanged
+##### btPeripheral.stateChanged
 
-##### Discussion
+###### Discussion
 
 Event received when changed state of [BT Peripheral](#bt-peripheral-module) module. Working only between start and stop methods calls.
 
-##### Callback Arguments
+###### Callback Arguments
 
   * `state` \- New state. See `STATES` for more info. (Integer)
 
-#### btPeripheral.peripheralsChanged
+##### btPeripheral.peripheralsChanged
 
-##### Discussion
+###### Discussion
 
 Event received when list of found peripherals changed. Working only between startDiscovery and stopDiscovery methods calls.
 
-##### Callback Arguments
+###### Callback Arguments
 
   * `peripherals` \- The list of found `peripheralInfo` objects. (Array of Object)
 
-#### btPeripheral.peripheralStateChanged
+##### btPeripheral.peripheralStateChanged
 
-##### Discussion
+###### Discussion
 
 Event received when connection state of peripheral device changed.
 
-##### Callback Arguments
+###### Callback Arguments
 
   * `peripheralId` \- Idenfier of peripheral device. (String)
   * `state` \- New state. See `CONNECTION_STATES` for more info. (Integer)
 
-#### btPeripheral.peripheralInfoChanged
+##### btPeripheral.peripheralInfoChanged
 
-##### Discussion
+###### Discussion
 
 Event received when supported GATT profile information received.
 
-##### Callback Arguments
+###### Callback Arguments
 
   * `peripheralId` \- Idenfier of peripheral device. (String)
   * `info` \- Updated `profilesInfo`. (Object)

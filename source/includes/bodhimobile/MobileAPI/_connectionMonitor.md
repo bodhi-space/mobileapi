@@ -1,4 +1,4 @@
-## RBCConnectionMonitor Class
+#### RBCConnectionMonitor Class
 
 This object is created by [connection.startMonitoring](#startmonitoring) method and used for checking the server availability.
 
@@ -13,31 +13,31 @@ Once an object is no longer needed developer must necessarily call stop method!
 
 ### Properties
 
-#### url
+##### url
 
 ```javascript
 // connectionMonitor - is object created with connection.startMonitoring method  
 var url = connectionMonitor.url;
 ```
 
-##### Discussion
+###### Discussion
 
 The internet address of the monitored server.
 
-#### available
+##### available
 
 ```javascript
 // connectionMonitor - is object created with connection.startMonitoring method  
 var serverAvailable = connectionMonitor.available;
 ```
 
-##### Discussion
+###### Discussion
 
 Current available state. Server available for requests from the device if **available** is **true**.
 
 ### Functions
 
-#### onAvailableChanged
+##### onAvailableChanged
 
 ```javascript
 // connectionMonitor - is object created with connection.startMonitoring method  
@@ -48,11 +48,11 @@ connectionMonitor.onAvailableChanged( function(info) {
 
 `RBCConnectionMonitor::onAvailableChanged( callback )`
 
-##### Discussion
+###### Discussion
 
 Registers `callback` to monitor available property changes.
 
-##### Arguments
+###### Arguments
 
   * `callback` optional
 
@@ -62,11 +62,11 @@ Callback parameter is object which contains:
 
     * `available` \- A Boolean value. The server availability.
 
-##### Return Value
+###### Return Value
 
   * `this`
 
-#### stop
+##### stop
 
 ```javascript
 // connectionMonitor - is object created with connection.startMonitoring method  
@@ -79,11 +79,11 @@ connectionMonitor.stop( function() {
 
 `RBCConnectionMonitor::stop( successCallback, errorCallback )`
 
-##### Discussion
+###### Discussion
 
 Stops monitoring and release all resources.
 
-##### Arguments
+###### Arguments
 
   * `succesCallback` optional
 
@@ -95,6 +95,6 @@ Callback parameter is always **null**
 
 Error Callback. Called when function return error.
 
-##### Return Value
+###### Return Value
 
   * [RBCPromise](#kernel-promise) object

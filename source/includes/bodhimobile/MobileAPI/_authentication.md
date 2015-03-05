@@ -1,4 +1,4 @@
-## Authentication Module
+#### Authentication Module
 
 This module is designed to authenticate users.
 
@@ -14,41 +14,41 @@ This module is designed to authenticate users.
 
 ### Properties
 
-#### supported
+##### supported
 
 ```javascript
 var supported = authentication.supported;
 ```
 
-##### Discussion
+###### Discussion
 
 Returns whether the device supports authentication.
 
-#### username
+##### username
 
 ```javascript
 var username = authentication.username;
 ```
 
-##### Discussion
+###### Discussion
 
 Returns current authenticated username or **null**. This property changed when
 authentication.usernameChanged event received.
 
-#### authenticated
+##### authenticated
 
 ```javascript
 var isAuthenticated = authentication.authenticated;
 ```
 
-##### Discussion
+###### Discussion
 
 Returns **true** if user already authenticated. Otherwise returns **false**.
 This property changed when authentication.usernameChanged event received.
 
 ### Functions
 
-#### login
+##### login
 
 ```javascript
 var options = {  
@@ -63,11 +63,11 @@ authentication.login( options, function(info) {
 
 `authentication.login( options, successCallback, errorCallback )`
 
-##### Discussion
+###### Discussion
 
 Tries to login to server with user credentials.
 
-##### Arguments
+###### Arguments
 
   * `options` required
 
@@ -98,11 +98,11 @@ Callback parameter is object which contains:
 
 Error Callback. Called when function return error.
 
-##### Return Value
+###### Return Value
 
   * [RBCPromise](#kernel-promise) object
 
-#### logout
+##### logout
 
 ```javascript
 authentication.logout( function(info) {  
@@ -114,11 +114,11 @@ authentication.logout( function(info) {
 
 `authentication.logout( successCallback, errorCallback )`
 
-##### Discussion
+###### Discussion
 
 Logout current authorized user and clear all session cookies.
 
-##### Arguments
+###### Arguments
 
   * `succesCallback` optional
 
@@ -130,11 +130,11 @@ Callback parameter is always **null**.
 
 Error Callback. Called when function return error.
 
-##### Return Value
+###### Return Value
 
   * [RBCPromise](#kernel-promise) object
 
-#### getCredentialsInfo
+##### getCredentialsInfo
 
 ```javascript
 authentication.getCredentialsInfo( function(info) {  
@@ -147,12 +147,12 @@ authentication.getCredentialsInfo( function(info) {
 
 `authentication.getCredentialsInfo( successCallback, errorCallback )`
 
-##### Discussion
+###### Discussion
 
 Gets username and remember flag which used in last successful call of login
 method.
 
-##### Arguments
+###### Arguments
 
   * `succesCallback` optional
 
@@ -168,18 +168,18 @@ Callback parameter is object which contains:
 
 Error Callback. Called when function return error.
 
-##### Return Value
+###### Return Value
 
   * [RBCPromise](#kernel-promise) object
 
 ### Events
 
-#### authentication.usernameChanged
+##### authentication.usernameChanged
 
-##### Discussion
+###### Discussion
 
 Event received when current authentication status changed.
 
-##### Callback Arguments
+###### Callback Arguments
 
   * `username` \- Current authenticated username or **null**. (String)

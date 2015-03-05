@@ -1,4 +1,4 @@
-## Notifications Module
+#### Notifications Module
 
 This module used to notify user about some events in application.
 
@@ -11,7 +11,7 @@ This module used to notify user about some events in application.
 
 ### Functions
 
-#### vibrate
+##### vibrate
 
 ```javascript
 notifications.vibrate( {vibrate:400, mute:400, repeatCount:3} );
@@ -19,12 +19,12 @@ notifications.vibrate( {vibrate:400, mute:400, repeatCount:3} );
 
 `notifications.vibrate( options )`
 
-##### Discussion
+###### Discussion
 
 Vibrates the device. Developer can configure vibration duration, mute duration
 and repeat count
 
-##### Arguments
+###### Arguments
 
   * `options` optional
 
@@ -42,11 +42,11 @@ The property with a Number value. Determines mute duration in ms between multimp
 
 The property with a Number value. Determines number of repeating "vibrate-mute" operations.
 
-##### Return Value
+###### Return Value
 
   * [RBCPromise](#kernel-promise) object
 
-#### beep
+##### beep
 
 ```javascript
 notifications.beep( );
@@ -54,16 +54,16 @@ notifications.beep( );
 
 `notifications.beep( )`
 
-##### Discussion
+###### Discussion
 
 The device plays a beep sound.
 
-##### Return Value
+###### Return Value
 
   * [RBCPromise](#kernel-promise) object
 
 
-#### alert
+##### alert
 
 ```javascript
 notifications.alert( "Title", "Message", "Cancel", ["OK"],  
@@ -74,11 +74,11 @@ function(info) {
 
 `notifications.alert( title, message, cancelButton, otherButtons, callback )`
 
-##### Discussion
+###### Discussion
 
 Shows a custom alert or dialog box.
 
-##### Arguments
+###### Arguments
 
   * `title` required
 
@@ -104,12 +104,12 @@ Callback parameter is object and can contains keys:
 
     * `button` \- property with a String value. The name of pressed button.
 
-##### Return Value
+###### Return Value
 
   * [RBCPromise](#kernel-promise) object
 
 
-#### showToast
+##### showToast
 
 ```javascript
 notifications.showToast( "Toast Message", 2000, "bottom",  
@@ -120,11 +120,11 @@ function (error) {
 
 `notifications.showToast( message, duration, position, errorCallback )`
 
-##### Discussion
+###### Discussion
 
 Shows toast notification.
 
-##### Arguments
+###### Arguments
 
   * `message` required
 
@@ -148,6 +148,6 @@ Supported values:
 
 Error Callback. Called when function return error.
 
-##### Return Value
+###### Return Value
 
   * [RBCPromise](#kernel-promise) object

@@ -1,4 +1,4 @@
-## Device Orientation Module
+#### Device Orientation Module
 
 Locking device orientation in specified mode.
 
@@ -9,9 +9,9 @@ Locking device orientation in specified mode.
 
 ### Constants
 
-#### `deviceOrientation.MODE`
+##### `deviceOrientation.MODE`
 
-##### Discussion
+###### Discussion
 
 The enum contains variants of supported orientation modes.  
 It used in setOrientation method.
@@ -33,7 +33,7 @@ mode.
 
 ### Functions
 
-#### setOrientation
+##### setOrientation
 
 ```javascript
 deviceOrientation.setOrientation( deviceOrientation.MODE.PORTRAIT,
@@ -46,11 +46,11 @@ function(info) {
 
 `deviceOrientation.setOrientation( orientation, successCallback, errorCallback )`
 
-##### Discussion
+###### Discussion
 
 Lock UI in selected **orientation**.
 
-##### Arguments
+###### Arguments
 
   * `orientation` required
 
@@ -67,6 +67,6 @@ Callback parameter is always **null**.
 
 Error Callback. Called when function return error.
 
-##### Return Value
+###### Return Value
 
   * [RBCPromise](#kernel-promise) object

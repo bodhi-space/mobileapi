@@ -1,4 +1,4 @@
-## Geofencing Module
+#### Geofencing Module
 
 This module provides the support for working with geo- regions. Developer can use
 this module for monitoring regions:
@@ -24,14 +24,14 @@ this module for monitoring regions:
 
 ### Objects
 
-#### notificationInfo
+##### notificationInfo
 
-##### Discussion
+###### Discussion
 
 This Object contains information about local notifications which displayed when application in background.
 Used in `notificationsInfo` object
 
-##### Keys
+###### Keys
 
   * `title` optional
 
@@ -46,15 +46,15 @@ A String value. Local notification message.
 A String value. Link that will open after application will be opened from
 notification.
 
-#### notificationsInfo
+##### notificationsInfo
 
-##### Discussion
+###### Discussion
 
 This Object contains information about notifications that will be displayed if
 the device entered or exited from the region and application was in background.
 Used in `regionInfo` object
 
-##### Keys
+###### Keys
 
    * `enter` optional
 
@@ -66,14 +66,14 @@ the device entered to the region and application was in background.
 An `notificationInfo` Object. Contains information about notification that will be displayed if
 the device exited from the region and application was in background.
 
-#### centerInfo
+##### centerInfo
 
-##### Discussion
+###### Discussion
 
 This Object contains contains information about center of region.
 Used in `regionInfo` object
 
-##### Keys
+###### Keys
 
   * `latitude` required
 
@@ -83,13 +83,13 @@ A Double value. The latitude of region's center.
 
 A Double value. The longitude of region's center.
 
-#### regionInfo
+##### regionInfo
 
-##### Discussion
+###### Discussion
 
 This Object contains information about geo- region.
 
-##### Keys
+###### Keys
 
   * `id` optional
 
@@ -114,19 +114,19 @@ the device entered or exited from the region and application was in background.
 
 ### Properties
 
-#### supported
+##### supported
 
 ```javascript
 var supported = geofencing.supported;
 ```
 
-##### Discussion
+###### Discussion
 
 Returns whether the device supports geofencing.
 
 ### Functions
 
-#### getRegions
+##### getRegions
 
 ```javascript
 geofencing.getRegions( function(info) {  
@@ -138,11 +138,11 @@ geofencing.getRegions( function(info) {
 
 `geofencing.getRegions( successCallback, errorCallback )`
 
-##### Discussion
+###### Discussion
 
 Returns a list of regions which the monitored currently.
 
-##### Arguments
+###### Arguments
 
   * `succesCallback` optional
 
@@ -156,11 +156,11 @@ Callback parameter is object which contains:
 
 Error Callback. Called when function return error.
 
-##### Return Value
+###### Return Value
 
   * [RBCPromise](#kernel-promise) object
 
-#### addRegion
+##### addRegion
 
 ```javascript
 var region = {  
@@ -184,11 +184,11 @@ geofencing.addRegion( region, function(info) {
 
 `geofencing.addRegion( regionInfo, successCallback, errorCallback )`
 
-##### Discussion
+###### Discussion
 
 Adds new region to monitoring.
 
-##### Arguments
+###### Arguments
 
 * `regionInfo` required
 
@@ -206,12 +206,12 @@ Callback parameter is object which contains:
 
 Error Callback. Called when function return error.
 
-##### Return Value
+###### Return Value
 
   * [RBCPromise](#kernel-promise) object
 
 
-#### checkRegion
+##### checkRegion
 
 ```javascript
 geofencing.checkRegion( {id:"b614b5eb-80fa-433b-ba25-dfadc540811a"}, function(info) {  
@@ -226,11 +226,11 @@ geofencing.checkRegion( {id:"b614b5eb-80fa-433b-ba25-dfadc540811a"}, function(in
 
 `geofencing.checkRegion( regionInfo, successCallback, errorCallback )`
 
-##### Discussion
+###### Discussion
 
 Checks whether the device is within the region with regionInfo.id identifier.
 
-##### Arguments
+###### Arguments
 
 * `regionInfo` required
 
@@ -250,11 +250,11 @@ Callback parameter is object which contains:
 
 Error Callback. Called when function return error.
 
-##### Return Value
+###### Return Value
 
   * [RBCPromise](#kernel-promise) object
 
-#### removeRegion
+##### removeRegion
 
 ```javascript
 geofencing.removeRegion( {id:"b614b5eb-80fa-433b-ba25-dfadc540811a"}, function(info)
@@ -267,11 +267,11 @@ geofencing.removeRegion( {id:"b614b5eb-80fa-433b-ba25-dfadc540811a"}, function(i
 
 `geofencing.removeRegion( regionInfo, successCallback, errorCallback )`
 
-##### Discussion
+###### Discussion
 
 Removes the region with regionInfo.id identifier from monitoring.
 
-##### Arguments
+###### Arguments
 
 * `regionInfo` required
 
@@ -289,12 +289,12 @@ Callback parameter is object which contains:
 
 Error Callback. Called when function return error.
 
-##### Return Value
+###### Return Value
 
   * [RBCPromise](#kernel-promise) object
 
 
-#### removeAllRegions
+##### removeAllRegions
 
 ```javascript
 geofencing.removeAllRegions( function() {  
@@ -306,11 +306,11 @@ geofencing.removeAllRegions( function() {
 
 `geofencing.removeAllRegions( successCallback, errorCallback )`
 
-##### Discussion
+###### Discussion
 
 Removes all regions from monitoring.
 
-##### Arguments
+###### Arguments
 
 * `succesCallback` optional
 
@@ -322,12 +322,12 @@ Callback parameter is always null
 
 Error Callback. Called when function return error.
 
-##### Return Value
+###### Return Value
 
   * [RBCPromise](#kernel-promise) object
 
 
-#### getPageRegion
+##### getPageRegion
 
 ```javascript
 geofencing.getPageRegion( function(info) {  
@@ -340,7 +340,7 @@ geofencing.getPageRegion( function(info) {
 
 `geofencing.getPageRegion( successCallback, errorCallback )`
 
-##### Discussion
+###### Discussion
 
 Gets the region associated with current page.
 
@@ -348,7 +348,7 @@ When user clicks by notification applications will open the new page.
 
 From this page JS can be called this method to get the region which was associated with notification.
 
-##### Arguments
+###### Arguments
 
 * `succesCallback` optional
 
@@ -361,28 +361,28 @@ Callback parameter is object which contains:
 * `errorCallback` optional
 
 Error Callback. Called when function return error.
-##### Return Value
+###### Return Value
 
   * [RBCPromise](#kernel-promise) object
 
 ### Events
 
-#### geofencing.didEnterToRegion
+##### geofencing.didEnterToRegion
 
-##### Discussion
+###### Discussion
 
 Event received when the device enters to the monitored region.
 
-##### Callback Arguments
+###### Callback Arguments
 
   * `region` \- regionInfo object. (Object)
 
-#### geofencing.didExitFromRegion
+##### geofencing.didExitFromRegion
 
-##### Discussion
+###### Discussion
 
 Event received when the device exits from the monitored region.
 
-##### Callback Arguments
+###### Callback Arguments
 
   * `region` \- regionInfo object. (Object)

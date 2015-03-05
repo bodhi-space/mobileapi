@@ -1,4 +1,4 @@
-## RBCAudioItem Class
+#### AudioItem Class
 
 This object is created by [audio.getAudio](#getaudio) method and it used for recording and playback audio.
 
@@ -25,54 +25,54 @@ Once an object is no longer needed developer must necessarily call close method!
 
 ### Properties
 
-#### key
+##### key
 
 ```javascript
 // audioItem - is object created with audio.getAudio method  
 var appStorageKey = audioItem.key;
 ```
 
-##### Discussion
+###### Discussion
 
 The key in [App Storage](#app-storage-module) associated with audio record.
 
-#### state
+##### state
 
 ```javascript
 // audioItem - is object created with audio.getAudio method  
 var state = audioItem.state;
 ```
 
-##### Discussion
+###### Discussion
 
 Current audio item state. See variants in [RBCAudioItemState](#rbcaudioitemstate).  
 Developer can control changes after registering **callback** in `onStateChanged` method.
 
-#### duration
+##### duration
 
 ```javascript
 // audioItem - is object created with audio.getAudio method  
 var duration = audioItem.duration;
 ```
 
-##### Discussion
+###### Discussion
 
 Audio record duration. Developer can control changes after registering **callback** in `onDurationChanged` method.
 
-#### position
+##### position
 
 ```javascript
 // audioItem - is object created with audio.getAudio method  
 var position = audioItem.position;
 ```
 
-##### Discussion
+###### Discussion
 
 Current audio record position. Developer can control changes after registering **callback** in `onPositionChanged` method.
 
 ### Functions
 
-#### startPlaying
+##### startPlaying
 
 ```javascript
 // audioItem - is object created with audio.getAudio method  
@@ -85,11 +85,11 @@ audioItem.startPlaying( function() {
 
 `RBCAudioItem::startPlaying( successCallback, errorCallback )`
 
-##### Discussion
+###### Discussion
 
 Starts playing audio record.
 
-##### Arguments
+###### Arguments
 
   * `succesCallback` optional
 
@@ -101,11 +101,11 @@ Callback parameter is always **null**.
 
 Error Callback. Called when function return error.
 
-##### Return Value
+###### Return Value
 
   * [RBCPromise](#kernel-promise) object
 
-#### stopPlaying
+##### stopPlaying
 
 ```javascript
 // audioItem - is object created with audio.getAudio method  
@@ -118,11 +118,11 @@ audioItem.stopPlaying( function() {
 
 `RBCAudioItem::stopPlaying( successCallback, errorCallback )`
 
-##### Discussion
+###### Discussion
 
 Stop playing audio record.
 
-##### Arguments
+###### Arguments
 
   * `succesCallback` optional
 
@@ -134,11 +134,11 @@ Callback parameter is always **null**.
 
 Error Callback. Called when function return error.
 
-##### Return Value
+###### Return Value
 
   * [RBCPromise](#kernel-promise) object
 
-#### pausePlaying
+##### pausePlaying
 
 ```javascript
 // audioItem - is object created with audio.getAudio method  
@@ -151,11 +151,11 @@ audioItem.pausePlaying( function() {
 
 `RBCAudioItem::pausePlaying( successCallback, errorCallback )`
 
-##### Discussion
+###### Discussion
 
 Pause audio record playing.
 
-##### Arguments
+###### Arguments
 
   * `succesCallback` optional
 
@@ -167,11 +167,11 @@ Callback parameter is always **null**.
 
 Error Callback. Called when function return error.
 
-##### Return Value
+###### Return Value
 
   * [RBCPromise](#kernel-promise) object
 
-#### getDuration
+##### getDuration
 
 ```javascript
 // audioItem - is object created with audio.getAudio method  
@@ -184,11 +184,11 @@ audioItem.getDuration( function(info) {
 
 `RBCAudioItem::getDuration( successCallback, errorCallback )`
 
-##### Discussion
+###### Discussion
 
 Returns current audio record duration. After calling this method duration property updated automatically.
 
-##### Arguments
+###### Arguments
 
   * `succesCallback` optional
 
@@ -202,11 +202,11 @@ Callback parameter is object which contains:
 
 Error Callback. Called when function return error.
 
-##### Return Value
+###### Return Value
 
   * [RBCPromise](#kernel-promise) object
 
-#### seekTo
+##### seekTo
 
 ```javascript
 // audioItem - is object created with audio.getAudio method  
@@ -219,11 +219,11 @@ audioItem.seekTo( 1.5, function(info) {
 
 `RBCAudioItem::seekTo( position, successCallback, errorCallback )`
 
-##### Discussion
+###### Discussion
 
 Moves current playing position.
 
-##### Arguments
+###### Arguments
 
   * `position` required
 
@@ -239,11 +239,11 @@ Callback parameter is always **null**.
 
 Error Callback. Called when function return error.
 
-##### Return Value
+###### Return Value
 
   * [RBCPromise](#kernel-promise) object
 
-#### startRecording
+##### startRecording
 
 ```javascript
 // audioItem - is object created with audio.getAudio method  
@@ -256,11 +256,11 @@ audioItem.startRecording( function() {
 
 `RBCAudioItem::startRecording( successCallback, errorCallback )`
 
-##### Discussion
+###### Discussion
 
 Starts recording audio.
 
-##### Arguments
+###### Arguments
 
   * `succesCallback` optional
 
@@ -272,11 +272,11 @@ Callback parameter is always **null**.
 
 Error Callback. Called when function return error.
 
-##### Return Value
+###### Return Value
 
   * [RBCPromise](#kernel-promise) object
 
-#### stopRecording
+##### stopRecording
 
 ```javascript
 // audioItem - is object created with audio.getAudio method  
@@ -289,11 +289,11 @@ audioItem.stopRecording( function() {
 
 `RBCAudioItem::stopRecording( successCallback, errorCallback )`
 
-##### Discussion
+###### Discussion
 
 Stops recording audio.
 
-##### Arguments
+###### Arguments
 
   * `succesCallback` optional
 
@@ -305,11 +305,11 @@ Callback parameter is always **null**.
 
 Error Callback. Called when function return error.
 
-##### Return Value
+###### Return Value
 
   * [RBCPromise](#kernel-promise) object
 
-#### setVolume
+##### setVolume
 
 ```javascript
 // audioItem - is object created with audio.getAudio method  
@@ -322,11 +322,11 @@ audioItem.setVolume( 0.7, function(info) {
 
 `RBCAudioItem::setVolume( volume, successCallback, errorCallback )`
 
-##### Discussion
+###### Discussion
 
 Changes volume for audio record.
 
-##### Arguments
+###### Arguments
 
   * `volume` required
 
@@ -342,11 +342,11 @@ Callback parameter is always **null**.
 
 Error Callback. Called when function return error.
 
-##### Return Value
+###### Return Value
 
   * [RBCPromise](#kernel-promise) object
 
-#### onStateChanged
+##### onStateChanged
 
 ```javascript
 // audioItem - is object created with audio.getAudio method  
@@ -357,11 +357,11 @@ audioItem.onStateChanged( function(info) {
 
 `RBCAudioItem::onStateChanged( callback )`
 
-##### Discussion
+###### Discussion
 
 Registers `callback` to monitor state property changes.
 
-##### Arguments
+###### Arguments
 
   * `callback` optional
 
@@ -371,11 +371,11 @@ Callback parameter is object which contains:
 
     * `state` \- [RBCAudioItemState](#rbcaudioitemstate)
 
-##### Return Value
+###### Return Value
 
   * `this`
 
-#### onDurationChanged
+##### onDurationChanged
 
 ```javascript
 // audioItem - is object created with audio.getAudio method  
@@ -386,11 +386,11 @@ audioItem.onDurationChanged( function(info) {
 
 `RBCAudioItem::onDurationChanged( callback )`
 
-##### Discussion
+###### Discussion
 
 Registers `callback` to monitor duration property changes.
 
-##### Arguments
+###### Arguments
 
   * `callback` optional
 
@@ -400,11 +400,11 @@ Callback parameter is object which contains:
 
     * `duration` \- A Float value. New audio record duration.
 
-##### Return Value
+###### Return Value
 
   * `this`
 
-#### onPositionChanged
+##### onPositionChanged
 
 ```javascript
 // audioItem - is object created with audio.getAudio method  
@@ -415,11 +415,11 @@ audioItem.onPositionChanged( function(info) {
 
 `RBCAudioItem::onPositionChanged( callback )`
 
-##### Discussion
+###### Discussion
 
 Registers `callback` to monitor position property changes.
 
-##### Arguments
+###### Arguments
 
   * `callback` optional
 
@@ -429,11 +429,11 @@ Callback parameter is object which contains:
 
     * `position` \- A Float value. New playing position.
 
-##### Return Value
+###### Return Value
 
   * `this`
 
-#### close
+##### close
 
 ```javascript
 // audioItem - is object created with audio.getAudio method  
@@ -446,11 +446,11 @@ audioItem.close( function() {
 
 `RBCAudioItem::close( successCallback, errorCallback )`
 
-##### Discussion
+###### Discussion
 
 Closes audio item and release all resources.
 
-##### Arguments
+###### Arguments
 
   * `succesCallback` optional
 
@@ -462,6 +462,6 @@ Callback parameter is always **null**
 
 Error Callback. Called when function return error.
 
-##### Return Value
+###### Return Value
 
   * [RBCPromise](#kernel-promise) object

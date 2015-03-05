@@ -10,10 +10,6 @@ toc_footers:
 includes:
   
   - bodhimobile/MobileAPI/index
-  - bodhimobile/gettingstarted
-  - bodhimobile/envsetup
-  - bodhimobile/howto
-  - bodhimobile/apptools
   - bodhimobile/mobileapi
   - bodhimobile/MobileAPI/kernelPromise
   - bodhimobile/MobileAPI/kernelEvents

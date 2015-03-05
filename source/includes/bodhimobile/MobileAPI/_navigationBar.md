@@ -1,4 +1,4 @@
-## Navigation Bar Module
+#### Navigation Bar Module
 
 The module is used to Navigation Bar control.  
 Developer can showing or hiding Navigation Bar, changing title and right navigation bar item.
@@ -13,7 +13,7 @@ Developer can showing or hiding Navigation Bar, changing title and right navigat
 
 ### Functions
 
-#### show
+##### show
 
 ```javascript
 navigationBar.show( {fixed: true}, function(info) {  
@@ -25,11 +25,11 @@ navigationBar.show( {fixed: true}, function(info) {
 
 `navigationBar.show( options, successCallback, errorCallback )`
 
-##### Discussion
+###### Discussion
 
 Shows the Navigation Bar.
 
-##### Arguments
+###### Arguments
 
   * `options` optional
 
@@ -49,11 +49,11 @@ Callback parameter is always **null**.
 
 Error Callback. Called when function return error.
 
-##### Return Value
+###### Return Value
 
   * [RBCPromise](#kernel-promise) object
 
-#### hide
+##### hide
 
 ```javascript
 navigationBar.show( {fixed: true}, function(info) {  
@@ -65,11 +65,11 @@ navigationBar.show( {fixed: true}, function(info) {
 
 `navigationBar.hide( options, successCallback, errorCallback )`
 
-##### Discussion
+###### Discussion
 
 Hides the Navigation Bar.
 
-##### Arguments
+###### Arguments
 
   * `options` optional
 
@@ -91,11 +91,11 @@ Callback parameter is always **null**.
 
 Error Callback. Called when function return error.
 
-##### Return Value
+###### Return Value
 
   * [RBCPromise](#kernel-promise) object
 
-#### setTitle
+##### setTitle
 
 ```javascript
 navigationBar.setTitle( {loading:true, title:"Loading..."}, function(info) {  
@@ -107,7 +107,7 @@ navigationBar.setTitle( {loading:true, title:"Loading..."}, function(info) {
 
 `navigationBar.setTitle( options, successCallback, errorCallback )`
 
-##### Discussion
+###### Discussion
 
 Replaces default Navigation Bar Title to specified.  
 
@@ -115,7 +115,7 @@ Can showing loading indicator.
 
 If `options` not selected set default title.
 
-##### Arguments
+###### Arguments
 
   * `options` optional
 
@@ -140,11 +140,11 @@ Callback parameter is always **null**.
 
 Error Callback. Called when function return error.
 
-##### Return Value
+###### Return Value
 
   * [RBCPromise](#kernel-promise) object
 
-#### setRightButton
+##### setRightButton
 
 ```javascript
 navigationBar.setRightButton( {title:"Cancel"}, function(info) {  
@@ -156,13 +156,13 @@ navigationBar.setRightButton( {title:"Cancel"}, function(info) {
 
 `navigationBar.setRightButton( options, successCallback, errorCallback )`
 
-##### Discussion
+###### Discussion
 
 Sets the Navigation Bar right button.  
 Can showing loading indicator.  
 If no `options` are specified removes the right button.
 
-##### Arguments
+###### Arguments
 
   * `options` optional
 
@@ -191,18 +191,18 @@ Callback parameter is always **null**.
 
 Error Callback. Called when function return error.
 
-##### Return Value
+###### Return Value
 
   * [RBCPromise](#kernel-promise) object
 
 ### Events
 
-#### navigationBar.rightButtonPressed
+##### navigationBar.rightButtonPressed
 
-##### Discussion
+###### Discussion
 
 Event received when user pressed to the right navigation bar button.
 
-##### Callback Arguments
+###### Callback Arguments
 
   * No arguments

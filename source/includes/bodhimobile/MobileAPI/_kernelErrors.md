@@ -1,4 +1,4 @@
-## Kernel Errors
+#### Kernel Errors
 
 Contains error codes which returned in parameters in errorCallback
 

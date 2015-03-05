@@ -1,4 +1,4 @@
-## Messaging Module
+#### Messaging Module
 
 This module provides the ability to send email and sms messages with
 attachments (If device supported its) from [App Storage](#app-storage-module).
@@ -11,7 +11,7 @@ attachments (If device supported its) from [App Storage](#app-storage-module).
 
 ### Functions
 
-#### supportAttachments
+##### supportAttachments
 
 ```javascript
 messaging.supportAttachments( function(info) {  
@@ -31,11 +31,11 @@ messaging.supportAttachments( function(info) {
 
 `messaging.supportAttachments( successCallback, errorCallback )`
 
-##### Discussion
+###### Discussion
 
 The method returns information about whether attachments are supported in SMS and email.
 
-##### Arguments
+###### Arguments
 
   * `succesCallback` optional
 
@@ -50,11 +50,11 @@ Callback parameter is object which contains keys:
 
 Error Callback. Called when function return error.
 
-##### Return Value
+###### Return Value
 
   * [RBCPromise](#kernel-promise) object
 
-#### sms
+##### sms
 
 ```javascript
 messaging.sms( {to:["+1111111"], body:"Message Text", attachments:["image_key"]}, 
@@ -67,11 +67,11 @@ function(info) {
 
 `messaging.sms( options, successCallback, errorCallback )`
 
-##### Discussion
+###### Discussion
 
 The method opens a new sms composer window with predefined values.
 
-##### Arguments
+###### Arguments
 
   * `options` required
 
@@ -99,11 +99,11 @@ Callback parameter is always null.
 
 Error Callback. Called when function return error.
 
-##### Return Value
+###### Return Value
 
   * [RBCPromise](#kernel-promise) object
 
-#### email
+##### email
 
 ```javascript
 messaging.email( {to:["test@test.com"], subject:"Test Email", body:"Email Message Text", attachments:["image_key"]},
@@ -116,11 +116,11 @@ function(info) {
 
 `messaging.email( options, successCallback, errorCallback )`
 
-##### Discussion
+###### Discussion
 
 The method opens a new email composer window with predefined values.
 
-##### Arguments
+###### Arguments
 
   * `options` required
 
@@ -162,6 +162,6 @@ Callback parameter is always null.
 
 Error Callback. Called when function return error.
 
-##### Return Value
+###### Return Value
 
   * [RBCPromise](#kernel-promise) object
