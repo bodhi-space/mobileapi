@@ -54,18 +54,7 @@
 
 <p>There is only one API required to deliver applications on Android, iOs or Windows phones.</p>
 
-          <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-58389630-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
-
-<h2 id="mobile-api">Mobile API</h2>
+          <h2 id="mobile-api">Mobile API</h2>
 
 <p>The Bodhi Mobile API provides interface to the native features of a mobile device across 3 platforms. iOS, Android, and Windows Phone/</p>
 
@@ -73,7 +62,7 @@
 
           <h4 id="kernel-promise">Kernel Promise</h4>
 
-<p>Virtually all functions in modules return instance of RBCPromise object.<br>
+<p>Virtually all functions in modules return instance of BodhiMobilePromise object.<br>
 With it you can easy add success and finished callbacks for the function.</p>
 
 <h3 id="tasks">Tasks</h3>
@@ -98,7 +87,7 @@ With it you can easy add success and finished callbacks for the function.</p>
 <span class="p">});</span>
 </code></pre>
 
-<p><code class="prettyprint">RBCPromise.then( succesCallback, errorCallback )</code></p>
+<p><code class="prettyprint">BodhiMobilePromise.then( succesCallback, errorCallback )</code></p>
 
 <h6 id="discussion">Discussion</h6>
 
@@ -133,7 +122,7 @@ called.</p>
 <span class="p">});</span>
 </code></pre>
 
-<p><code class="prettyprint">RBCPromise.fail( errorCallback )</code></p>
+<p><code class="prettyprint">BodhiMobilePromise.fail( errorCallback )</code></p>
 
 <h5 id="discussion">Discussion</h5>
 
@@ -161,7 +150,7 @@ called.</p>
 <span class="p">});</span>
 </code></pre>
 
-<p><code class="prettyprint">RBCPromise.success( succesCallback )</code></p>
+<p><code class="prettyprint">BodhiMobilePromise.success( succesCallback )</code></p>
 
 <h5 id="discussion">Discussion</h5>
 
@@ -273,35 +262,35 @@ device.pause</p>
 <h3 id="tasks">Tasks</h3>
 
 <ul>
-<li><code class="prettyprint">RBCErrors.Unknown</code> constant</li>
-<li><code class="prettyprint">RBCErrors.ModuleNotSupported</code> constant</li>
-<li><code class="prettyprint">RBCErrors.FunctionNotSupported</code> constant</li>
-<li><code class="prettyprint">RBCErrors.PermissionDenied</code> constant</li>
-<li><code class="prettyprint">RBCErrors.WrongParameters</code> constant</li>
-<li><code class="prettyprint">RBCErrors.Timeout</code> constant</li>
-<li><code class="prettyprint">RBCErrors.Formatting</code> constant</li>
-<li><code class="prettyprint">RBCErrors.Parsing</code> constant</li>
-<li><code class="prettyprint">RBCErrors.CancelledByUser</code> constant</li>
-<li><code class="prettyprint">RBCErrors.NotFound</code> constant</li>
-<li><code class="prettyprint">RBCErrors.Internal</code> constant</li>
+<li><code class="prettyprint">BodhiMobileErrors.Unknown</code> constant</li>
+<li><code class="prettyprint">BodhiMobileErrors.ModuleNotSupported</code> constant</li>
+<li><code class="prettyprint">BodhiMobileErrors.FunctionNotSupported</code> constant</li>
+<li><code class="prettyprint">BodhiMobileErrors.PermissionDenied</code> constant</li>
+<li><code class="prettyprint">BodhiMobileErrors.WrongParameters</code> constant</li>
+<li><code class="prettyprint">BodhiMobileErrors.Timeout</code> constant</li>
+<li><code class="prettyprint">BodhiMobileErrors.Formatting</code> constant</li>
+<li><code class="prettyprint">BodhiMobileErrors.Parsing</code> constant</li>
+<li><code class="prettyprint">BodhiMobileErrors.CancelledByUser</code> constant</li>
+<li><code class="prettyprint">BodhiMobileErrors.NotFound</code> constant</li>
+<li><code class="prettyprint">BodhiMobileErrors.Internal</code> constant</li>
 </ul>
 
 <h3 id="constants">Constants</h3>
 
-<h3 id="rbcerrors.unknown">RBCErrors.Unknown</h3>
+<h3 id="bodhimobileerrors.unknown">BodhiMobileErrors.Unknown</h3>
 
 <h5 id="discussion">Discussion</h5>
 
 <p>Error with this code returned if unknown error occurred.</p>
 
-<h3 id="rbcerrors.modulenotsupported">RBCErrors.ModuleNotSupported</h3>
+<h3 id="bodhimobileerrors.modulenotsupported">BodhiMobileErrors.ModuleNotSupported</h3>
 
 <h5 id="discussion">Discussion</h5>
 
 <p>Error with this code returned if application does not support module. It can
 happen if used old version of application.</p>
 
-<h3 id="rbcerrors.functionnotsupported">RBCErrors.FunctionNotSupported</h3>
+<h3 id="bodhimobileerrors.functionnotsupported">BodhiMobileErrors.FunctionNotSupported</h3>
 
 <h5 id="discussion">Discussion</h5>
 
@@ -309,7 +298,7 @@ happen if used old version of application.</p>
 It can happen if used old version of application or device can not support
 this function.</p>
 
-<h3 id="rbcerrors.permissiondenied">RBCErrors.PermissionDenied</h3>
+<h3 id="bodhimobileerrors.permissiondenied">BodhiMobileErrors.PermissionDenied</h3>
 
 <h5 id="discussion">Discussion</h5>
 
@@ -317,45 +306,45 @@ this function.</p>
 access to required feature. For example user can reject access to photos or
 location on iOS.</p>
 
-<h3 id="rbcerrors.wrongparameters">RBCErrors.WrongParameters</h3>
+<h3 id="bodhimobileerrors.wrongparameters">BodhiMobileErrors.WrongParameters</h3>
 
 <h5 id="discussion">Discussion</h5>
 
 <p>Error with this code returned if function&rsquo;s input parameters is wrong or
 insufficient.</p>
 
-<h3 id="rbcerrors.timeout">RBCErrors.Timeout</h3>
+<h3 id="bodhimobileerrors.timeout">BodhiMobileErrors.Timeout</h3>
 
 <h5 id="discussion">Discussion</h5>
 
 <p>Error with this code returned if the timeout expired before the results.</p>
 
-<h3 id="rbcerrors.formatting">RBCErrors.Formatting</h3>
+<h3 id="bodhimobileerrors.formatting">BodhiMobileErrors.Formatting</h3>
 
 <h5 id="discussion">Discussion</h5>
 
 <p>Error with this code returned if formatting of input parameters is wrong.</p>
 
-<h3 id="rbcerrors.parsing">RBCErrors.Parsing</h3>
+<h3 id="bodhimobileerrors.parsing">BodhiMobileErrors.Parsing</h3>
 
 <h5 id="discussion">Discussion</h5>
 
 <p>Error with this code returned if function can not parse input parameters.</p>
 
-<h3 id="rbcerrors.cancelledbyuser">RBCErrors.CancelledByUser</h3>
+<h3 id="bodhimobileerrors.cancelledbyuser">BodhiMobileErrors.CancelledByUser</h3>
 
 <h5 id="discussion">Discussion</h5>
 
 <p>Error with this code returned if action was cancelled by user. For example
 user pressed close button instead selecting photo from library.</p>
 
-<h3 id="rbcerrors.notfound">RBCErrors.NotFound</h3>
+<h3 id="bodhimobileerrors.notfound">BodhiMobileErrors.NotFound</h3>
 
 <h5 id="discussion">Discussion</h5>
 
 <p>Error with this code returned if requested object not found.</p>
 
-<h3 id="rbcerrors.internal">RBCErrors.Internal</h3>
+<h3 id="bodhimobileerrors.internal">BodhiMobileErrors.Internal</h3>
 
 <h5 id="discussion">Discussion</h5>
 
@@ -453,7 +442,7 @@ user pressed close button instead selecting photo from library.</p>
 <h5 id="return-value">Return Value</h5>
 
 <ul>
-<li><a href="#kernel-promise">RBCPromise</a> object</li>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
 </ul>
 
 <h5 id="watchacceleration">watchAcceleration</h5>
@@ -661,7 +650,7 @@ For it developer must set key, url and contentType (optional) properties for
 <h6 id="return-value">Return Value</h6>
 
 <ul>
-<li><a href="#kernel-promise">RBCPromise</a> object</li>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
 </ul>
 
 <h5 id="getallkeys">getAllKeys</h5>
@@ -718,7 +707,7 @@ For it developer must set key, url and contentType (optional) properties for
 <h6 id="return-value">Return Value</h6>
 
 <ul>
-<li><a href="#kernel-promise">RBCPromise</a> object</li>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
 </ul>
 
 <h5 id="get">get</h5>
@@ -784,7 +773,7 @@ For it developer must set key, url and contentType (optional) properties for
 <h6 id="return-value">Return Value</h6>
 
 <ul>
-<li><a href="#kernel-promise">RBCPromise</a> object</li>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
 </ul>
 
 <h5 id="delete">delete</h5>
@@ -840,7 +829,7 @@ For it developer must set key, url and contentType (optional) properties for
 <h6 id="return-value">Return Value</h6>
 
 <ul>
-<li><a href="#kernel-promise">RBCPromise</a> object</li>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
 </ul>
 
 <h5 id="deleteall">deleteAll</h5>
@@ -896,7 +885,7 @@ For it developer must set key, url and contentType (optional) properties for
 <h6 id="return-value">Return Value</h6>
 
 <ul>
-<li><a href="#kernel-promise">RBCPromise</a> object</li>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
 </ul>
 
 <h5 id="putstring">putString</h5>
@@ -954,7 +943,7 @@ For it developer must set key, url and contentType (optional) properties for
 <h6 id="return-value">Return Value</h6>
 
 <ul>
-<li><a href="#kernel-promise">RBCPromise</a> object</li>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
 </ul>
 
 <h5 id="getstring">getString</h5>
@@ -1012,7 +1001,7 @@ For it developer must set key, url and contentType (optional) properties for
 <h6 id="return-value">Return Value</h6>
 
 <ul>
-<li><a href="#kernel-promise">RBCPromise</a> object</li>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
 </ul>
 
 <h5 id="getstrings">getStrings</h5>
@@ -1070,7 +1059,7 @@ For it developer must set key, url and contentType (optional) properties for
 <h6 id="return-value">Return Value</h6>
 
 <ul>
-<li><a href="#kernel-promise">RBCPromise</a> object</li>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
 </ul>
 
 <h5 id="putcontent">putContent</h5>
@@ -1134,7 +1123,7 @@ For it developer must set key, url and contentType (optional) properties for
 <h6 id="return-value">Return Value</h6>
 
 <ul>
-<li><a href="#kernel-promise">RBCPromise</a> object</li>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
 </ul>
 
 <h5 id="loadcontent">loadContent</h5>
@@ -1192,7 +1181,7 @@ For it developer must set key, url and contentType (optional) properties for
 <h6 id="return-value">Return Value</h6>
 
 <ul>
-<li><a href="#kernel-promise">RBCPromise</a> object</li>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
 </ul>
 
 <h5 id="getcontent">getContent</h5>
@@ -1250,7 +1239,7 @@ For it developer must set key, url and contentType (optional) properties for
 <h6 id="return-value">Return Value</h6>
 
 <ul>
-<li><a href="#kernel-promise">RBCPromise</a> object</li>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
 </ul>
 
           <h4 id="archiving-module">Archiving Module</h4>
@@ -1341,7 +1330,7 @@ contains prefix in the start of string will be added to zip archive.</p>
 <h6 id="return-value">Return Value</h6>
 
 <ul>
-<li><a href="#kernel-promise">RBCPromise</a> object</li>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
 </ul>
 
 <h5 id="unzip">unzip</h5>
@@ -1411,10 +1400,10 @@ After unzipping will be created keys:</p></li>
 <h6 id="return-value">Return Value</h6>
 
 <ul>
-<li><a href="#kernel-promise">RBCPromise</a> object</li>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
 </ul>
 
-          <h4 id="audioitem-class">AudioItem Class</h4>
+          <h4 id="bodhimobileaudioitem-class">BodhiMobileAudioItem Class</h4>
 
 <p>This object is created by <a href="#getaudio">audio.getAudio</a> method and it used for recording and playback audio.</p>
 
@@ -1459,7 +1448,7 @@ After unzipping will be created keys:</p></li>
 
 <h6 id="discussion">Discussion</h6>
 
-<p>Current audio item state. See variants in <a href="#rbcaudioitemstate">RBCAudioItemState</a>.<br>
+<p>Current audio item state. See variants in <a href="#bodhimobileaudioitemstate">BodhiMobileAudioItemState</a>.<br>
 Developer can control changes after registering <strong>callback</strong> in <code class="prettyprint">onStateChanged</code> method.</p>
 
 <h5 id="duration">duration</h5>
@@ -1491,7 +1480,7 @@ Developer can control changes after registering <strong>callback</strong> in <co
 <span class="p">});</span>
 </code></pre>
 
-<p><code class="prettyprint">RBCAudioItem::startPlaying( successCallback, errorCallback )</code></p>
+<p><code class="prettyprint">BodhiMobileAudioItem::startPlaying( successCallback, errorCallback )</code></p>
 
 <h6 id="discussion">Discussion</h6>
 
@@ -1516,7 +1505,7 @@ Developer can control changes after registering <strong>callback</strong> in <co
 <h6 id="return-value">Return Value</h6>
 
 <ul>
-<li><a href="#kernel-promise">RBCPromise</a> object</li>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
 </ul>
 
 <h5 id="stopplaying">stopPlaying</h5>
@@ -1528,7 +1517,7 @@ Developer can control changes after registering <strong>callback</strong> in <co
 <span class="p">});</span>
 </code></pre>
 
-<p><code class="prettyprint">RBCAudioItem::stopPlaying( successCallback, errorCallback )</code></p>
+<p><code class="prettyprint">BodhiMobileAudioItem::stopPlaying( successCallback, errorCallback )</code></p>
 
 <h6 id="discussion">Discussion</h6>
 
@@ -1553,7 +1542,7 @@ Developer can control changes after registering <strong>callback</strong> in <co
 <h6 id="return-value">Return Value</h6>
 
 <ul>
-<li><a href="#kernel-promise">RBCPromise</a> object</li>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
 </ul>
 
 <h5 id="pauseplaying">pausePlaying</h5>
@@ -1565,7 +1554,7 @@ Developer can control changes after registering <strong>callback</strong> in <co
 <span class="p">});</span>
 </code></pre>
 
-<p><code class="prettyprint">RBCAudioItem::pausePlaying( successCallback, errorCallback )</code></p>
+<p><code class="prettyprint">BodhiMobileAudioItem::pausePlaying( successCallback, errorCallback )</code></p>
 
 <h6 id="discussion">Discussion</h6>
 
@@ -1590,7 +1579,7 @@ Developer can control changes after registering <strong>callback</strong> in <co
 <h6 id="return-value">Return Value</h6>
 
 <ul>
-<li><a href="#kernel-promise">RBCPromise</a> object</li>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
 </ul>
 
 <h5 id="getduration">getDuration</h5>
@@ -1602,7 +1591,7 @@ Developer can control changes after registering <strong>callback</strong> in <co
 <span class="p">});</span>
 </code></pre>
 
-<p><code class="prettyprint">RBCAudioItem::getDuration( successCallback, errorCallback )</code></p>
+<p><code class="prettyprint">BodhiMobileAudioItem::getDuration( successCallback, errorCallback )</code></p>
 
 <h6 id="discussion">Discussion</h6>
 
@@ -1629,7 +1618,7 @@ Developer can control changes after registering <strong>callback</strong> in <co
 <h6 id="return-value">Return Value</h6>
 
 <ul>
-<li><a href="#kernel-promise">RBCPromise</a> object</li>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
 </ul>
 
 <h5 id="seekto">seekTo</h5>
@@ -1641,7 +1630,7 @@ Developer can control changes after registering <strong>callback</strong> in <co
 <span class="p">});</span>
 </code></pre>
 
-<p><code class="prettyprint">RBCAudioItem::seekTo( position, successCallback, errorCallback )</code></p>
+<p><code class="prettyprint">BodhiMobileAudioItem::seekTo( position, successCallback, errorCallback )</code></p>
 
 <h6 id="discussion">Discussion</h6>
 
@@ -1672,7 +1661,7 @@ Developer can control changes after registering <strong>callback</strong> in <co
 <h6 id="return-value">Return Value</h6>
 
 <ul>
-<li><a href="#kernel-promise">RBCPromise</a> object</li>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
 </ul>
 
 <h5 id="startrecording">startRecording</h5>
@@ -1684,7 +1673,7 @@ Developer can control changes after registering <strong>callback</strong> in <co
 <span class="p">});</span>
 </code></pre>
 
-<p><code class="prettyprint">RBCAudioItem::startRecording( successCallback, errorCallback )</code></p>
+<p><code class="prettyprint">BodhiMobileAudioItem::startRecording( successCallback, errorCallback )</code></p>
 
 <h6 id="discussion">Discussion</h6>
 
@@ -1709,7 +1698,7 @@ Developer can control changes after registering <strong>callback</strong> in <co
 <h6 id="return-value">Return Value</h6>
 
 <ul>
-<li><a href="#kernel-promise">RBCPromise</a> object</li>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
 </ul>
 
 <h5 id="stoprecording">stopRecording</h5>
@@ -1721,7 +1710,7 @@ Developer can control changes after registering <strong>callback</strong> in <co
 <span class="p">});</span>
 </code></pre>
 
-<p><code class="prettyprint">RBCAudioItem::stopRecording( successCallback, errorCallback )</code></p>
+<p><code class="prettyprint">BodhiMobileAudioItem::stopRecording( successCallback, errorCallback )</code></p>
 
 <h6 id="discussion">Discussion</h6>
 
@@ -1746,7 +1735,7 @@ Developer can control changes after registering <strong>callback</strong> in <co
 <h6 id="return-value">Return Value</h6>
 
 <ul>
-<li><a href="#kernel-promise">RBCPromise</a> object</li>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
 </ul>
 
 <h5 id="setvolume">setVolume</h5>
@@ -1758,7 +1747,7 @@ Developer can control changes after registering <strong>callback</strong> in <co
 <span class="p">});</span>
 </code></pre>
 
-<p><code class="prettyprint">RBCAudioItem::setVolume( volume, successCallback, errorCallback )</code></p>
+<p><code class="prettyprint">BodhiMobileAudioItem::setVolume( volume, successCallback, errorCallback )</code></p>
 
 <h6 id="discussion">Discussion</h6>
 
@@ -1789,7 +1778,7 @@ Developer can control changes after registering <strong>callback</strong> in <co
 <h6 id="return-value">Return Value</h6>
 
 <ul>
-<li><a href="#kernel-promise">RBCPromise</a> object</li>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
 </ul>
 
 <h5 id="onstatechanged">onStateChanged</h5>
@@ -1799,7 +1788,7 @@ Developer can control changes after registering <strong>callback</strong> in <co
 <span class="p">});</span>
 </code></pre>
 
-<p><code class="prettyprint">RBCAudioItem::onStateChanged( callback )</code></p>
+<p><code class="prettyprint">BodhiMobileAudioItem::onStateChanged( callback )</code></p>
 
 <h6 id="discussion">Discussion</h6>
 
@@ -1815,7 +1804,7 @@ Developer can control changes after registering <strong>callback</strong> in <co
 
 <p>Callback parameter is object which contains:</p>
 
-<p>* <code class="prettyprint">state</code> - <a href="#rbcaudioitemstate">RBCAudioItemState</a></p>
+<p>* <code class="prettyprint">state</code> - <a href="#bodhimobileaudioitemstate">BodhiMobileAudioItemState</a></p>
 
 <h6 id="return-value">Return Value</h6>
 
@@ -1830,7 +1819,7 @@ Developer can control changes after registering <strong>callback</strong> in <co
 <span class="p">});</span>
 </code></pre>
 
-<p><code class="prettyprint">RBCAudioItem::onDurationChanged( callback )</code></p>
+<p><code class="prettyprint">BodhiMobileAudioItem::onDurationChanged( callback )</code></p>
 
 <h6 id="discussion">Discussion</h6>
 
@@ -1861,7 +1850,7 @@ Developer can control changes after registering <strong>callback</strong> in <co
 <span class="p">});</span>
 </code></pre>
 
-<p><code class="prettyprint">RBCAudioItem::onPositionChanged( callback )</code></p>
+<p><code class="prettyprint">BodhiMobileAudioItem::onPositionChanged( callback )</code></p>
 
 <h6 id="discussion">Discussion</h6>
 
@@ -1894,7 +1883,7 @@ Developer can control changes after registering <strong>callback</strong> in <co
 <span class="p">});</span>
 </code></pre>
 
-<p><code class="prettyprint">RBCAudioItem::close( successCallback, errorCallback )</code></p>
+<p><code class="prettyprint">BodhiMobileAudioItem::close( successCallback, errorCallback )</code></p>
 
 <h6 id="discussion">Discussion</h6>
 
@@ -1919,7 +1908,7 @@ Developer can control changes after registering <strong>callback</strong> in <co
 <h6 id="return-value">Return Value</h6>
 
 <ul>
-<li><a href="#kernel-promise">RBCPromise</a> object</li>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
 </ul>
 
           <h4 id="audio-module">Audio Module</h4>
@@ -1929,46 +1918,46 @@ Developer can control changes after registering <strong>callback</strong> in <co
 <h3 id="tasks">Tasks</h3>
 
 <ul>
-<li><code class="prettyprint">RBCAudioItemState</code> constant</li>
-<li><code class="prettyprint">RBCAudioItem</code> object</li>
+<li><code class="prettyprint">BodhiMobileAudioItemState</code> constant</li>
+<li><code class="prettyprint">BodhiMobileAudioItem</code> object</li>
 <li><code class="prettyprint">getAudio</code> function</li>
 </ul>
 
 <h3 id="constants">Constants</h3>
 
-<h5 id="rbcaudioitemstate">RBCAudioItemState</h5>
+<h5 id="bodhimobileaudioitemstate">BodhiMobileAudioItemState</h5>
 
 <h6 id="discussion">Discussion</h6>
 
-<p>This enum contains variants of <a href="#rbcaudioitem-class">RBCAudioItem</a> object states.</p>
+<p>This enum contains variants of <a href="#bodhimobileaudioitem-class">BodhiMobileAudioItem</a> object states.</p>
 
 <ul>
-<li><code class="prettyprint">RBCAudioItemState.STOPPED</code></li>
+<li><code class="prettyprint">BodhiMobileAudioItemState.STOPPED</code></li>
 </ul>
 
 <p>Audio record currently stopped.</p>
 
 <ul>
-<li><code class="prettyprint">RBCAudioItemState.PLAYING</code></li>
+<li><code class="prettyprint">BodhiMobileAudioItemState.PLAYING</code></li>
 </ul>
 
 <p>Audio record currently playing.</p>
 
 <ul>
-<li><code class="prettyprint">RBCAudioItemState.PAUSED</code></li>
+<li><code class="prettyprint">BodhiMobileAudioItemState.PAUSED</code></li>
 </ul>
 
 <p>Audio record currently paused.</p>
 
 <ul>
-<li><code class="prettyprint">RBCAudioItemState.RECORDED</code></li>
+<li><code class="prettyprint">BodhiMobileAudioItemState.RECORDED</code></li>
 </ul>
 
 <p>Audio record currently recorded.</p>
 
 <h3 id="objects">Objects</h3>
 
-<h5 id="rbcaudioitem">RBCAudioItem</h5>
+<h5 id="bodhimobileaudioitem">BodhiMobileAudioItem</h5>
 
 <h6 id="discussion">Discussion</h6>
 
@@ -1988,7 +1977,7 @@ Developer can control changes after registering <strong>callback</strong> in <co
 
 <h6 id="discussion">Discussion</h6>
 
-<p>Creates new <a href="#rbcaudioitem-class">RBCAudioItem</a> object which used for all audio operations.</p>
+<p>Creates new <a href="#bodhimobileaudioitem-class">BodhiMobileAudioItem</a> object which used for all audio operations.</p>
 
 <h6 id="arguments">Arguments</h6>
 
@@ -2010,7 +1999,7 @@ Developer can control changes after registering <strong>callback</strong> in <co
 
 <p>Callback parameter is object which contains:</p>
 
-<p>* <code class="prettyprint">audioItem</code> - The created <a href="#rbcaudioitem-class">RBCAudioItem</a> object.</p>
+<p>* <code class="prettyprint">audioItem</code> - The created <a href="#bodhimobileaudioitem-class">BodhiMobileAudioItem</a> object.</p>
 
 <ul>
 <li><code class="prettyprint">errorCallback</code> optional</li>
@@ -2021,7 +2010,7 @@ Developer can control changes after registering <strong>callback</strong> in <co
 <h6 id="return-value">Return Value</h6>
 
 <ul>
-<li><a href="#kernel-promise">RBCPromise</a> object</li>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
 </ul>
 
           <h4 id="authentication-module">Authentication Module</h4>
@@ -2127,7 +2116,7 @@ application restart.</p>
 <h6 id="return-value">Return Value</h6>
 
 <ul>
-<li><a href="#kernel-promise">RBCPromise</a> object</li>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
 </ul>
 
 <h5 id="logout">logout</h5>
@@ -2163,7 +2152,7 @@ application restart.</p>
 <h6 id="return-value">Return Value</h6>
 
 <ul>
-<li><a href="#kernel-promise">RBCPromise</a> object</li>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
 </ul>
 
 <h5 id="getcredentialsinfo">getCredentialsInfo</h5>
@@ -2205,7 +2194,7 @@ method.</p>
 <h6 id="return-value">Return Value</h6>
 
 <ul>
-<li><a href="#kernel-promise">RBCPromise</a> object</li>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
 </ul>
 
 <h3 id="events">Events</h3>
@@ -2307,7 +2296,7 @@ supported codes.</p>
 <h6 id="return-value">Return Value</h6>
 
 <ul>
-<li><a href="#kernel-promise">RBCPromise</a> object</li>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
 </ul>
 
           <h4 id="battery-module">Battery Module</h4>
@@ -2703,7 +2692,7 @@ device supports it.</p>
 <h6 id="return-value">Return Value</h6>
 
 <ul>
-<li><a href="#kernel-promise">RBCPromise</a> object</li>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
 </ul>
 
 <h5 id="stop">stop</h5>
@@ -2739,7 +2728,7 @@ device supports it.</p>
 <h6 id="return-value">Return Value</h6>
 
 <ul>
-<li><a href="#kernel-promise">RBCPromise</a> object</li>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
 </ul>
 
 <h5 id="getstate">getState</h5>
@@ -2777,7 +2766,7 @@ device supports it.</p>
 <h6 id="return-value">Return Value</h6>
 
 <ul>
-<li><a href="#kernel-promise">RBCPromise</a> object</li>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
 </ul>
 
 <h5 id="startdiscovery">startDiscovery</h5>
@@ -2813,7 +2802,7 @@ device supports it.</p>
 <h6 id="return-value">Return Value</h6>
 
 <ul>
-<li><a href="#kernel-promise">RBCPromise</a> object</li>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
 </ul>
 
 <h5 id="stopdiscovery">stopDiscovery</h5>
@@ -2849,7 +2838,7 @@ device supports it.</p>
 <h6 id="return-value">Return Value</h6>
 
 <ul>
-<li><a href="#kernel-promise">RBCPromise</a> object</li>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
 </ul>
 
 <h5 id="connect">connect</h5>
@@ -2896,7 +2885,7 @@ btPeripheral.peripheralInfoChanged event to receive it.</p>
 <h6 id="return-value">Return Value</h6>
 
 <ul>
-<li><a href="#kernel-promise">RBCPromise</a> object</li>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
 </ul>
 
 <h5 id="disconnect">disconnect</h5>
@@ -2938,7 +2927,7 @@ btPeripheral.peripheralInfoChanged event to receive it.</p>
 <h6 id="return-value">Return Value</h6>
 
 <ul>
-<li><a href="#kernel-promise">RBCPromise</a> object</li>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
 </ul>
 
 <h3 id="events">Events</h3>
@@ -3350,7 +3339,7 @@ The value can be one of:</p>
 <h6 id="return-value">Return Value</h6>
 
 <ul>
-<li><a href="#kernel-promise">RBCPromise</a> object</li>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
 </ul>
 
 <h5 id="getcalendarbyid">getCalendarById</h5>
@@ -3395,7 +3384,7 @@ The value can be one of:</p>
 <h6 id="return-value">Return Value</h6>
 
 <ul>
-<li><a href="#kernel-promise">RBCPromise</a> object</li>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
 </ul>
 
 <h5 id="getevents">getEvents</h5>
@@ -3452,7 +3441,7 @@ The value can be one of:</p>
 <h6 id="return-value">Return Value</h6>
 
 <ul>
-<li><a href="#kernel-promise">RBCPromise</a> object</li>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
 </ul>
 
 <h5 id="geteventbyid">getEventById</h5>
@@ -3497,7 +3486,7 @@ The value can be one of:</p>
 <h6 id="return-value">Return Value</h6>
 
 <ul>
-<li><a href="#kernel-promise">RBCPromise</a> object</li>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
 </ul>
 
 <h5 id="create">create</h5>
@@ -3558,7 +3547,7 @@ The value can be one of:</p>
 <h6 id="return-value">Return Value</h6>
 
 <ul>
-<li><a href="#kernel-promise">RBCPromise</a> object</li>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
 </ul>
 
 <h5 id="delete">delete</h5>
@@ -3602,7 +3591,7 @@ The value can be one of:</p>
 <h6 id="return-value">Return Value</h6>
 
 <ul>
-<li><a href="#kernel-promise">RBCPromise</a> object</li>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
 </ul>
 
           <h4 id="camera-module">Camera Module</h4>
@@ -3823,7 +3812,7 @@ The value can be one of:</p>
 <h6 id="return-value">Return Value</h6>
 
 <ul>
-<li><a href="#kernel-promise">RBCPromise</a> object</li>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
 </ul>
 
 <h5 id="takemedia">takeMedia</h5>
@@ -3907,7 +3896,7 @@ The value can be one of:</p>
 <h6 id="return-value">Return Value</h6>
 
 <ul>
-<li><a href="#kernel-promise">RBCPromise</a> object</li>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
 </ul>
 
 <h5 id="choosemedia">chooseMedia</h5>
@@ -3993,7 +3982,7 @@ property is <strong>true</strong></p>
 <h6 id="return-value">Return Value</h6>
 
 <ul>
-<li><a href="#kernel-promise">RBCPromise</a> object</li>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
 </ul>
 
 <h5 id="recordvideo">recordVideo</h5>
@@ -4061,7 +4050,7 @@ property is <strong>true</strong></p>
 <h6 id="return-value">Return Value</h6>
 
 <ul>
-<li><a href="#kernel-promise">RBCPromise</a> object</li>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
 </ul>
 
 <h5 id="choosevideo">chooseVideo</h5>
@@ -4123,7 +4112,7 @@ property is <strong>true</strong></p>
 <h6 id="return-value">Return Value</h6>
 
 <ul>
-<li><a href="#kernel-promise">RBCPromise</a> object</li>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
 </ul>
 
 <h5 id="capturephoto">capturePhoto</h5>
@@ -4208,7 +4197,7 @@ property is <strong>true</strong></p>
 <h6 id="return-value">Return Value</h6>
 
 <ul>
-<li><a href="#kernel-promise">RBCPromise</a> object</li>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
 </ul>
 
 <h5 id="choosephoto">choosePhoto</h5>
@@ -4287,7 +4276,7 @@ property is <strong>true</strong></p>
 <h6 id="return-value">Return Value</h6>
 
 <ul>
-<li><a href="#kernel-promise">RBCPromise</a> object</li>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
 </ul>
 
 <h5 id="cleanup">cleanup</h5>
@@ -4323,7 +4312,7 @@ property is <strong>true</strong></p>
 <h6 id="return-value">Return Value</h6>
 
 <ul>
-<li><a href="#kernel-promise">RBCPromise</a> object</li>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
 </ul>
 
           <h4 id="compass-module">Compass Module</h4>
@@ -4434,7 +4423,7 @@ property is <strong>true</strong></p>
 <li>No return value.</li>
 </ul>
 
-          <h4 id="rbcconnectionmonitor-class">RBCConnectionMonitor Class</h4>
+          <h4 id="bodhimobileconnectionmonitor-class">BodhiMobileConnectionMonitor Class</h4>
 
 <p>This object is created by <a href="#startmonitoring">connection.startMonitoring</a> method and used for checking the server availability.</p>
 
@@ -4478,7 +4467,7 @@ property is <strong>true</strong></p>
 <span class="p">});</span>
 </code></pre>
 
-<p><code class="prettyprint">RBCConnectionMonitor::onAvailableChanged( callback )</code></p>
+<p><code class="prettyprint">BodhiMobileConnectionMonitor::onAvailableChanged( callback )</code></p>
 
 <h6 id="discussion">Discussion</h6>
 
@@ -4511,7 +4500,7 @@ property is <strong>true</strong></p>
 <span class="p">});</span>
 </code></pre>
 
-<p><code class="prettyprint">RBCConnectionMonitor::stop( successCallback, errorCallback )</code></p>
+<p><code class="prettyprint">BodhiMobileConnectionMonitor::stop( successCallback, errorCallback )</code></p>
 
 <h6 id="discussion">Discussion</h6>
 
@@ -4536,7 +4525,7 @@ property is <strong>true</strong></p>
 <h6 id="return-value">Return Value</h6>
 
 <ul>
-<li><a href="#kernel-promise">RBCPromise</a> object</li>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
 </ul>
 
           <h4 id="connection-module">Connection Module</h4>
@@ -4548,7 +4537,7 @@ property is <strong>true</strong></p>
 <ul>
 <li><code class="prettyprint">TYPES</code> constant</li>
 <li><code class="prettyprint">STATES</code> constant</li>
-<li><code class="prettyprint">RBCConnectionMonitor</code> object</li>
+<li><code class="prettyprint">BodhiMobileConnectionMonitor</code> object</li>
 <li><code class="prettyprint">type</code> property</li>
 <li><code class="prettyprint">state</code> property</li>
 <li><code class="prettyprint">startMonitoring</code> function</li>
@@ -4651,11 +4640,11 @@ property is <strong>true</strong></p>
 
 <h3 id="objects">Objects</h3>
 
-<h5 id="rbcconnectionmonitor">RBCConnectionMonitor</h5>
+<h5 id="bodhimobileconnectionmonitor">BodhiMobileConnectionMonitor</h5>
 
 <h6 id="discussion">Discussion</h6>
 
-<p>This object contains information about specified server availability for requests from the device. See <a href="#rbcconnectionmonitor-class">RBCConnectionMonitor Class</a> to get more information.</p>
+<p>This object contains information about specified server availability for requests from the device. See <a href="#bodhimobileconnectionmonitor-class">BodhiMobileConnectionMonitor Class</a> to get more information.</p>
 
 <h3 id="properties">Properties</h3>
 
@@ -4689,7 +4678,7 @@ property is <strong>true</strong></p>
 
 <h6 id="discussion">Discussion</h6>
 
-<p>Creates new <a href="#rbcconnectionmonitor-class">RBCConnectionMonitor</a> object which used for monitoring specified in <code class="prettyprint">options</code> server.</p>
+<p>Creates new <a href="#bodhimobileconnectionmonitor-class">BodhiMobileConnectionMonitor</a> object which used for monitoring specified in <code class="prettyprint">options</code> server.</p>
 
 <h6 id="arguments">Arguments</h6>
 
@@ -4715,7 +4704,7 @@ property is <strong>true</strong></p>
 
 <p>Callback parameter is object which contains:</p>
 
-<p>* <code class="prettyprint">monitor</code> - The created <a href="#rbcconnectionmonitor-class">RBCConnectionMonitor</a> object.</p>
+<p>* <code class="prettyprint">monitor</code> - The created <a href="#bodhimobileconnectionmonitor-class">BodhiMobileConnectionMonitor</a> object.</p>
 
 <ul>
 <li><code class="prettyprint">errorCallback</code> optional</li>
@@ -4726,7 +4715,7 @@ property is <strong>true</strong></p>
 <h6 id="return-value">Return Value</h6>
 
 <ul>
-<li><a href="#kernel-promise">RBCPromise</a> object </li>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object </li>
 </ul>
 
 <h5 id="isonline">isOnline</h5>
@@ -5070,7 +5059,7 @@ default this property is <strong>true</strong></p>
 <h6 id="return-value">Return Value</h6>
 
 <ul>
-<li><a href="#kernel-promise">RBCPromise</a> object</li>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
 </ul>
 
 <h5 id="findbyid">findById</h5>
@@ -5114,7 +5103,7 @@ default this property is <strong>true</strong></p>
 <h6 id="return-value">Return Value</h6>
 
 <ul>
-<li><a href="#kernel-promise">RBCPromise</a> object</li>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
 </ul>
 
 <h5 id="create">create</h5>
@@ -5169,7 +5158,7 @@ default this property is <strong>true</strong></p>
 <h6 id="return-value">Return Value</h6>
 
 <ul>
-<li><a href="#kernel-promise">RBCPromise</a> object</li>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
 </ul>
 
 <h5 id="update">update</h5>
@@ -5223,7 +5212,7 @@ default this property is <strong>true</strong></p>
 <h6 id="return-value">Return Value</h6>
 
 <ul>
-<li><a href="#kernel-promise">RBCPromise</a> object</li>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
 </ul>
 
 <h5 id="delete">delete</h5>
@@ -5267,7 +5256,7 @@ default this property is <strong>true</strong></p>
 <h6 id="return-value">Return Value</h6>
 
 <ul>
-<li><a href="#kernel-promise">RBCPromise</a> object</li>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
 </ul>
 
           <h4 id="cryptography-module">Cryptography Module</h4>
@@ -5344,7 +5333,7 @@ default this property is <strong>true</strong></p>
 <h6 id="return-value">Return Value</h6>
 
 <ul>
-<li><a href="#kernel-promise">RBCPromise</a> object</li>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
 </ul>
 
           <h4 id="device-module">Device Module</h4>
@@ -5623,7 +5612,7 @@ info.</p>
 <h6 id="return-value">Return Value</h6>
 
 <ul>
-<li><a href="#kernel-promise">RBCPromise</a> object</li>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
 </ul>
 
           <h4 id="geofencing-module">Geofencing Module</h4>
@@ -5815,7 +5804,7 @@ the device entered or exited from the region and application was in background.<
 <h6 id="return-value">Return Value</h6>
 
 <ul>
-<li><a href="#kernel-promise">RBCPromise</a> object</li>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
 </ul>
 
 <h5 id="addregion">addRegion</h5>
@@ -5871,7 +5860,7 @@ the device entered or exited from the region and application was in background.<
 <h6 id="return-value">Return Value</h6>
 
 <ul>
-<li><a href="#kernel-promise">RBCPromise</a> object</li>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
 </ul>
 
 <h5 id="checkregion">checkRegion</h5>
@@ -5920,7 +5909,7 @@ the device entered or exited from the region and application was in background.<
 <h6 id="return-value">Return Value</h6>
 
 <ul>
-<li><a href="#kernel-promise">RBCPromise</a> object</li>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
 </ul>
 
 <h5 id="removeregion">removeRegion</h5>
@@ -5965,7 +5954,7 @@ the device entered or exited from the region and application was in background.<
 <h6 id="return-value">Return Value</h6>
 
 <ul>
-<li><a href="#kernel-promise">RBCPromise</a> object</li>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
 </ul>
 
 <h5 id="removeallregions">removeAllRegions</h5>
@@ -6001,7 +5990,7 @@ the device entered or exited from the region and application was in background.<
 <h6 id="return-value">Return Value</h6>
 
 <ul>
-<li><a href="#kernel-promise">RBCPromise</a> object</li>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
 </ul>
 
 <h5 id="getpageregion">getPageRegion</h5>
@@ -6044,7 +6033,7 @@ the device entered or exited from the region and application was in background.<
 <h6 id="return-value">Return Value</h6>
 
 <ul>
-<li><a href="#kernel-promise">RBCPromise</a> object</li>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
 </ul>
 
 <h3 id="events">Events</h3>
@@ -6212,7 +6201,7 @@ the device entered or exited from the region and application was in background.<
 <h6 id="return-value">Return Value</h6>
 
 <ul>
-<li><a href="#kernel-promise">RBCPromise</a> object</li>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
 </ul>
 
 <h5 id="watchposition">watchPosition</h5>
@@ -6349,7 +6338,7 @@ the device entered or exited from the region and application was in background.<
 <h6 id="return-value">Return Value</h6>
 
 <ul>
-<li><a href="#kernel-promise">RBCPromise</a> object</li>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
 </ul>
 
 <h5 id="getlocalename">getLocaleName</h5>
@@ -6385,7 +6374,7 @@ the device entered or exited from the region and application was in background.<
 <h6 id="return-value">Return Value</h6>
 
 <ul>
-<li><a href="#kernel-promise">RBCPromise</a> object</li>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
 </ul>
 
 <h5 id="datetostring">dateToString</h5>
@@ -6442,7 +6431,7 @@ the device entered or exited from the region and application was in background.<
 <h6 id="return-value">Return Value</h6>
 
 <ul>
-<li><a href="#kernel-promise">RBCPromise</a> object</li>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
 </ul>
 
 <h5 id="stringtodate">stringToDate</h5>
@@ -6512,7 +6501,7 @@ the device entered or exited from the region and application was in background.<
 <h6 id="return-value">Return Value</h6>
 
 <ul>
-<li><a href="#kernel-promise">RBCPromise</a> object</li>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
 </ul>
 
 <h5 id="getdatepattern">getDatePattern</h5>
@@ -6571,7 +6560,7 @@ the device entered or exited from the region and application was in background.<
 <h6 id="return-value">Return Value</h6>
 
 <ul>
-<li><a href="#kernel-promise">RBCPromise</a> object</li>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
 </ul>
 
 <h5 id="getdatenames">getDateNames</h5>
@@ -6625,7 +6614,7 @@ the device entered or exited from the region and application was in background.<
 <h6 id="return-value">Return Value</h6>
 
 <ul>
-<li><a href="#kernel-promise">RBCPromise</a> object</li>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
 </ul>
 
 <h5 id="isdaylightsavingstime">isDayLightSavingsTime</h5>
@@ -6670,7 +6659,7 @@ the client&rsquo;s time zone and calendar.</p>
 <h6 id="return-value">Return Value</h6>
 
 <ul>
-<li><a href="#kernel-promise">RBCPromise</a> object</li>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
 </ul>
 
 <h5 id="getfirstdayofweek">getFirstDayOfWeek</h5>
@@ -6709,7 +6698,7 @@ and calendar.</p>
 <h6 id="return-value">Return Value</h6>
 
 <ul>
-<li><a href="#kernel-promise">RBCPromise</a> object</li>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
 </ul>
 
 <h5 id="numbertostring">numberToString</h5>
@@ -6759,7 +6748,7 @@ and calendar.</p>
 <h6 id="return-value">Return Value</h6>
 
 <ul>
-<li><a href="#kernel-promise">RBCPromise</a> object</li>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
 </ul>
 
 <h5 id="stringtonumber">stringToNumber</h5>
@@ -6815,7 +6804,7 @@ preferences and returns the corresponding number.</p>
 <h6 id="return-value">Return Value</h6>
 
 <ul>
-<li><a href="#kernel-promise">RBCPromise</a> object</li>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
 </ul>
 
 <h5 id="getnumberpattern">getNumberPattern</h5>
@@ -6885,7 +6874,7 @@ user preferences.</p>
 <h6 id="return-value">Return Value</h6>
 
 <ul>
-<li><a href="#kernel-promise">RBCPromise</a> object</li>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
 </ul>
 
 <h5 id="getcurrencypattern">getCurrencyPattern</h5>
@@ -6946,7 +6935,7 @@ client&rsquo;s user preferences and ISO 4217 currency code.</p>
 <h6 id="return-value">Return Value</h6>
 
 <ul>
-<li><a href="#kernel-promise">RBCPromise</a> object</li>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
 </ul>
 
           <h4 id="ibeacon-module">iBeacon Module</h4>
@@ -7152,7 +7141,7 @@ client&rsquo;s user preferences and ISO 4217 currency code.</p>
 <h6 id="return-value">Return Value</h6>
 
 <ul>
-<li><a href="#kernel-promise">RBCPromise</a> object</li>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
 </ul>
 
 <h5 id="addregion">addRegion</h5>
@@ -7205,7 +7194,7 @@ client&rsquo;s user preferences and ISO 4217 currency code.</p>
 <h6 id="return-value">Return Value</h6>
 
 <ul>
-<li><a href="#kernel-promise">RBCPromise</a> object</li>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
 </ul>
 
 <h5 id="checkregion">checkRegion</h5>
@@ -7254,7 +7243,7 @@ client&rsquo;s user preferences and ISO 4217 currency code.</p>
 <h6 id="return-value">Return Value</h6>
 
 <ul>
-<li><a href="#kernel-promise">RBCPromise</a> object</li>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
 </ul>
 
 <h5 id="removeregion">removeRegion</h5>
@@ -7298,7 +7287,7 @@ client&rsquo;s user preferences and ISO 4217 currency code.</p>
 <h6 id="return-value">Return Value</h6>
 
 <ul>
-<li><a href="#kernel-promise">RBCPromise</a> object</li>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
 </ul>
 
 <h5 id="removeallregions">removeAllRegions</h5>
@@ -7334,7 +7323,7 @@ client&rsquo;s user preferences and ISO 4217 currency code.</p>
 <h6 id="return-value">Return Value</h6>
 
 <ul>
-<li><a href="#kernel-promise">RBCPromise</a> object</li>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
 </ul>
 
 <h5 id="addbeacon">addBeacon</h5>
@@ -7388,7 +7377,7 @@ client&rsquo;s user preferences and ISO 4217 currency code.</p>
 <h6 id="return-value">Return Value</h6>
 
 <ul>
-<li><a href="#kernel-promise">RBCPromise</a> object</li>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
 </ul>
 
 <h5 id="getbeacons">getBeacons</h5>
@@ -7426,7 +7415,7 @@ client&rsquo;s user preferences and ISO 4217 currency code.</p>
 <h6 id="return-value">Return Value</h6>
 
 <ul>
-<li><a href="#kernel-promise">RBCPromise</a> object</li>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
 </ul>
 
 <h5 id="removebeacon">removeBeacon</h5>
@@ -7475,7 +7464,7 @@ client&rsquo;s user preferences and ISO 4217 currency code.</p>
 <h6 id="return-value">Return Value</h6>
 
 <ul>
-<li><a href="#kernel-promise">RBCPromise</a> object</li>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
 </ul>
 
 <h5 id="removeallbeacons">removeAllBeacons</h5>
@@ -7511,7 +7500,7 @@ client&rsquo;s user preferences and ISO 4217 currency code.</p>
 <h6 id="return-value">Return Value</h6>
 
 <ul>
-<li><a href="#kernel-promise">RBCPromise</a> object</li>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
 </ul>
 
 <h3 id="events">Events</h3>
@@ -7625,7 +7614,7 @@ external map application with specific location coordinates or addresses.</p>
 <h6 id="return-value">Return Value</h6>
 
 <ul>
-<li><a href="#kernel-promise">RBCPromise</a> object</li>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
 </ul>
 
 <h5 id="map">map</h5>
@@ -7673,7 +7662,7 @@ addresses.</p>
 <h6 id="return-value">Return Value</h6>
 
 <ul>
-<li><a href="#kernel-promise">RBCPromise</a> object</li>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
 </ul>
 
           <h4 id="local-notifications-module">Local Notifications Module</h4>
@@ -7807,7 +7796,7 @@ rewritten.</p>
 <h6 id="return-value">Return Value</h6>
 
 <ul>
-<li><a href="#kernel-promise">RBCPromise</a> object</li>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
 </ul>
 
 <h5 id="cancel">cancel</h5>
@@ -7849,7 +7838,7 @@ rewritten.</p>
 <h6 id="return-value">Return Value</h6>
 
 <ul>
-<li><a href="#kernel-promise">RBCPromise</a> object</li>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
 </ul>
 
 <h5 id="cancelall">cancelAll</h5>
@@ -7885,7 +7874,7 @@ rewritten.</p>
 <h6 id="return-value">Return Value</h6>
 
 <ul>
-<li><a href="#kernel-promise">RBCPromise</a> object</li>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
 </ul>
 
 <h5 id="getscheduled">getScheduled</h5>
@@ -7927,7 +7916,7 @@ rewritten.</p>
 <h6 id="return-value">Return Value</h6>
 
 <ul>
-<li><a href="#kernel-promise">RBCPromise</a> object</li>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
 </ul>
 
 <h5 id="isscheduled">isScheduled</h5>
@@ -7975,7 +7964,7 @@ rewritten.</p>
 <h6 id="return-value">Return Value</h6>
 
 <ul>
-<li><a href="#kernel-promise">RBCPromise</a> object</li>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
 </ul>
 
 <h5 id="received">received</h5>
@@ -8102,7 +8091,7 @@ rewritten.</p>
 <h6 id="return-value">Return Value</h6>
 
 <ul>
-<li><a href="#kernel-promise">RBCPromise</a> object</li>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
 </ul>
 
 <h5 id="addcustomitem">addCustomItem</h5>
@@ -8148,7 +8137,7 @@ rewritten.</p>
 <h6 id="return-value">Return Value</h6>
 
 <ul>
-<li><a href="#kernel-promise">RBCPromise</a> object</li>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
 </ul>
 
 <h5 id="removecustomitem">removeCustomItem</h5>
@@ -8193,7 +8182,7 @@ rewritten.</p>
 <h6 id="return-value">Return Value</h6>
 
 <ul>
-<li><a href="#kernel-promise">RBCPromise</a> object</li>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
 </ul>
 
 <h5 id="removeallcustomitems">removeAllCustomItems</h5>
@@ -8229,7 +8218,7 @@ rewritten.</p>
 <h6 id="return-value">Return Value</h6>
 
 <ul>
-<li><a href="#kernel-promise">RBCPromise</a> object</li>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
 </ul>
 
 <h5 id="showmenu">showMenu</h5>
@@ -8265,7 +8254,7 @@ rewritten.</p>
 <h6 id="return-value">Return Value</h6>
 
 <ul>
-<li><a href="#kernel-promise">RBCPromise</a> object</li>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
 </ul>
 
 <h5 id="bouncemenu">bounceMenu</h5>
@@ -8301,7 +8290,7 @@ rewritten.</p>
 <h6 id="return-value">Return Value</h6>
 
 <ul>
-<li><a href="#kernel-promise">RBCPromise</a> object</li>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
 </ul>
 
 <h3 id="events">Events</h3>
@@ -8377,7 +8366,7 @@ attachments (If device supported its) from <a href="#app-storage-module">App Sto
 <h6 id="return-value">Return Value</h6>
 
 <ul>
-<li><a href="#kernel-promise">RBCPromise</a> object</li>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
 </ul>
 
 <h5 id="sms">sms</h5>
@@ -8432,7 +8421,7 @@ attachments (If device supported its) from <a href="#app-storage-module">App Sto
 <h6 id="return-value">Return Value</h6>
 
 <ul>
-<li><a href="#kernel-promise">RBCPromise</a> object</li>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
 </ul>
 
 <h5 id="email">email</h5>
@@ -8501,7 +8490,7 @@ carbon copy) recipients.</p>
 <h6 id="return-value">Return Value</h6>
 
 <ul>
-<li><a href="#kernel-promise">RBCPromise</a> object</li>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
 </ul>
 
           <h4 id="navigation-bar-module">Navigation Bar Module</h4>
@@ -8515,7 +8504,10 @@ Developer can showing or hiding Navigation Bar, changing title and right navigat
 <li><code class="prettyprint">show</code> function</li>
 <li><code class="prettyprint">hide</code> function</li>
 <li><code class="prettyprint">setTitle</code> function</li>
+<li><code class="prettyprint">setLeftButton</code> function</li>
 <li><code class="prettyprint">setRightButton</code> function</li>
+<li><code class="prettyprint">setTheme</code> function</li>
+<li><code class="prettyprint">navigationBar.leftButtonPressed</code> event</li>
 <li><code class="prettyprint">navigationBar.rightButtonPressed</code> event</li>
 </ul>
 
@@ -8564,7 +8556,7 @@ Developer can showing or hiding Navigation Bar, changing title and right navigat
 <h6 id="return-value">Return Value</h6>
 
 <ul>
-<li><a href="#kernel-promise">RBCPromise</a> object</li>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
 </ul>
 
 <h5 id="hide">hide</h5>
@@ -8612,7 +8604,7 @@ scrolling to up).</p>
 <h6 id="return-value">Return Value</h6>
 
 <ul>
-<li><a href="#kernel-promise">RBCPromise</a> object</li>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
 </ul>
 
 <h5 id="settitle">setTitle</h5>
@@ -8667,7 +8659,66 @@ indicator to the navigation bar.</p>
 <h6 id="return-value">Return Value</h6>
 
 <ul>
-<li><a href="#kernel-promise">RBCPromise</a> object</li>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
+</ul>
+
+<h5 id="setleftbutton">setLeftButton</h5>
+<pre class="highlight javascript"><code><span class="nx">navigationBar</span><span class="p">.</span><span class="nx">setLeftButton</span><span class="p">(</span> <span class="p">{</span><span class="na">title</span><span class="p">:</span><span class="s2">"Cancel"</span><span class="p">},</span> <span class="kd">function</span><span class="p">(</span><span class="nx">info</span><span class="p">)</span> <span class="p">{</span>  
+    <span class="nx">alert</span><span class="p">(</span><span class="s2">"Button updated"</span><span class="p">);</span>  
+<span class="p">},</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>  
+    <span class="nx">alert</span><span class="p">(</span><span class="s2">"Failed! code: "</span> <span class="o">+</span> <span class="nx">error</span><span class="p">.</span><span class="nx">code</span> <span class="o">+</span> <span class="s2">"\nmessage: "</span> <span class="o">+</span> <span class="nx">error</span><span class="p">.</span><span class="nx">message</span><span class="p">);</span>  
+<span class="p">});</span>
+</code></pre>
+
+<p><code class="prettyprint">navigationBar.setLeftButton( options, successCallback, errorCallback )</code></p>
+
+<h6 id="discussion">Discussion</h6>
+
+<p>Sets the Navigation Bar left button.<br>
+Can showing loading indicator.<br>
+If no <code class="prettyprint">options</code> are specified removes the left button.</p>
+
+<p>For Android only icon supported for left button (title and loading has no effect)</p>
+
+<h6 id="arguments">Arguments</h6>
+
+<ul>
+<li><code class="prettyprint">options</code> optional</li>
+</ul>
+
+<p>Object with key-value. Supported keys:</p>
+
+<p>* <code class="prettyprint">title</code></p>
+
+<p>A String value. String with button title.</p>
+
+<p>* <code class="prettyprint">icon</code></p>
+
+<p>A String value. String with url of icon.</p>
+
+<p>* <code class="prettyprint">loading</code></p>
+
+<p>A Boolean value. If this flag is set to true then application will show
+loading indicator in the space of right button.</p>
+
+<ul>
+<li><code class="prettyprint">succesCallback</code> optional</li>
+</ul>
+
+<p>Success callback. Called when function finished without errors</p>
+
+<p>Callback parameter is always <strong>null</strong>.</p>
+
+<ul>
+<li><code class="prettyprint">errorCallback</code> optional</li>
+</ul>
+
+<p>Error Callback. Called when function return error.</p>
+
+<h6 id="return-value">Return Value</h6>
+
+<ul>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
 </ul>
 
 <h5 id="setrightbutton">setRightButton</h5>
@@ -8724,10 +8775,121 @@ loading indicator in the space of right button.</p>
 <h6 id="return-value">Return Value</h6>
 
 <ul>
-<li><a href="#kernel-promise">RBCPromise</a> object</li>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
+</ul>
+
+<h5 id="settheme">setTheme</h5>
+<pre class="highlight javascript"><code>    <span class="kd">var</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{};</span>
+
+    <span class="kd">var</span> <span class="nx">bgColor</span> <span class="o">=</span> <span class="s1">'#ffffff'</span><span class="p">;</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="nx">bgColor</span> <span class="o">!=</span> <span class="s2">""</span><span class="p">)</span> <span class="p">{</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="nx">bgColor</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="s1">'#'</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+            <span class="nx">bgColor</span> <span class="o">=</span> <span class="nx">bgColor</span><span class="p">.</span><span class="nx">substring</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+
+        <span class="kd">var</span> <span class="nx">bigint</span> <span class="o">=</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">bgColor</span><span class="p">,</span> <span class="mi">16</span><span class="p">);</span>
+
+        <span class="nx">options</span><span class="p">.</span><span class="nx">color</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="na">r</span><span class="p">:</span> <span class="p">((</span><span class="nx">bigint</span> <span class="o">&gt;&gt;</span> <span class="mi">16</span><span class="p">)</span> <span class="o">&amp;</span> <span class="mi">255</span><span class="p">),</span>
+            <span class="na">g</span><span class="p">:</span> <span class="p">((</span><span class="nx">bigint</span> <span class="o">&gt;&gt;</span> <span class="mi">8</span><span class="p">)</span> <span class="o">&amp;</span> <span class="mi">255</span><span class="p">),</span>
+            <span class="na">b</span><span class="p">:</span> <span class="p">(</span><span class="nx">bigint</span> <span class="o">&amp;</span> <span class="mi">255</span><span class="p">)</span>
+        <span class="p">}</span>
+
+    <span class="p">}</span>
+
+    <span class="kd">var</span> <span class="nx">tintColor</span> <span class="o">=</span> <span class="s1">'#000000'</span><span class="p">;</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="nx">tintColor</span> <span class="o">!=</span> <span class="s2">""</span><span class="p">)</span> <span class="p">{</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="nx">tintColor</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="s1">'#'</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+            <span class="nx">tintColor</span> <span class="o">=</span> <span class="nx">tintColor</span><span class="p">.</span><span class="nx">substring</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+
+        <span class="kd">var</span> <span class="nx">bigint</span> <span class="o">=</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">tintColor</span><span class="p">,</span> <span class="mi">16</span><span class="p">);</span>
+
+        <span class="nx">options</span><span class="p">.</span><span class="nx">tintColor</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="na">r</span><span class="p">:</span> <span class="p">((</span><span class="nx">bigint</span> <span class="o">&gt;&gt;</span> <span class="mi">16</span><span class="p">)</span> <span class="o">&amp;</span> <span class="mi">255</span><span class="p">),</span>
+            <span class="na">g</span><span class="p">:</span> <span class="p">((</span><span class="nx">bigint</span> <span class="o">&gt;&gt;</span> <span class="mi">8</span><span class="p">)</span> <span class="o">&amp;</span> <span class="mi">255</span><span class="p">),</span>
+            <span class="na">b</span><span class="p">:</span> <span class="p">(</span><span class="nx">bigint</span> <span class="o">&amp;</span> <span class="mi">255</span><span class="p">)</span>
+        <span class="p">}</span>
+
+    <span class="p">}</span>
+
+    <span class="kd">var</span> <span class="nx">logoUrl</span> <span class="o">=</span> <span class="s1">'http://mydomain.com/logo.png'</span><span class="p">;</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="nx">logoUrl</span> <span class="o">!=</span> <span class="s2">""</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">options</span><span class="p">.</span><span class="nx">logoUrl</span> <span class="o">=</span> <span class="nx">logoUrl</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="nx">navigationBar</span><span class="p">.</span><span class="nx">setTheme</span><span class="p">(</span><span class="nx">options</span><span class="p">).</span><span class="nx">fail</span><span class="p">(</span><span class="nx">handleError</span><span class="p">);</span>
+</code></pre>
+
+<p><code class="prettyprint">navigationBar.setTheme( options, successCallback, errorCallback )</code></p>
+
+<h6 id="discussion">Discussion</h6>
+
+<p>Sets the Navigation Bar theme.<br>
+If no <code class="prettyprint">options</code> are specified theme values are set to default.</p>
+
+<h6 id="arguments">Arguments</h6>
+
+<ul>
+<li><code class="prettyprint">options</code></li>
+</ul>
+
+<p>Object with key-value. Supported keys:</p>
+
+<ul>
+<li><code class="prettyprint">color</code> optional</li>
+</ul>
+
+<p>A String value. String with background color.</p>
+
+<ul>
+<li><code class="prettyprint">tintColor</code> optional</li>
+</ul>
+
+<p>A String value. String with color for text and button icons.</p>
+
+<ul>
+<li><code class="prettyprint">logoUrl</code>  optional</li>
+</ul>
+
+<p>A String value. String with url for logo image.</p>
+
+<ul>
+<li><code class="prettyprint">succesCallback</code> optional</li>
+</ul>
+
+<p>Success callback. Called when function finished without errors</p>
+
+<p>Callback parameter is always <strong>null</strong>.</p>
+
+<ul>
+<li><code class="prettyprint">errorCallback</code> optional</li>
+</ul>
+
+<p>Error Callback. Called when function return error.</p>
+
+<h6 id="return-value">Return Value</h6>
+
+<ul>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
 </ul>
 
 <h3 id="events">Events</h3>
+
+<h5 id="navigationbar.leftbuttonpressed">navigationBar.leftButtonPressed</h5>
+
+<h6 id="discussion">Discussion</h6>
+
+<p>Event received when user pressed to the left navigation bar button.</p>
+
+<h6 id="callback-arguments">Callback Arguments</h6>
+
+<ul>
+<li>No arguments</li>
+</ul>
 
 <h5 id="navigationbar.rightbuttonpressed">navigationBar.rightButtonPressed</h5>
 
@@ -9285,7 +9447,7 @@ and repeat count</p>
 <h6 id="return-value">Return Value</h6>
 
 <ul>
-<li><a href="#kernel-promise">RBCPromise</a> object</li>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
 </ul>
 
 <h5 id="beep">beep</h5>
@@ -9301,7 +9463,7 @@ and repeat count</p>
 <h6 id="return-value">Return Value</h6>
 
 <ul>
-<li><a href="#kernel-promise">RBCPromise</a> object</li>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
 </ul>
 
 <h5 id="alert">alert</h5>
@@ -9356,7 +9518,7 @@ and repeat count</p>
 <h6 id="return-value">Return Value</h6>
 
 <ul>
-<li><a href="#kernel-promise">RBCPromise</a> object</li>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
 </ul>
 
 <h5 id="showtoast">showToast</h5>
@@ -9407,7 +9569,7 @@ and repeat count</p>
 <h6 id="return-value">Return Value</h6>
 
 <ul>
-<li><a href="#kernel-promise">RBCPromise</a> object</li>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
 </ul>
 
           <h4 id="printing-module">Printing Module</h4>
@@ -9540,7 +9702,7 @@ and repeat count</p>
 <h6 id="return-value">Return Value</h6>
 
 <ul>
-<li><a href="#kernel-promise">RBCPromise</a> object</li>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
 </ul>
 
 <h5 id="print">print</h5>
@@ -9612,7 +9774,7 @@ default this property is <strong>printing.Duplex.LONG_EDGE</strong></p>
 <h6 id="return-value">Return Value</h6>
 
 <ul>
-<li><a href="#kernel-promise">RBCPromise</a> object</li>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
 </ul>
 
           <h4 id="push-notifications-module">Push Notifications Module</h4>
@@ -9715,7 +9877,7 @@ images.</p>
 <h6 id="return-value">Return Value</h6>
 
 <ul>
-<li><a href="#kernel-promise">RBCPromise</a> object</li>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
 </ul>
 
 <h5 id="unregister">unregister</h5>
@@ -9751,7 +9913,7 @@ images.</p>
 <h6 id="return-value">Return Value</h6>
 
 <ul>
-<li><a href="#kernel-promise">RBCPromise</a> object</li>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
 </ul>
 
 <h5 id="setapplicationiconbadgenumber">setApplicationIconBadgeNumber</h5>
@@ -9793,7 +9955,7 @@ images.</p>
 <h6 id="return-value">Return Value</h6>
 
 <ul>
-<li><a href="#kernel-promise">RBCPromise</a> object</li>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
 </ul>
 
           <h4 id="shake-detector-module">Shake Detector Module</h4>
@@ -9907,7 +10069,7 @@ because iOS don&rsquo;t have hardware back button.</p>
 <h6 id="return-value">Return Value</h6>
 
 <ul>
-<li><a href="#kernel-promise">RBCPromise</a> object</li>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
 </ul>
 
 <h5 id="dismiss">dismiss</h5>
@@ -9924,7 +10086,7 @@ notification about iBeacons.</p>
 <h6 id="return-value">Return Value</h6>
 
 <ul>
-<li><a href="#kernel-promise">RBCPromise</a> object</li>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
 </ul>
 
 <h5 id="open">open</h5>
@@ -9951,7 +10113,7 @@ iOS don&rsquo;t have hardware back button.</p>
 <h6 id="return-value">Return Value</h6>
 
 <ul>
-<li><a href="#kernel-promise">RBCPromise</a> object</li>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
 </ul>
 
 <h5 id="close">close</h5>
@@ -9967,7 +10129,7 @@ iOS don&rsquo;t have hardware back button.</p>
 <h6 id="return-value">Return Value</h6>
 
 <ul>
-<li><a href="#kernel-promise">RBCPromise</a> object</li>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
 </ul>
 
       </div>
