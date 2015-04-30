@@ -6,7 +6,7 @@ Getting information about current connection status.
 
   * `TYPES` constant
   * `STATES` constant
-  * `BodhiMobileConnectionMonitor` object
+  * `ConnectionMonitor` object
   * `type` property
   * `state` property
   * `startMonitoring` function
@@ -86,11 +86,11 @@ Device doesn't connected to internet
 
 ### Objects
 
-##### BodhiMobileConnectionMonitor
+##### ConnectionMonitor
 
 ###### Discussion
 
-This object contains information about specified server availability for requests from the device. See [BodhiMobileConnectionMonitor Class](#bodhimobileconnectionmonitor-class) to get more information.
+This object contains information about specified server availability for requests from the device. See [ConnectionMonitor Class](#connectionmonitor-class) to get more information.
 
 ### Properties
 
@@ -130,7 +130,7 @@ connection.startMonitoring( {url:"http://www.google.com"}, function(info) {
 
 ###### Discussion
 
-Creates new [BodhiMobileConnectionMonitor](#bodhimobileconnectionmonitor-class) object which used for monitoring specified in `options` server.
+Creates new [ConnectionMonitor](#connectionmonitor-class) object which used for monitoring specified in `options` server.
 
 ###### Arguments
 
@@ -152,7 +152,7 @@ Success callback. Called when function finished without errors
 
 Callback parameter is object which contains:
 
-    * `monitor` \- The created [BodhiMobileConnectionMonitor](#bodhimobileconnectionmonitor-class) object.
+    * `monitor` \- The created [ConnectionMonitor](#connectionmonitor-class) object.
 
   * `errorCallback` optional
 

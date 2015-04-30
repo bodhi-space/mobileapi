@@ -1,4 +1,4 @@
-#### BodhiMobileConnectionMonitor Class
+#### ConnectionMonitor Class
 
 This object is created by [connection.startMonitoring](#startmonitoring) method and used for checking the server availability.
 
@@ -46,7 +46,7 @@ connectionMonitor.onAvailableChanged( function(info) {
 });
 ```
 
-`BodhiMobileConnectionMonitor::onAvailableChanged( callback )`
+`ConnectionMonitor::onAvailableChanged( callback )`
 
 ###### Discussion
 
@@ -77,7 +77,7 @@ connectionMonitor.stop( function() {
 });
 ```
 
-`BodhiMobileConnectionMonitor::stop( successCallback, errorCallback )`
+`ConnectionMonitor::stop( successCallback, errorCallback )`
 
 ###### Discussion
 
