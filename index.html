@@ -1399,7 +1399,7 @@ After unzipping will be created keys:</p></li>
 <li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
 </ul>
 
-          <h4 id="bodhimobileaudioitem-class">BodhiMobileAudioItem Class</h4>
+          <h4 id="audioitem-class">AudioItem Class</h4>
 
 <p>This object is created by <a href="#getaudio">audio.getAudio</a> method and it used for recording and playback audio.</p>
 
@@ -1444,7 +1444,7 @@ After unzipping will be created keys:</p></li>
 
 <h6 id="discussion">Discussion</h6>
 
-<p>Current audio item state. See variants in <a href="#bodhimobileaudioitemstate">BodhiMobileAudioItemState</a>.<br>
+<p>Current audio item state. See variants in <a href="#audioitemstate">AudioItemState</a>.<br>
 Developer can control changes after registering <strong>callback</strong> in <code class="prettyprint">onStateChanged</code> method.</p>
 
 <h5 id="duration">duration</h5>
@@ -1476,7 +1476,7 @@ Developer can control changes after registering <strong>callback</strong> in <co
 <span class="p">});</span>
 </code></pre>
 
-<p><code class="prettyprint">BodhiMobileAudioItem::startPlaying( successCallback, errorCallback )</code></p>
+<p><code class="prettyprint">AudioItem::startPlaying( successCallback, errorCallback )</code></p>
 
 <h6 id="discussion">Discussion</h6>
 
@@ -1513,7 +1513,7 @@ Developer can control changes after registering <strong>callback</strong> in <co
 <span class="p">});</span>
 </code></pre>
 
-<p><code class="prettyprint">BodhiMobileAudioItem::stopPlaying( successCallback, errorCallback )</code></p>
+<p><code class="prettyprint">AudioItem::stopPlaying( successCallback, errorCallback )</code></p>
 
 <h6 id="discussion">Discussion</h6>
 
@@ -1550,7 +1550,7 @@ Developer can control changes after registering <strong>callback</strong> in <co
 <span class="p">});</span>
 </code></pre>
 
-<p><code class="prettyprint">BodhiMobileAudioItem::pausePlaying( successCallback, errorCallback )</code></p>
+<p><code class="prettyprint">AudioItem::pausePlaying( successCallback, errorCallback )</code></p>
 
 <h6 id="discussion">Discussion</h6>
 
@@ -1587,7 +1587,7 @@ Developer can control changes after registering <strong>callback</strong> in <co
 <span class="p">});</span>
 </code></pre>
 
-<p><code class="prettyprint">BodhiMobileAudioItem::getDuration( successCallback, errorCallback )</code></p>
+<p><code class="prettyprint">AudioItem::getDuration( successCallback, errorCallback )</code></p>
 
 <h6 id="discussion">Discussion</h6>
 
@@ -1626,7 +1626,7 @@ Developer can control changes after registering <strong>callback</strong> in <co
 <span class="p">});</span>
 </code></pre>
 
-<p><code class="prettyprint">BodhiMobileAudioItem::seekTo( position, successCallback, errorCallback )</code></p>
+<p><code class="prettyprint">AudioItem::seekTo( position, successCallback, errorCallback )</code></p>
 
 <h6 id="discussion">Discussion</h6>
 
@@ -1669,7 +1669,7 @@ Developer can control changes after registering <strong>callback</strong> in <co
 <span class="p">});</span>
 </code></pre>
 
-<p><code class="prettyprint">BodhiMobileAudioItem::startRecording( successCallback, errorCallback )</code></p>
+<p><code class="prettyprint">AudioItem::startRecording( successCallback, errorCallback )</code></p>
 
 <h6 id="discussion">Discussion</h6>
 
@@ -1706,7 +1706,7 @@ Developer can control changes after registering <strong>callback</strong> in <co
 <span class="p">});</span>
 </code></pre>
 
-<p><code class="prettyprint">BodhiMobileAudioItem::stopRecording( successCallback, errorCallback )</code></p>
+<p><code class="prettyprint">AudioItem::stopRecording( successCallback, errorCallback )</code></p>
 
 <h6 id="discussion">Discussion</h6>
 
@@ -1743,7 +1743,7 @@ Developer can control changes after registering <strong>callback</strong> in <co
 <span class="p">});</span>
 </code></pre>
 
-<p><code class="prettyprint">BodhiMobileAudioItem::setVolume( volume, successCallback, errorCallback )</code></p>
+<p><code class="prettyprint">AudioItem::setVolume( volume, successCallback, errorCallback )</code></p>
 
 <h6 id="discussion">Discussion</h6>
 
@@ -1784,7 +1784,7 @@ Developer can control changes after registering <strong>callback</strong> in <co
 <span class="p">});</span>
 </code></pre>
 
-<p><code class="prettyprint">BodhiMobileAudioItem::onStateChanged( callback )</code></p>
+<p><code class="prettyprint">AudioItem::onStateChanged( callback )</code></p>
 
 <h6 id="discussion">Discussion</h6>
 
@@ -1800,7 +1800,7 @@ Developer can control changes after registering <strong>callback</strong> in <co
 
 <p>Callback parameter is object which contains:</p>
 
-<p>* <code class="prettyprint">state</code> - <a href="#bodhimobileaudioitemstate">BodhiMobileAudioItemState</a></p>
+<p>* <code class="prettyprint">state</code> - <a href="#audioitemstate">AudioItemState</a></p>
 
 <h6 id="return-value">Return Value</h6>
 
@@ -1815,7 +1815,7 @@ Developer can control changes after registering <strong>callback</strong> in <co
 <span class="p">});</span>
 </code></pre>
 
-<p><code class="prettyprint">BodhiMobileAudioItem::onDurationChanged( callback )</code></p>
+<p><code class="prettyprint">AudioItem::onDurationChanged( callback )</code></p>
 
 <h6 id="discussion">Discussion</h6>
 
@@ -1846,7 +1846,7 @@ Developer can control changes after registering <strong>callback</strong> in <co
 <span class="p">});</span>
 </code></pre>
 
-<p><code class="prettyprint">BodhiMobileAudioItem::onPositionChanged( callback )</code></p>
+<p><code class="prettyprint">AudioItem::onPositionChanged( callback )</code></p>
 
 <h6 id="discussion">Discussion</h6>
 
@@ -1879,7 +1879,7 @@ Developer can control changes after registering <strong>callback</strong> in <co
 <span class="p">});</span>
 </code></pre>
 
-<p><code class="prettyprint">BodhiMobileAudioItem::close( successCallback, errorCallback )</code></p>
+<p><code class="prettyprint">AudioItem::close( successCallback, errorCallback )</code></p>
 
 <h6 id="discussion">Discussion</h6>
 
@@ -1914,50 +1914,50 @@ Developer can control changes after registering <strong>callback</strong> in <co
 <h3 id="tasks">Tasks</h3>
 
 <ul>
-<li><code class="prettyprint">BodhiMobileAudioItemState</code> constant</li>
-<li><code class="prettyprint">BodhiMobileAudioItem</code> object</li>
+<li><code class="prettyprint">AudioItemState</code> constant</li>
+<li><code class="prettyprint">AudioItem</code> object</li>
 <li><code class="prettyprint">getAudio</code> function</li>
 </ul>
 
 <h3 id="constants">Constants</h3>
 
-<h5 id="bodhimobileaudioitemstate">BodhiMobileAudioItemState</h5>
+<h5 id="audioitemstate">AudioItemState</h5>
 
 <h6 id="discussion">Discussion</h6>
 
-<p>This enum contains variants of <a href="#bodhimobileaudioitem-class">BodhiMobileAudioItem</a> object states.</p>
+<p>This enum contains variants of <a href="#audioitem-class">AudioItem</a> object states.</p>
 
 <ul>
-<li><code class="prettyprint">BodhiMobileAudioItemState.STOPPED</code></li>
+<li><code class="prettyprint">AudioItemState.STOPPED</code></li>
 </ul>
 
 <p>Audio record currently stopped.</p>
 
 <ul>
-<li><code class="prettyprint">BodhiMobileAudioItemState.PLAYING</code></li>
+<li><code class="prettyprint">AudioItemState.PLAYING</code></li>
 </ul>
 
 <p>Audio record currently playing.</p>
 
 <ul>
-<li><code class="prettyprint">BodhiMobileAudioItemState.PAUSED</code></li>
+<li><code class="prettyprint">AudioItemState.PAUSED</code></li>
 </ul>
 
 <p>Audio record currently paused.</p>
 
 <ul>
-<li><code class="prettyprint">BodhiMobileAudioItemState.RECORDED</code></li>
+<li><code class="prettyprint">AudioItemState.RECORDED</code></li>
 </ul>
 
 <p>Audio record currently recorded.</p>
 
 <h3 id="objects">Objects</h3>
 
-<h5 id="bodhimobileaudioitem">BodhiMobileAudioItem</h5>
+<h5 id="audioitem">AudioItem</h5>
 
 <h6 id="discussion">Discussion</h6>
 
-<p>This object contains information about audio records and allows developer to record, play and control audio. See <a href="#rbcaudioitem-class">RBCAudioItem Class</a> to get more information.</p>
+<p>This object contains information about audio records and allows developer to record, play and control audio. See <a href="#audioitem-class">AudioItem Class</a> to get more information.</p>
 
 <h3 id="functions">Functions</h3>
 
@@ -1973,7 +1973,7 @@ Developer can control changes after registering <strong>callback</strong> in <co
 
 <h6 id="discussion">Discussion</h6>
 
-<p>Creates new <a href="#bodhimobileaudioitem-class">BodhiMobileAudioItem</a> object which used for all audio operations.</p>
+<p>Creates new <a href="#audioitem-class">AudioItem</a> object which used for all audio operations.</p>
 
 <h6 id="arguments">Arguments</h6>
 
@@ -1995,7 +1995,7 @@ Developer can control changes after registering <strong>callback</strong> in <co
 
 <p>Callback parameter is object which contains:</p>
 
-<p>* <code class="prettyprint">audioItem</code> - The created <a href="#bodhimobileaudioitem-class">BodhiMobileAudioItem</a> object.</p>
+<p>* <code class="prettyprint">audioItem</code> - The created <a href="#audioitem-class">AudioItem</a> object.</p>
 
 <ul>
 <li><code class="prettyprint">errorCallback</code> optional</li>
@@ -4419,7 +4419,7 @@ property is <strong>true</strong></p>
 <li>No return value.</li>
 </ul>
 
-          <h4 id="bodhimobileconnectionmonitor-class">BodhiMobileConnectionMonitor Class</h4>
+          <h4 id="connectionmonitor-class">ConnectionMonitor Class</h4>
 
 <p>This object is created by <a href="#startmonitoring">connection.startMonitoring</a> method and used for checking the server availability.</p>
 
@@ -4463,7 +4463,7 @@ property is <strong>true</strong></p>
 <span class="p">});</span>
 </code></pre>
 
-<p><code class="prettyprint">BodhiMobileConnectionMonitor::onAvailableChanged( callback )</code></p>
+<p><code class="prettyprint">ConnectionMonitor::onAvailableChanged( callback )</code></p>
 
 <h6 id="discussion">Discussion</h6>
 
@@ -4496,7 +4496,7 @@ property is <strong>true</strong></p>
 <span class="p">});</span>
 </code></pre>
 
-<p><code class="prettyprint">BodhiMobileConnectionMonitor::stop( successCallback, errorCallback )</code></p>
+<p><code class="prettyprint">ConnectionMonitor::stop( successCallback, errorCallback )</code></p>
 
 <h6 id="discussion">Discussion</h6>
 
@@ -4533,7 +4533,7 @@ property is <strong>true</strong></p>
 <ul>
 <li><code class="prettyprint">TYPES</code> constant</li>
 <li><code class="prettyprint">STATES</code> constant</li>
-<li><code class="prettyprint">BodhiMobileConnectionMonitor</code> object</li>
+<li><code class="prettyprint">ConnectionMonitor</code> object</li>
 <li><code class="prettyprint">type</code> property</li>
 <li><code class="prettyprint">state</code> property</li>
 <li><code class="prettyprint">startMonitoring</code> function</li>
@@ -4636,11 +4636,11 @@ property is <strong>true</strong></p>
 
 <h3 id="objects">Objects</h3>
 
-<h5 id="bodhimobileconnectionmonitor">BodhiMobileConnectionMonitor</h5>
+<h5 id="connectionmonitor">ConnectionMonitor</h5>
 
 <h6 id="discussion">Discussion</h6>
 
-<p>This object contains information about specified server availability for requests from the device. See <a href="#bodhimobileconnectionmonitor-class">BodhiMobileConnectionMonitor Class</a> to get more information.</p>
+<p>This object contains information about specified server availability for requests from the device. See <a href="#connectionmonitor-class">ConnectionMonitor Class</a> to get more information.</p>
 
 <h3 id="properties">Properties</h3>
 
@@ -4674,7 +4674,7 @@ property is <strong>true</strong></p>
 
 <h6 id="discussion">Discussion</h6>
 
-<p>Creates new <a href="#bodhimobileconnectionmonitor-class">BodhiMobileConnectionMonitor</a> object which used for monitoring specified in <code class="prettyprint">options</code> server.</p>
+<p>Creates new <a href="#connectionmonitor-class">ConnectionMonitor</a> object which used for monitoring specified in <code class="prettyprint">options</code> server.</p>
 
 <h6 id="arguments">Arguments</h6>
 
@@ -4700,7 +4700,7 @@ property is <strong>true</strong></p>
 
 <p>Callback parameter is object which contains:</p>
 
-<p>* <code class="prettyprint">monitor</code> - The created <a href="#bodhimobileconnectionmonitor-class">BodhiMobileConnectionMonitor</a> object.</p>
+<p>* <code class="prettyprint">monitor</code> - The created <a href="#connectionmonitor-class">ConnectionMonitor</a> object.</p>
 
 <ul>
 <li><code class="prettyprint">errorCallback</code> optional</li>
