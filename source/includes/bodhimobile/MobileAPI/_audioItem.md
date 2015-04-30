@@ -1,4 +1,4 @@
-#### BodhiMobileAudioItem Class
+#### AudioItem Class
 
 This object is created by [audio.getAudio](#getaudio) method and it used for recording and playback audio.
 
@@ -45,7 +45,7 @@ var state = audioItem.state;
 
 ###### Discussion
 
-Current audio item state. See variants in [BodhiMobileAudioItemState](#bodhimobileaudioitemstate).  
+Current audio item state. See variants in [AudioItemState](#audioitemstate).  
 Developer can control changes after registering **callback** in `onStateChanged` method.
 
 ##### duration
@@ -83,7 +83,7 @@ audioItem.startPlaying( function() {
 });
 ```
 
-`BodhiMobileAudioItem::startPlaying( successCallback, errorCallback )`
+`AudioItem::startPlaying( successCallback, errorCallback )`
 
 ###### Discussion
 
@@ -116,7 +116,7 @@ audioItem.stopPlaying( function() {
 });
 ```
 
-`BodhiMobileAudioItem::stopPlaying( successCallback, errorCallback )`
+`AudioItem::stopPlaying( successCallback, errorCallback )`
 
 ###### Discussion
 
@@ -149,7 +149,7 @@ audioItem.pausePlaying( function() {
 });
 ```
 
-`BodhiMobileAudioItem::pausePlaying( successCallback, errorCallback )`
+`AudioItem::pausePlaying( successCallback, errorCallback )`
 
 ###### Discussion
 
@@ -182,7 +182,7 @@ audioItem.getDuration( function(info) {
 });
 ```
 
-`BodhiMobileAudioItem::getDuration( successCallback, errorCallback )`
+`AudioItem::getDuration( successCallback, errorCallback )`
 
 ###### Discussion
 
@@ -217,7 +217,7 @@ audioItem.seekTo( 1.5, function(info) {
 });
 ```
 
-`BodhiMobileAudioItem::seekTo( position, successCallback, errorCallback )`
+`AudioItem::seekTo( position, successCallback, errorCallback )`
 
 ###### Discussion
 
@@ -254,7 +254,7 @@ audioItem.startRecording( function() {
 });
 ```
 
-`BodhiMobileAudioItem::startRecording( successCallback, errorCallback )`
+`AudioItem::startRecording( successCallback, errorCallback )`
 
 ###### Discussion
 
@@ -287,7 +287,7 @@ audioItem.stopRecording( function() {
 });
 ```
 
-`BodhiMobileAudioItem::stopRecording( successCallback, errorCallback )`
+`AudioItem::stopRecording( successCallback, errorCallback )`
 
 ###### Discussion
 
@@ -320,7 +320,7 @@ audioItem.setVolume( 0.7, function(info) {
 });
 ```
 
-`BodhiMobileAudioItem::setVolume( volume, successCallback, errorCallback )`
+`AudioItem::setVolume( volume, successCallback, errorCallback )`
 
 ###### Discussion
 
@@ -355,7 +355,7 @@ audioItem.onStateChanged( function(info) {
 });
 ```
 
-`BodhiMobileAudioItem::onStateChanged( callback )`
+`AudioItem::onStateChanged( callback )`
 
 ###### Discussion
 
@@ -369,7 +369,7 @@ Callback. Called when state property changed.
 
 Callback parameter is object which contains:
 
-    * `state` \- [BodhiMobileAudioItemState](#bodhimobileaudioitemstate)
+    * `state` \- [AudioItemState](#audioitemstate)
 
 ###### Return Value
 
@@ -384,7 +384,7 @@ audioItem.onDurationChanged( function(info) {
 });
 ```
 
-`BodhiMobileAudioItem::onDurationChanged( callback )`
+`AudioItem::onDurationChanged( callback )`
 
 ###### Discussion
 
@@ -413,7 +413,7 @@ audioItem.onPositionChanged( function(info) {
 });
 ```
 
-`BodhiMobileAudioItem::onPositionChanged( callback )`
+`AudioItem::onPositionChanged( callback )`
 
 ###### Discussion
 
@@ -444,7 +444,7 @@ audioItem.close( function() {
 });
 ```
 
-`BodhiMobileAudioItem::close( successCallback, errorCallback )`
+`AudioItem::close( successCallback, errorCallback )`
 
 ###### Discussion
 

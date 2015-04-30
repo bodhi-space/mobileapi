@@ -4,41 +4,41 @@ This module allows playing and recording audio.
 
 ### Tasks
 
-  * `BodhiMobileAudioItemState` constant
-  * `BodhiMobileAudioItem` object
+  * `AudioItemState` constant
+  * `AudioItem` object
   * `getAudio` function
 
 ### Constants
 
-##### BodhiMobileAudioItemState
+##### AudioItemState
 
 ###### Discussion
 
-This enum contains variants of [BodhiMobileAudioItem](#bodhimobileaudioitem-class) object states.
+This enum contains variants of [AudioItem](#audioitem-class) object states.
 
-  * `BodhiMobileAudioItemState.STOPPED`
+  * `AudioItemState.STOPPED`
 
 Audio record currently stopped.
 
-  * `BodhiMobileAudioItemState.PLAYING`
+  * `AudioItemState.PLAYING`
 
 Audio record currently playing.
 
-  * `BodhiMobileAudioItemState.PAUSED`
+  * `AudioItemState.PAUSED`
 
 Audio record currently paused.
 
-  * `BodhiMobileAudioItemState.RECORDED`
+  * `AudioItemState.RECORDED`
 
 Audio record currently recorded.
 
 ### Objects
 
-##### BodhiMobileAudioItem
+##### AudioItem
 
 ###### Discussion
 
-This object contains information about audio records and allows developer to record, play and control audio. See [RBCAudioItem Class](#rbcaudioitem-class) to get more information.
+This object contains information about audio records and allows developer to record, play and control audio. See [AudioItem Class](#audioitem-class) to get more information.
 
 ### Functions
 
@@ -56,7 +56,7 @@ audio.getAudio( function(info) {
 
 ###### Discussion
 
-Creates new [BodhiMobileAudioItem](#bodhimobileaudioitem-class) object which used for all audio operations.
+Creates new [AudioItem](#audioitem-class) object which used for all audio operations.
 
 ###### Arguments
 
@@ -74,7 +74,7 @@ Success callback. Called when function finished without errors
 
 Callback parameter is object which contains:
 
-    * `audioItem` \- The created [BodhiMobileAudioItem](#bodhimobileaudioitem-class) object.
+    * `audioItem` \- The created [AudioItem](#audioitem-class) object.
 
   * `errorCallback` optional
 
