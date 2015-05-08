@@ -46,6 +46,7 @@ includes:
   - bodhimobile/MobileAPI/notifications
   - bodhimobile/MobileAPI/printing
   - bodhimobile/MobileAPI/pushnotifications
+  - bodhimobile/MobileAPI/screenLock
   - bodhimobile/MobileAPI/shakeDetector
   - bodhimobile/MobileAPI/webview
 
