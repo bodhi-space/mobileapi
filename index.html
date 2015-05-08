@@ -9954,6 +9954,181 @@ images.</p>
 <li><a href="#kernel-promise">BodhiMobilePromise</a> object</li>
 </ul>
 
+          <h4 id="screen-lock-module">Screen Lock Module</h4>
+
+<p>This module provides the ability to work with native authentication.</p>
+
+<p>Developer can get current activated authentication type and show UI for changing it.</p>
+
+<p>Also he can lock his application and get authentication status after unlocking.</p>
+
+<h3 id="tasks">Tasks</h3>
+
+<ul>
+<li><code class="prettyprint">TYPES</code> constant</li>
+<li><code class="prettyprint">supported</code> property</li>
+<li><code class="prettyprint">type</code> property</li>
+<li><code class="prettyprint">setup</code> function</li>
+<li><code class="prettyprint">lock</code> function</li>
+<li><code class="prettyprint">screenLock.type</code> event</li>
+</ul>
+
+<h3 id="constants">Constants</h3>
+
+<h5 id="types">TYPES</h5>
+
+<h6 id="discussion">Discussion</h6>
+
+<p>This enum contains all variants of supported authentication types.</p>
+
+<ul>
+<li><code class="prettyprint">screenLock.TYPES.NONE</code></li>
+</ul>
+
+<p>Native authentication deactivated.</p>
+
+<ul>
+<li><code class="prettyprint">screenLock.TYPES.PIN</code></li>
+</ul>
+
+<p>Using PIN for unlock device or application.</p>
+
+<ul>
+<li><code class="prettyprint">screenLock.TYPES.PATTERN</code></li>
+</ul>
+
+<p>Using Pattern (User should provide the path in 3x3 numbers grid) for unlock device or application.</p>
+
+<ul>
+<li><code class="prettyprint">screenLock.TYPES.PASSWORD</code></li>
+</ul>
+
+<p>Using Password for unlock device or application.</p>
+
+<ul>
+<li><code class="prettyprint">screenLock.TYPES.FINGERPRINT</code></li>
+</ul>
+
+<p>Using Fingerprint (TouchID for iOS) for unlock device or application.</p>
+
+<h3 id="properties">Properties</h3>
+
+<h5 id="supported">supported</h5>
+
+<h6 id="discussion">Discussion</h6>
+<pre class="highlight javascript"><code><span class="kd">var</span> <span class="nx">supported</span> <span class="o">=</span> <span class="nx">screenLock</span><span class="p">.</span><span class="nx">supported</span><span class="p">;</span>
+</code></pre>
+
+<p>Returns whether the Mobile Container supports native authentication.</p>
+
+<h5 id="type">type</h5>
+<pre class="highlight javascript"><code><span class="kd">var</span> <span class="nx">type</span> <span class="o">=</span> <span class="nx">screenLock</span><span class="p">.</span><span class="nx">type</span><span class="p">;</span>
+</code></pre>
+
+<h6 id="discussion">Discussion</h6>
+
+<p>Current native authentication type. See <code class="prettyprint">TYPES</code> enum for variants.</p>
+
+<h3 id="functions">Functions</h3>
+
+<h5 id="setup">setup</h5>
+<pre class="highlight javascript"><code><span class="nx">screenLock</span><span class="p">.</span><span class="nx">setup</span><span class="p">(</span> <span class="kd">function</span><span class="p">(</span><span class="nx">info</span><span class="p">)</span> <span class="p">{</span>  
+    <span class="nx">alert</span><span class="p">(</span><span class="s2">"Setup Finished"</span><span class="p">);</span>
+<span class="p">},</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>  
+    <span class="nx">alert</span><span class="p">(</span><span class="s2">"code: "</span> <span class="o">+</span> <span class="nx">error</span><span class="p">.</span><span class="nx">code</span> <span class="o">+</span> <span class="s2">"\nmessage: "</span> <span class="o">+</span> <span class="nx">error</span><span class="p">.</span><span class="nx">message</span><span class="p">);</span>  
+<span class="p">});</span>
+</code></pre>
+
+<p><code class="prettyprint">screenLock.setup( successCallback, errorCallback )</code></p>
+
+<h6 id="discussion">Discussion</h6>
+
+<p>Shows the UI for changing current native authentication method or turning off it.</p>
+
+<p>Developer can be notified of selected method with <code class="prettyprint">type</code> property and <code class="prettyprint">screenLock.type</code> event.</p>
+
+<h6 id="arguments">Arguments</h6>
+
+<ul>
+<li><code class="prettyprint">succesCallback</code> optional</li>
+</ul>
+
+<p>Success callback. Called when function finished without errors</p>
+
+<p>Callback parameter is always <strong>null</strong></p>
+
+<ul>
+<li><code class="prettyprint">errorCallback</code> optional</li>
+</ul>
+
+<p>Error Callback. Called when function return error.</p>
+
+<h6 id="return-value">Return Value</h6>
+
+<ul>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object </li>
+</ul>
+
+<h5 id="lock">lock</h5>
+<pre class="highlight javascript"><code><span class="nx">screenLock</span><span class="p">.</span><span class="nx">lock</span><span class="p">(</span> <span class="kd">function</span><span class="p">(</span><span class="nx">info</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">info</span><span class="p">.</span><span class="nx">unlocked</span><span class="p">)</span>
+      <span class="nx">alert</span><span class="p">(</span><span class="s2">"Unlocked"</span><span class="p">);</span>
+    <span class="k">else</span>
+      <span class="nx">alert</span><span class="p">(</span><span class="s2">"Not unlocked"</span><span class="p">);</span>
+<span class="p">},</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>  
+    <span class="nx">alert</span><span class="p">(</span><span class="s2">"code: "</span> <span class="o">+</span> <span class="nx">error</span><span class="p">.</span><span class="nx">code</span> <span class="o">+</span> <span class="s2">"\nmessage: "</span> <span class="o">+</span> <span class="nx">error</span><span class="p">.</span><span class="nx">message</span><span class="p">);</span>  
+<span class="p">});</span>
+</code></pre>
+
+<p><code class="prettyprint">screenLock.lock( successCallback, errorCallback )</code></p>
+
+<h6 id="discussion">Discussion</h6>
+
+<p>Locks the application.</p>
+
+<h6 id="arguments">Arguments</h6>
+
+<ul>
+<li><code class="prettyprint">succesCallback</code> optional</li>
+</ul>
+
+<p>Success callback. Called when function finished without errors</p>
+
+<p>Callback parameter is object which contains:</p>
+
+<p>* <code class="prettyprint">unlocked</code> - <em>true</em> if application was unlocked successfully. Otherwise <em>false</em>. (Boolean)</p>
+
+<ul>
+<li><code class="prettyprint">errorCallback</code> optional</li>
+</ul>
+
+<p>Error Callback. Called when function return error.</p>
+
+<h6 id="return-value">Return Value</h6>
+
+<ul>
+<li><a href="#kernel-promise">BodhiMobilePromise</a> object </li>
+</ul>
+
+<h3 id="events">Events</h3>
+
+<h5 id="screenlock.type">screenLock.type</h5>
+<pre class="highlight javascript"><code><span class="nx">events</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">"screenLock.type"</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">info</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">type</span> <span class="o">=</span> <span class="nx">info</span><span class="p">.</span><span class="nx">type</span><span class="p">;</span>
+<span class="p">});</span>
+</code></pre>
+
+<h6 id="discussion">Discussion</h6>
+
+<p>Event received when user changes native authentication type.</p>
+
+<h6 id="callback-arguments">Callback Arguments</h6>
+
+<ul>
+<li><code class="prettyprint">type</code> - The updated native authentication type. See <code class="prettyprint">TYPES</code> enum for variants. (String)</li>
+</ul>
+
           <h4 id="shake-detector-module">Shake Detector Module</h4>
 
 <p>This module provides the ability to detecting when user shakes the device..</p>
