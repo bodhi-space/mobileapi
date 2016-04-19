@@ -1,3 +1,20 @@
+#### To Get Notifications
+
+JS with push notifications support:
+- [https://www.npmjs.com/package/bodhi-mobile](https://www.npmjs.com/package/bodhi-mobile) (version 1.0.8)
+To get notification use code:
+```
+device.ready(function() {
+    pushNotifications.onNotification(function(eventInfo) {
+// eventInfo.url contains url from push
+        notifications.alert("Push Notification", "URL: " + eventInfo.url, "OK");
+    });
+});
+```
+
+For example if you will send notification with "url":"bodhi-reveal://SalesTransaction/570e5fd14f86217863a4f14a"
+Inside Bodhi Reveal app you will receive eventInfo.url = "SalesTransaction/570e5fd14f86217863a4f14a"
+
 #### Notifications Module
 
 This module used to notify user about some events in application.
