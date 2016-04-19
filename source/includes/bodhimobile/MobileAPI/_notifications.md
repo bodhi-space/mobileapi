@@ -2,6 +2,7 @@
 
 JS with push notifications support:
 - [https://www.npmjs.com/package/bodhi-mobile](https://www.npmjs.com/package/bodhi-mobile) (version 1.0.8)
+
 To get notification use code:
 ```
 device.ready(function() {
