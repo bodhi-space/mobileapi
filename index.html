@@ -9394,7 +9394,25 @@ To write a URI as the payload use ndef.uriRecord(uri)</p>
 
 <p>Tagdiscovered event occurs when any tag is detected by the phone.</p>
 
-          <h4 id="notifications-module">Notifications Module</h4>
+          <h4 id="to-get-notifications">To Get Notifications</h4>
+
+<p>JS with push notifications support:
+- <a href="https://www.npmjs.com/package/bodhi-mobile">https://www.npmjs.com/package/bodhi-mobile</a> (version 1.0.8)</p>
+
+<p>To get notification use code:
+<code class="prettyprint">
+device.ready(function() {
+    pushNotifications.onNotification(function(eventInfo) {
+// eventInfo.url contains url from push
+        notifications.alert(&quot;Push Notification&quot;, &quot;URL: &quot; + eventInfo.url, &quot;OK&quot;);
+    });
+});
+</code></p>
+
+<p>For example if you will send notification with &ldquo;url&rdquo;:&ldquo;bodhi-reveal://SalesTransaction/570e5fd14f86217863a4f14a&rdquo;
+Inside Bodhi Reveal app you will receive eventInfo.url = &ldquo;SalesTransaction/570e5fd14f86217863a4f14a&rdquo;</p>
+
+<h4 id="notifications-module">Notifications Module</h4>
 
 <p>This module used to notify user about some events in application.</p>
 
