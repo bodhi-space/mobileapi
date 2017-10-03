@@ -77,7 +77,7 @@ html, body {
   bottom: 0;
   width: $nav-width;
   background-color: $nav-bg;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: bold;
 
   // language selector for mobile devices
@@ -99,9 +99,9 @@ html, body {
 
   .bodhi-logo
   {
-    padding-top: 10px;
-    padding-left: 10px;
-    padding-bottom: 10px;
+    // padding-top: 10px;
+    // padding-left: 5px;
+    // padding-bottom: 10px;
     display: block;
   }
 
@@ -372,10 +372,9 @@ html, body {
   &>h1, &>h2, &>h3, &>h4, &>h5, &>h6, &>p, &>table, &>ul, &>ol, &>aside, &>dl {
     margin-right: $examples-width;
     padding: 0 $main-padding;
-    @include box-sizing(border-box);
+    // @include box-sizing(border-box);
     display: block;
-    @include text-shadow($main-embossed-text-shadow);
-
+    // @include text-shadow($main-embossed-text-shadow);
     @extend %left-col;
   }
 
@@ -397,10 +396,9 @@ html, body {
     margin-bottom: $h1-margin-bottom;
     margin-top: 2em;
     border-top: 1px solid #ddd;
-    background-color: #F9A11D;
-    @include background-image(
-      linear-gradient(top, rgba(#fff,0.4), rgba(#fff, 0))
-    );
+    background-color: #0299cc;
+    color: #ffffff;
+
   }
 
   h1:first-child, div:first-child + h1 {
@@ -502,6 +500,7 @@ html, body {
   img {
     max-width: 100%;
   }
+
 
   code {
     background-color: rgba(0,0,0,0.05);
